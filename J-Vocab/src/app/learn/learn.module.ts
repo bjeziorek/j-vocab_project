@@ -8,6 +8,9 @@ import { LearnComponent } from '../learn/learn.component';
   declarations: [LearnComponent],
   imports: [
     CommonModule
+  ],
+  exports:[
+    LearnComponent
   ]
 })
 export class LearnModule { }

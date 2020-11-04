@@ -1,1 +1,17 @@
 <p>options works!</p>
+
+<button (click)='exportClick()'>eksport</button>
+<button (click)='importClick()'>import</button>
+<button (click)='backToLearnClick()'>back</button>
+
+<div *ngIf="mode==='none'">
+  <p>nic</p>
+</div>
+<div *ngIf="mode==='export'">
+  eksport
+ <app-export></app-export>>
+</div>
+<div *ngIf="mode==='import'">
+  import
+<app-import></app-import>
+</div>

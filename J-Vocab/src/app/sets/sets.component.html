@@ -1,1 +1,16 @@
 <p>sets works!</p>
+<button (click)='manageSetsClick()'>zestawy</button>
+<button (click)='manageResourcesClick()'>zasoby</button>
+<button (click)='backToLearnClick()'>back</button>
+
+<div *ngIf="mode==='none'">
+  <p>nic</p>
+</div>
+<div *ngIf="mode==='manage-resources'">
+  zarządzaj zasobami
+ <app-manage-resources></app-manage-resources>
+</div>
+<div *ngIf="mode==='manage-sets'">
+  zarządzaj zestawami
+<app-manage-sets></app-manage-sets>
+</div>

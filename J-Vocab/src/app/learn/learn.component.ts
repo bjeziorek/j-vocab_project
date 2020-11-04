@@ -7,9 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LearnComponent implements OnInit {
 
+  mode = 'none';
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  quizClick(): void {
+    this.mode = 'quiz';
+  }
+  presentationClick(): void {
+    this.mode = 'presentation';
+  }
+  backToLearnClick(): void {
+    this.mode = 'none';
   }
 
 }

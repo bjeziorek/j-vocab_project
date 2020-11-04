@@ -1,1 +1,20 @@
 <p>learn works!</p>
+
+<button (click)='presentationClick()'>presentation</button>
+<button (click)='quizClick()'>quiz</button>
+<button (click)='backToLearnClick()'>back</button>
+
+<div *ngIf="mode==='none'">
+  <p>nic</p>
+</div>
+<div *ngIf="mode==='presentation'">
+  presentation
+  <app-presentation></app-presentation>
+</div>
+<div *ngIf="mode==='quiz'">
+  quiz
+  <app-quiz></app-quiz>
+</div>
+
+
+ 
