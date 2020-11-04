@@ -16,6 +16,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import {MatMenuModule} from '@angular/material/menu';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import { MainMenuComponent } from './main-menu/main-menu.component'; 
+import {MatButtonModule} from '@angular/material/button'; 
 
 @NgModule({
   declarations: [
@@ -28,7 +32,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ImportComponent,
     ExportComponent,
     ManageSetsComponent,
-    ManageResourcesComponent
+    ManageResourcesComponent,
+    MainMenuComponent
   ],
   imports: [
     BrowserModule,
@@ -36,8 +41,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
-
+    BrowserAnimationsModule,
+    MatMenuModule,
+    MatToolbarModule,
+    MatButtonModule
 
   ],
   providers: [],

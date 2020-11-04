@@ -1,0 +1,100 @@
+@use './colors.scss';
+
+//amethyst
+%amethystThemeDark {
+  
+  background-color: colors.$darkPurple;
+  color: colors.$lightPurple;
+  button, a {
+    background-color: colors.$mainPurple;
+    border: 1px solid colors.$lightPurple;
+    color: colors.$lightPurple;
+    padding: 5px 2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    
+    border-radius: 5%;
+    border: 1px solid colors.$lightPurple;
+    cursor: pointer;
+  }
+}
+%amethystThemeInverse {
+  background-color: colors.$lightPurple;
+  color: colors.$darkPurpleSolid;
+  button, a {
+    background-color: colors.$lightPurple;
+    border: 1px solid colors.$mainPurple;
+    color: colors.$mainPurple;
+    padding: 5px 2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    
+    border-radius: 5%;
+    border: 1px solid colors.$mainPurple;
+    cursor: pointer;
+  }
+}
+%amethystThemeMain {
+  background-color: colors.$mainPurple;
+  color: colors.$lightPurple;
+}
+
+//turquise
+%turquiseThemeDark {
+  background-color: colors.$darkTurquise;
+  color: colors.$lightTurquise;
+  button, a {
+    background-color: colors.$mainTurquise;
+    border: 1px solid colors.$lightTurquise;
+    color: colors.$lightTurquise;
+    padding: 5px 2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+
+    border-radius: 5%;
+    border: 1px solid colors.$lightTurquise;
+    cursor: pointer;
+  }
+}
+%turquiseThemeInverse {
+  background-color: colors.$lightTurquise;
+  color: colors.$darkTurquise;
+}
+%turquiseThemeMain {
+  background-color: colors.$mainTurquise;
+  color: colors.$lightTurquise;
+}
+
+//amber
+%amberThemeDark {
+  background-color: colors.$darkAmber;
+  color: colors.$lightAmber;
+  button, a {
+    background-color: colors.$mainAmber;
+    border: 1px solid colors.$lightAmber;
+    color: colors.$lightAmber;
+    padding: 5px 2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+   
+    border-radius: 5%;
+    border: 1px solid colors.$lightAmber;
+    cursor: pointer;
+  }
+}
+%amberThemeInverse {
+  background-color: colors.$lightAmber;
+  color: colors.$darkAmber;
+}
+%amberThemeMain {
+  background-color: colors.$mainAmber;
+  color: colors.$lightAmber;
+}

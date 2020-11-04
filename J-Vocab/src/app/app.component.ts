@@ -14,7 +14,7 @@ export class AppComponent {
 
   ngOnInit(): void {
     this.themesService.theme.subscribe((receivedTheme: string) => {
-      this.theme=receivedTheme;
+      this.theme = receivedTheme;
     });
 
   }

@@ -1,31 +1,6 @@
-<div class={{theme}}>
-<!-- <div class="bg max">
-  <div class="{{theme}}">
-  <mat-toolbar class="{{theme}}">
-      <span>J-Vocab</span>
-      <span class="links">
-        <a mat-button routerLink="/" (click)="setUrl('/')">Strona Główna</a>
-
-        <a mat-button routerLink="/kana" (click)="setUrl('/kana')">Kana</a>
-        <a mat-button routerLink="/kanji" (click)="setUrl('/kanji')">Kanji</a>
-        <a mat-button routerLink="/vocabulary" (click)="setUrl('/vocabulary')">Słownictwo</a>
-        <a mat-button routerLink="/grammar" (click)="setUrl('/grammar')">Gramatyka</a>
-        <a mat-button routerLink="/account" (click)="setUrl('/account')">Opcje</a>
-        <span class="group">
-          <a mat-button class="{{isPressed}} {{isDisabled}}" (click)="furiOptions($event,'kanaOn')">furigana</a>
-          <a mat-button class="{{isPressed}} {{isDisabled}}" (click)="furiOptions($event,'romajiOn')">romaji</a>
-          <a mat-button class="{{isPressed}}" (click)="furiOptions($event,'characterOn')">kanji</a>
-          <a mat-button class="{{isPressed}}" (click)="furiOptions($event,'meaningOn')">tłumaczenie</a>
-        </span>
-      </span>
-    </mat-toolbar>
-
+<div class="bg {{theme}}">
+  <app-main-menu></app-main-menu>
+  <div class="container">
+    <router-outlet></router-outlet>
   </div>
-</div>  -->
-<a routerLink="/learn">Nauka</a>
-<a routerLink="/sets">Zestawy</a>
-<a routerLink="/options">Opcje</a>
-
-<div>main</div>
-<router-outlet></router-outlet>
 </div>

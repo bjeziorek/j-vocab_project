@@ -1,18 +1,33 @@
+@use './themes.scss';
+
+.bg{
+    width: 100%;
+    height: 100%;
+}
+
 .amberTheme {
-  width: 100%;
-  height: 100%;
+    @extend %amberThemeDark; 
+  
   background: url("bgAmber.jpg") no-repeat center fixed;
   background-size: cover;
 }
 .amethystTheme {
-  width: 100%;
-  height: 100%;
+    @extend %amethystThemeDark;
+  
   background: url("bgAmethyst.jpg") no-repeat center fixed;
   background-size: cover;
 }
 .turquiseTheme {
-  width: 100%;
-  height: 100%;
+    @extend %turquiseThemeDark;
+
   background: url("bgTurquise.jpg") no-repeat center fixed;
   background-size: cover;
+}
+
+.container{
+   width: 100%;
+   background-color: rgba(0, 0, 0, 0.739);
+   padding: 10px;
+   margin-top: 10px;
+   margin-bottom: 10px;
 }

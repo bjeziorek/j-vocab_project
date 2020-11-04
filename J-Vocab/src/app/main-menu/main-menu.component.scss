@@ -1,0 +1,35 @@
+@use './colors.scss';
+
+@use './themes.scss';
+
+.amethystTheme {
+  @extend %amethystThemeMain;
+  .button {
+    color: colors.$lightPurple;
+    background-color: colors.$darkPurple;
+    margin: 5px;
+  }
+}
+.amberTheme {
+  @extend %amberThemeMain;
+  .button {
+    color: colors.$lightAmber;
+    background-color: colors.$darkAmber;
+    margin: 5px;
+  }
+}
+.turquiseTheme {
+  @extend %turquiseThemeMain;
+  .button {
+    color: colors.$lightTurquise;
+    background-color: colors.$darkTurquise;
+    margin: 5px;
+  }
+}
+.group {
+  border: 1px solid white;
+  padding: 10px 6px;
+}
+.pressed {
+  background-color: black;
+}
