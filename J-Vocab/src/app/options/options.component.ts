@@ -1,3 +1,4 @@
+import { ThemesService } from './../themes.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OptionsComponent implements OnInit {
 
-  mode='mode';
+  mode = 'mode';
 
-  constructor() { }
+  constructor(private readonly themeService: ThemesService) { }
 
   ngOnInit(): void {
   }
@@ -22,6 +23,10 @@ export class OptionsComponent implements OnInit {
   }
   backToLearnClick(): void {
     this.mode = 'none';
+  }
+
+  setTheme(theme: string): void {
+    this.themeService.theme.next(theme);
   }
 
 }
