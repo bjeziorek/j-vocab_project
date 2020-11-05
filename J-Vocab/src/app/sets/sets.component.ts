@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ThemesService } from '../themes.service';
 
 @Component({
   selector: 'app-sets',
@@ -7,10 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SetsComponent implements OnInit {
   mode = 'none';
-  constructor() { }
+  theme = 'amethystTheme';
+
+  constructor(private readonly themeService: ThemesService) { }
 
   ngOnInit(): void {
+    this.theme = this.themeService.currentTheme;
+    this.themeService.theme.subscribe((receivedTheme: string) => {
+      this.theme = receivedTheme;
+    });
   }
+
+
 
   manageSetsClick(): void {
     this.mode = 'manage-sets';

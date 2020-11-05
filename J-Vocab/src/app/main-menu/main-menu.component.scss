@@ -8,6 +8,7 @@
     color: colors.$lightPurple;
     background-color: colors.$darkPurple;
     margin: 5px;
+    border: 1px solid colors.$lightPurple;
   }
 }
 .amberTheme {
@@ -16,6 +17,8 @@
     color: colors.$lightAmber;
     background-color: colors.$darkAmber;
     margin: 5px;
+    border: 1px solid colors.$lightAmber;
+
   }
 }
 .turquiseTheme {
@@ -24,6 +27,8 @@
     color: colors.$lightTurquise;
     background-color: colors.$darkTurquise;
     margin: 5px;
+    border: 1px solid colors.$lightTurquise;
+
   }
 }
 .group {

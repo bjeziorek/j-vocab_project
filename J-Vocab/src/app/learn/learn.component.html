@@ -1,20 +1,20 @@
-<p>learn works!</p>
+<div class="{{theme}}">
+  <p>learn works!</p>
 
-<button (click)='presentationClick()'>presentation</button>
-<button (click)='quizClick()'>quiz</button>
-<button (click)='backToLearnClick()'>back</button>
+  <button (click)='presentationClick()'>presentation</button>
+  <button (click)='quizClick()'>quiz</button>
+  <button (click)='backToLearnClick()'>back</button>
 
-<div *ngIf="mode==='none'">
-  <p>nic</p>
+  <div *ngIf="mode==='none'">
+    <p>nic</p>
+  </div>
+  <div *ngIf="mode==='presentation'">
+    <p>presentation</p>
+    <app-presentation></app-presentation>
+  </div>
+  <div *ngIf="mode==='quiz'">
+    <p>quiz</p>
+    <app-quiz></app-quiz>
+  </div>
+
 </div>
-<div *ngIf="mode==='presentation'">
-  presentation
-  <app-presentation></app-presentation>
-</div>
-<div *ngIf="mode==='quiz'">
-  quiz
-  <app-quiz></app-quiz>
-</div>
-
-
- 

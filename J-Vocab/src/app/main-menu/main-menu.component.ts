@@ -1,5 +1,5 @@
 import { ThemesService } from './../themes.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-main-menu',
@@ -8,12 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainMenuComponent implements OnInit {
   theme = 'amethystTheme';
-  constructor(private readonly themeService:ThemesService) { }
+
+  constructor(private readonly themeService: ThemesService) { }
 
   ngOnInit(): void {
+    this.theme = this.themeService.currentTheme;
     this.themeService.theme.subscribe((receivedTheme: string) => {
       this.theme = receivedTheme;
     });
+  }
+
+
+  setTheme() {
+   // this.themeService.currentTheme = this.theme;
   }
 
 }

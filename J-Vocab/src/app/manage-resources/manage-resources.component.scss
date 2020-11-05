@@ -1,0 +1,12 @@
+@use './themes.scss';
+@use './colors.scss';
+
+.amberTheme {
+    @extend %amberThemeDark; 
+}
+.amethystTheme {
+    @extend %amethystThemeDark;
+}
+.turquiseTheme {
+    @extend %turquiseThemeDark;
+}

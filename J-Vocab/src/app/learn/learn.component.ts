@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ThemesService } from '../themes.service';
 
 @Component({
   selector: 'app-learn',
@@ -9,10 +10,18 @@ export class LearnComponent implements OnInit {
 
   mode = 'none';
 
-  constructor() { }
+  theme = 'amethystTheme';
+
+  constructor(private readonly themeService: ThemesService) { }
 
   ngOnInit(): void {
+    this.theme = this.themeService.currentTheme;
+    this.themeService.theme.subscribe((receivedTheme: string) => {
+      this.theme = receivedTheme;
+    });
   }
+
+
 
   quizClick(): void {
     this.mode = 'quiz';

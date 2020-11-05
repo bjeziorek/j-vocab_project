@@ -1,21 +1,22 @@
-<p>options works!</p>
+<div class="{{theme}}">
+  <p>options works!</p>
+  <button (click)='setTheme("amberTheme")'>Motyw bursztynowy</button>
+  <button (click)='setTheme("amethystTheme")'>Motyw Ametystowy</button>
+  <button (click)='setTheme("turquiseTheme")'>Motyw Turkusowy</button>
 
-<button (click)='setTheme("amberTheme")'>Motyw bursztynowy</button>
-<button (click)='setTheme("amethystTheme")'>Motyw Ametystowy</button>
-<button (click)='setTheme("turquiseTheme")'>Motyw Turkusowy</button>
+  <button (click)='exportClick()'>eksport</button>
+  <button (click)='importClick()'>import</button>
+  <button (click)='backToLearnClick()'>back</button>
 
-<button (click)='exportClick()'>eksport</button>
-<button (click)='importClick()'>import</button>
-<button (click)='backToLearnClick()'>back</button>
-
-<div *ngIf="mode==='none'">
-  <p>nic</p>
-</div>
-<div *ngIf="mode==='export'">
-  eksport
- <app-export></app-export>
-</div>
-<div *ngIf="mode==='import'">
-  import
-<app-import></app-import>
+  <div *ngIf="mode==='none'">
+    <p>nic</p>
+  </div>
+  <div *ngIf="mode==='export'">
+    <p> eksport</p>
+    <app-export></app-export>
+  </div>
+  <div *ngIf="mode==='import'">
+    <p>import</p>
+    <app-import></app-import>
+  </div>
 </div>

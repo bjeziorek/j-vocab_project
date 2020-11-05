@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ThemesService } from '../themes.service';
 
 @Component({
   selector: 'app-import',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ImportComponent implements OnInit {
 
-  constructor() { }
+  theme = 'amethystTheme';
+
+  constructor(private readonly themeService: ThemesService) { }
 
   ngOnInit(): void {
+    this.theme = this.themeService.currentTheme;
+    this.themeService.theme.subscribe((receivedTheme: string) => {
+      this.theme = receivedTheme;
+    });
   }
+
+
 
 }

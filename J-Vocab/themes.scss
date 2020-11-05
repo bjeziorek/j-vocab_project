@@ -1,11 +1,39 @@
 @use './colors.scss';
 
+
+
 //amethyst
 %amethystThemeDark {
   
-  background-color: colors.$darkPurple;
+ // background-color: colors.$darkPurple;
+ // color: colors.$lightPurple;
+ p{
   color: colors.$lightPurple;
+}
   button, a {
+    margin: 5px;
+    background-color: colors.$mainPurple;
+    border: 1px solid colors.$lightPurple;
+    color: colors.$lightPurple;
+    padding: 5px 2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    
+    border-radius: 5%;
+   // border: 1px solid colors.$lightPurple;
+    cursor: pointer;
+  }
+  .clicked{
+
+  }
+ 
+}
+%amethystThemeInverse {
+ background-color: colors.$lightPurple;
+  color: colors.$darkPurpleSolid;
+  .btn {
     background-color: colors.$mainPurple;
     border: 1px solid colors.$lightPurple;
     color: colors.$lightPurple;
@@ -19,10 +47,6 @@
     border: 1px solid colors.$lightPurple;
     cursor: pointer;
   }
-}
-%amethystThemeInverse {
-  background-color: colors.$lightPurple;
-  color: colors.$darkPurpleSolid;
   button, a {
     background-color: colors.$lightPurple;
     border: 1px solid colors.$mainPurple;
@@ -36,6 +60,7 @@
     border-radius: 5%;
     border: 1px solid colors.$mainPurple;
     cursor: pointer;
+  
   }
 }
 %amethystThemeMain {
@@ -45,9 +70,13 @@
 
 //turquise
 %turquiseThemeDark {
-  background-color: colors.$darkTurquise;
-  color: colors.$lightTurquise;
+  //background-color: colors.$darkTurquise;
+  //color: colors.$lightTurquise;
+  p{
+    color: colors.$lightTurquise;
+  }
   button, a {
+    margin: 5px;
     background-color: colors.$mainTurquise;
     border: 1px solid colors.$lightTurquise;
     color: colors.$lightTurquise;
@@ -73,9 +102,13 @@
 
 //amber
 %amberThemeDark {
-  background-color: colors.$darkAmber;
-  color: colors.$lightAmber;
+  //background-color: colors.$darkAmber;
+  //color: colors.$lightAmber;
+  p{
+    color: colors.$lightAmber;
+  }
   button, a {
+    margin: 5px;
     background-color: colors.$mainAmber;
     border: 1px solid colors.$lightAmber;
     color: colors.$lightAmber;

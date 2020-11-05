@@ -9,10 +9,15 @@ import { Component, OnInit } from '@angular/core';
 export class OptionsComponent implements OnInit {
 
   mode = 'mode';
+  theme = 'amethystTheme';
 
   constructor(private readonly themeService: ThemesService) { }
 
   ngOnInit(): void {
+    this.theme = this.themeService.currentTheme;
+    this.themeService.theme.subscribe((receivedTheme: string) => {
+      this.theme = receivedTheme;
+    });
   }
 
   exportClick(): void {
@@ -27,6 +32,7 @@ export class OptionsComponent implements OnInit {
 
   setTheme(theme: string): void {
     this.themeService.theme.next(theme);
+    this.themeService.currentTheme = theme;
   }
 
 }
