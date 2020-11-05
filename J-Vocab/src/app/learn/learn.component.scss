@@ -2,11 +2,26 @@
 @use './colors.scss';
 
 .amberTheme {
-    @extend %amberThemeDark; 
+  @extend %amberThemeDark;
+  .centerize {
+    @extend %centerize;
+  }
 }
 .amethystTheme {
-    @extend %amethystThemeDark;
+  @extend %amethystThemeDark;
+  .centerize {
+    @extend %centerize;
+  }
 }
 .turquiseTheme {
-    @extend %turquiseThemeDark;
+  @extend %turquiseThemeDark;
+  .centerize {
+    @extend %centerize;
+  }
+}
+
+.center {
+    margin-left: 40%;
+    margin-right: 40%;
+    text-align: center;
 }

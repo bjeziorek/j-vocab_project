@@ -1,3 +1,19 @@
 <div class="{{theme}}">
-    <p>presentation works!</p>
+    <div class="centerize">
+        <p>presentation works!</p>
+    </div>
+  <div *ngIf="summary===false" class="centerize">
+        <p>{{questionText}}</p> 
+        <div *ngIf="answerShown!==true">
+            <button (click)="showAnswerClick()">Pokaż odpowiedź</button>
+        </div>
+        <div *ngIf="answerShown===true">
+            <p>{{answerText}}</p>
+            <button (click)="nextClick()">Dalej</button>
+            </div>
+
+    </div>
+    <div *ngIf="summary===true" class="centerize">
+        <p>Podsumowanie</p>
+    </div>
 </div>

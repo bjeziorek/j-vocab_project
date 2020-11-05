@@ -1,6 +1,12 @@
 @use './colors.scss';
 
-
+%centerize{
+  border-radius: 3px;
+  width:fit-content;
+  padding: 15px;
+  text-align: center;
+  margin:auto;
+}
 
 //amethyst
 %amethystThemeDark {

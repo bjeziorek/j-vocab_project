@@ -1,13 +1,15 @@
 <div class="{{theme}}">
+  <div class="centerize">
   <p>options works!</p>
   <button (click)='setTheme("amberTheme")'>Motyw bursztynowy</button>
   <button (click)='setTheme("amethystTheme")'>Motyw Ametystowy</button>
   <button (click)='setTheme("turquiseTheme")'>Motyw Turkusowy</button>
-
+</div>
+<div class="centerize">
   <button (click)='exportClick()'>eksport</button>
   <button (click)='importClick()'>import</button>
   <button (click)='backToLearnClick()'>back</button>
-
+</div>
   <div *ngIf="mode==='none'">
     <p>nic</p>
   </div>

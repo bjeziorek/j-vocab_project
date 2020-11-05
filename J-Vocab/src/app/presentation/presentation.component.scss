@@ -2,11 +2,20 @@
 @use './colors.scss';
 
 .amberTheme {
-    @extend %amberThemeDark; 
-}
-.amethystTheme {
+    @extend %amberThemeDark;
+    .centerize {
+      @extend %centerize;
+    }
+  }
+  .amethystTheme {
     @extend %amethystThemeDark;
-}
-.turquiseTheme {
+    .centerize {
+      @extend %centerize;
+    }
+  }
+  .turquiseTheme {
     @extend %turquiseThemeDark;
-}
+    .centerize {
+      @extend %centerize;
+    }
+  }

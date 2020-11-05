@@ -1,20 +1,34 @@
 <div class="{{theme}}">
-  <p>learn works!</p>
-
-  <button (click)='presentationClick()'>presentation</button>
-  <button (click)='quizClick()'>quiz</button>
-  <button (click)='backToLearnClick()'>back</button>
-
+  <div class="centerize">
+    <p>Nauka języka japońskiego</p>
+  </div>
   <div *ngIf="mode==='none'">
-    <p>nic</p>
+    <div class="centerize">
+      <button (click)='presentationClick()'>Prezentacja materiału</button>
+      <p>Oglądnij prezentację, żeby poznać nowe słówka i zwroty</p>
+    </div>
+    <div class="centerize">
+      <button (click)='quizClick()'>Test</button>
+      <p>Sprawdź swoje siły w teście</p>
+    </div>
   </div>
   <div *ngIf="mode==='presentation'">
-    <p>presentation</p>
+    <div class="centerize">
+      <p>Prezentacja:</p>
+    </div>
     <app-presentation></app-presentation>
+    <div class="centerize">
+      <button (click)='backToLearnClick()'>Wróć</button>
+    </div>
   </div>
   <div *ngIf="mode==='quiz'">
-    <p>quiz</p>
+    <div class="centerize">
+      <p>Test:</p>
+    </div>
     <app-quiz></app-quiz>
+    <div class="centerize">
+      <button (click)='backToLearnClick()'>Wróć</button>
+    </div>
   </div>
 
 </div>

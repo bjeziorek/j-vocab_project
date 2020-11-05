@@ -41,7 +41,7 @@ export class DataBase {
             sylabs: ['do', 'you', 'bi'],
             meaningPL: 'sobota',
             tags: ['daty']
-        },
+        }];/*,
         {
             character: 'お見合い',
             sylabs: ['o', 'mi', 'a', 'i'],
@@ -930,6 +930,8 @@ export class DataBase {
             meaningPL: 'całą drogę, do samego końca',
             tags: ['nigashitaSakana']
         }
-    ];
-
+    ];*/
+    getResources(){
+        return this.resources;
+    }
 }
