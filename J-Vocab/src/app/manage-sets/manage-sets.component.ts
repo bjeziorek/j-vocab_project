@@ -9,6 +9,7 @@ import { ThemesService } from '../themes.service';
 export class ManageSetsComponent implements OnInit {
 
   theme = 'amethystTheme';
+  saveState = '';
 
   constructor(private readonly themeService: ThemesService) { }
 
@@ -19,5 +20,19 @@ export class ManageSetsComponent implements OnInit {
     });
   }
 
+  switchClick(event: Event): void {
+    if ((event.target as HTMLButtonElement).parentElement.id === 'resourceBox') {
+      (event.target as HTMLButtonElement).parentElement.parentElement.children[3].appendChild(event.target as HTMLButtonElement);
+    } else {
+      if ((event.target as HTMLButtonElement).parentElement.id === 'setBox') {
+        (event.target as HTMLButtonElement).parentElement.parentElement.children[1].appendChild(event.target as HTMLButtonElement);
+      }
+    }
+    this.saveState = '';
+  }
+
+  SaveClick(): void {
+    this.saveState = 'zapisano';
+  }
 
 }

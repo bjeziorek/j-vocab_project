@@ -13,7 +13,7 @@
   
  // background-color: colors.$darkPurple;
  // color: colors.$lightPurple;
- p{
+ p, span{
   color: colors.$lightPurple;
 }
   button, a {
@@ -78,7 +78,7 @@
 %turquiseThemeDark {
   //background-color: colors.$darkTurquise;
   //color: colors.$lightTurquise;
-  p{
+  p, span{
     color: colors.$lightTurquise;
   }
   button, a {
@@ -110,7 +110,7 @@
 %amberThemeDark {
   //background-color: colors.$darkAmber;
   //color: colors.$lightAmber;
-  p{
+  p, span{
     color: colors.$lightAmber;
   }
   button, a {

@@ -3,10 +3,25 @@
 
 .amberTheme {
     @extend %amberThemeDark; 
+    .box{
+        border: 1px solid colors.$lightAmber;
+    }
 }
 .amethystTheme {
     @extend %amethystThemeDark;
+    .box{
+        border: 1px solid colors.$lightPurple;
+    }
 }
 .turquiseTheme {
     @extend %turquiseThemeDark;
+    .box{
+        border: 1px solid colors.$lightTurquise;
+    }
 }
+
+
+.flex {
+    display: flex;
+    flex-wrap: nowrap;
+  }

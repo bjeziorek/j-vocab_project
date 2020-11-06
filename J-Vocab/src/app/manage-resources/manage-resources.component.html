@@ -1,3 +1,25 @@
 <div class="{{theme}}">
     <p>manage-resources works!</p>
+    <div>
+        <span>kana:</span>
+        <span *ngFor="let item of generatedFields"><input (input)="onInput()"></span>
+    </div>
+    <div>
+        <span>kanji:</span>
+        <span *ngFor="let item of generatedFields"><input (input)="onInput()"></span>
+    </div>
+    <div>
+        <span>romaji:</span>
+        <span *ngFor="let item of generatedFields"><input (input)="onInput()"></span>
+    </div>
+    <div>
+        <span>znaczenie:</span>
+        <span><input></span>
+    </div>
+
+    <button (click)="fieldMinus()">-</button><span>Ilość pól</span><button (click)="fieldPlus()">+</button>
+    <button (click)="SaveClick()">Zapisz</button>
+    <p>{{saveState}}</p>
+    
+
 </div>

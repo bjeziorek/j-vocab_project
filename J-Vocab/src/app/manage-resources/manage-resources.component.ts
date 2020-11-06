@@ -9,6 +9,8 @@ import { ThemesService } from '../themes.service';
 export class ManageResourcesComponent implements OnInit {
 
   theme = 'amethystTheme';
+  generatedFields = [''];
+  saveState = '';
 
   constructor(private readonly themeService: ThemesService) { }
 
@@ -19,6 +21,22 @@ export class ManageResourcesComponent implements OnInit {
     });
   }
 
+  fieldPlus(){
+    this.generatedFields.push('');
+    this.saveState = '';
+  }
 
+  fieldMinus(){
+    this.generatedFields.shift();
+    this.saveState = '';
+  }
+
+  onInput(){
+    this.saveState = '';
+  }
+
+  SaveClick(): void {
+    this.saveState = 'zapisano';
+  }
 
 }
