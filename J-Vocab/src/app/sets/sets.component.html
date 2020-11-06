@@ -1,19 +1,22 @@
 <div class="{{theme}}">
-  <div class="centerize">
+  
+  <div *ngIf="mode==='none'" class="centerize">
+    <p>nic</p>
+    <div class="centerize">
   <p>sets works!</p>
   <button (click)='manageSetsClick()'>zestawy</button>
   <button (click)='manageResourcesClick()'>zasoby</button>
-  <button (click)='backToLearnClick()'>back</button>
+ 
 </div>
-  <div *ngIf="mode==='none'">
-    <p>nic</p>
   </div>
-  <div *ngIf="mode==='manage-resources'">
-    zarządzaj zasobami
+  <div *ngIf="mode==='manage-resources'" class="centerize">
+    <p>zarządzaj zasobami</p>
     <app-manage-resources></app-manage-resources>
+    <button (click)='backToLearnClick()'>Wróć</button>
   </div>
-  <div *ngIf="mode==='manage-sets'">
-    zarządzaj zestawami
+  <div *ngIf="mode==='manage-sets'" class="centerize">
+    <p>zarządzaj zestawami</p>
     <app-manage-sets></app-manage-sets>
+    <button (click)='backToLearnClick()'>Wróć</button>
   </div>
 </div>

@@ -9,7 +9,7 @@ import { ThemesService } from '../themes.service';
 export class ImportComponent implements OnInit {
 
   theme = 'amethystTheme';
-
+  importStatus = '';
   constructor(private readonly themeService: ThemesService) { }
 
   ngOnInit(): void {
@@ -19,6 +19,8 @@ export class ImportComponent implements OnInit {
     });
   }
 
-
+  import(): void {
+    this.importStatus = 'zaimportowano';
+  }
 
 }

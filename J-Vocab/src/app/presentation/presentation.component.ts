@@ -57,7 +57,6 @@ export class PresentationComponent implements OnInit {
   }
 
   showAnswerClick() {
-    console.log('in');
     this.answerShown = true;
   }
 

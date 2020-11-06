@@ -9,6 +9,7 @@ import { ThemesService } from '../themes.service';
 export class ExportComponent implements OnInit {
 
   theme = 'amethystTheme';
+  textToExport = 'tu pojawi się tekst to skopiowania';
   constructor(private readonly themeService: ThemesService) { }
 
   ngOnInit(): void {
@@ -16,5 +17,9 @@ export class ExportComponent implements OnInit {
     this.themeService.theme.subscribe((receivedTheme: string) => {
       this.theme = receivedTheme;
     });
+  }
+
+  export():void {
+    this.textToExport = 'tekst eksportu - to skopiuj';
   }
 }

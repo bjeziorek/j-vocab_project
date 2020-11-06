@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OptionsComponent implements OnInit {
 
-  mode = 'mode';
+  mode = 'none';
   theme = 'amethystTheme';
 
   constructor(private readonly themeService: ThemesService) { }

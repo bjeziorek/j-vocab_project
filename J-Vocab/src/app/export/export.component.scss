@@ -1,0 +1,22 @@
+@use './themes.scss';
+@use './colors.scss';
+
+
+.amberTheme {
+    @extend %amberThemeDark;
+    .centerize {
+      @extend %centerize;
+    }
+  }
+  .amethystTheme {
+    @extend %amethystThemeDark;
+    .centerize {
+      @extend %centerize;
+    }
+  }
+  .turquiseTheme {
+    @extend %turquiseThemeDark;
+    .centerize {
+      @extend %centerize;
+    }
+  }
