@@ -33,6 +33,8 @@ export class QuizComponent implements OnInit {
   listToDisplay;
   save;
 
+  saveState = '';
+
   constructor(
     private readonly themeService: ThemesService,
     private readonly dataService: DataService,
@@ -109,5 +111,17 @@ export class QuizComponent implements OnInit {
       this.summary = true;
     }
   }
+
+  switchClick(event: Event): void {
+    if ((event.target as HTMLButtonElement).parentElement.id === 'resourceBox') {
+      (event.target as HTMLButtonElement).parentElement.parentElement.children[3].appendChild(event.target as HTMLButtonElement);
+    } else {
+      if ((event.target as HTMLButtonElement).parentElement.id === 'setBox') {
+        (event.target as HTMLButtonElement).parentElement.parentElement.children[1].appendChild(event.target as HTMLButtonElement);
+      }
+    }
+    this.saveState = '';
+  }
+
 
 }

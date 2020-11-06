@@ -39,14 +39,29 @@
         <p>snapping</p>
         <div *ngIf="summary===false" class="centerize">
             <p>{{questionText}}</p>
+
+            <div id="boxes flex" *ngIf="answerShown!==true">
+                <p>Ułóż:</p>
+                <div class="box" id="resourceBox">
+                    <button (click)="switchClick($event)">gfjj</button>
+                    <button (click)="switchClick($event)">gwe</button>
+                    <button (click)="switchClick($event)">qqqgfjj</button>
+
+                </div>
+                <p>Dostępne elementy:</p>
+                <div class="box" id="setBox"> <button (click)="switchClick($event)">wewefjj</button>
+                </div>
+            </div>
+
             <div *ngIf="answerShown!==true">
-                <button (click)="showAnswerClick()">Pokaż odpowiedź</button>
+                <button (click)="showAnswerClick()">Zatwierdź swoją odpowiedź</button>
             </div>
             <div *ngIf="answerShown===true">
                 <p>{{answerText}}</p>
                 <button (click)="nextClick()">Dalej</button>
             </div>
         </div>
+
     </div>
 
 

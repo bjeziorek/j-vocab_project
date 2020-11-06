@@ -7,16 +7,25 @@
     .centerize {
       @extend %centerize;
     }
+    .box{
+        border: 1px solid colors.$lightAmber;
+    }
   }
   .amethystTheme {
     @extend %amethystThemeDark;
     .centerize {
       @extend %centerize;
     }
+    .box{
+        border: 1px solid colors.$lightPurple;
+    }
   }
   .turquiseTheme {
     @extend %turquiseThemeDark;
     .centerize {
       @extend %centerize;
+    }
+    .box{
+        border: 1px solid colors.$lightTurquise;
     }
   }
