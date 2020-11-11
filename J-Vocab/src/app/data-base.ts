@@ -41,7 +41,7 @@ export class DataBase {
             sylabs: ['do', 'you', 'bi'],
             meaningPL: 'sobota',
             tags: ['daty']
-        }];/*,
+        },//];/*,
         {
             character: 'お見合い',
             sylabs: ['o', 'mi', 'a', 'i'],
@@ -343,7 +343,7 @@ export class DataBase {
             tags: ['nigashitaSakana']
         },
         {
-            character: 'コース ',
+            character: 'コース',
             sylabs: ['KO', '-', 'SU'],
             meaningPL: 'kurs, droga',
             tags: ['nigashitaSakana']
@@ -361,7 +361,7 @@ export class DataBase {
             tags: ['nigashitaSakana']
         },
         {
-            character: 'ユーモア ',
+            character: 'ユーモア',
             sylabs: ['YU', '-', 'MO', 'A'],
             meaningPL: 'humor',
             tags: ['nigashitaSakana']
@@ -662,8 +662,8 @@ export class DataBase {
         },
         {
             character: '何よりも',
-            sylabs: ['nani', 'yo', 'ri', ',mo'],
-            meaningPL: 'przede wzsystkim, ponad wszystko',
+            sylabs: ['nani', 'yo', 'ri', 'mo'],
+            meaningPL: 'przede wszystkim, ponad wszystko',
             tags: ['nigashitaSakana']
         },
         {
@@ -873,7 +873,7 @@ export class DataBase {
         {
             character: '即座',
             sylabs: ['soku', 'za'],
-            meaningPL: 'kuleć, kajdany, ciężar',
+            meaningPL: 'natychmiast',
             tags: ['nigashitaSakana']
         },
         {
@@ -930,7 +930,7 @@ export class DataBase {
             meaningPL: 'całą drogę, do samego końca',
             tags: ['nigashitaSakana']
         }
-    ];*/
+    ];//*/
     getResources(){
         return this.resources;
     }

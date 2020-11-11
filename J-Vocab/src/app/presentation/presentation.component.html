@@ -1,9 +1,9 @@
 <div class="{{theme}}">
     <div class="centerize">
-        <p>presentation works!</p>
+        <p>Pozostało: {{listToDisplay.length}}</p>
     </div>
     <div *ngIf="summary===false" class="centerize">
-        <p>{{questionText}}</p>
+        <p>{{questionText}} ({{romajiText}})</p>
         <div *ngIf="answerShown!==true">
             <button (click)="showAnswerClick()">Pokaż odpowiedź</button>
         </div>

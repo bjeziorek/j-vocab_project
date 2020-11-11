@@ -17,11 +17,12 @@
   color: colors.$lightPurple;
 }
   button, a {
+    color:colors.$lightPurple;
     margin: 5px;
     background-color: colors.$mainPurple;
     border: 1px solid colors.$lightPurple;
     color: colors.$lightPurple;
-    padding: 5px 2px;
+    padding: 10px 6px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -82,16 +83,17 @@
     color: colors.$lightTurquise;
   }
   button, a {
+    color: colors.$lightTurquise;
     margin: 5px;
     background-color: colors.$mainTurquise;
     border: 1px solid colors.$lightTurquise;
     color: colors.$lightTurquise;
-    padding: 5px 2px;
+    
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-
+    padding: 10px 6px;
     border-radius: 5%;
     border: 1px solid colors.$lightTurquise;
     cursor: pointer;
@@ -114,16 +116,15 @@
     color: colors.$lightAmber;
   }
   button, a {
+    color:colors.$lightAmber;
     margin: 5px;
     background-color: colors.$mainAmber;
     border: 1px solid colors.$lightAmber;
-    color: colors.$lightAmber;
-    padding: 5px 2px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-   
+    padding: 10px 6px;
     border-radius: 5%;
     border: 1px solid colors.$lightAmber;
     cursor: pointer;

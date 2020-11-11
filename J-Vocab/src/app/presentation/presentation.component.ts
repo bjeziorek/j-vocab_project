@@ -15,6 +15,7 @@ export class PresentationComponent implements OnInit {
   summary = false;
   questionText = 'q';
   answerText = 'a';
+  romajiText='r';
   summaryText = 'sum';
 
   chosenSet;
@@ -73,6 +74,7 @@ export class PresentationComponent implements OnInit {
   setTexts() {
     this.questionText = this.listToDisplay[0].character;
     this.answerText = this.listToDisplay[0].meaningPL;
+    this.romajiText = this.listToDisplay[0].sylabs;
   }
 
   

@@ -1,17 +1,14 @@
 <div class="{{theme}}">
-    <p>manage-sets works!</p>
-    <div id="boxes flex">
-        <p>Zasoby:</p>
-        <div class="box" id="resourceBox">
-            <button (click)="switchClick($event)">gfjj</button>
-            <button (click)="switchClick($event)">gwe</button>
-            <button (click)="switchClick($event)">qqqgfjj</button>
+    <p>Zarządzanie zestawami:</p>
 
-        </div>
-        <p>Zestaw <input></p>
-        <div class="box" id="setBox"> <button (click)="switchClick($event)">wewefjj</button>
+    <div id="boxes flex">
+        <p>Zestaw: <input><button (click)="SaveClick($event)">Zapisz</button>{{saveState}}</p>
+        <div class="box" id="resourceBox"></div>
+        <p>Zasoby:</p>
+        <div class="box" id="setBox"> 
+            <button *ngFor="let block of rawData" id="{{toStr(block)}}" (click)="switchClick($event)">{{block.character}}</button>
         </div>
     </div>
-    <button (click)="SaveClick()">Zapisz</button>
-    <p>{{saveState}}</p>
+
+    
 </div>
