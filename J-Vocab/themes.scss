@@ -2,7 +2,7 @@
 
 %centerize{
   border-radius: 3px;
-  width:fit-content;
+  
   padding: 15px;
   text-align: center;
   margin:auto;
@@ -112,22 +112,64 @@
 %amberThemeDark {
   //background-color: colors.$darkAmber;
   //color: colors.$lightAmber;
+  h1{
+    color: colors.$lightAmber;
+    font-size:4vw;
+  margin: 2vw;
+  }
+  h2{
+    color: colors.$lightAmber;
+    font-size:3vw;
+  margin: 1vw;
+  }
   p, span{
     color: colors.$lightAmber;
+    font-size:2vw;
+  margin: 1vw;
   }
   button, a {
+    font-size:2vw;
     color:colors.$lightAmber;
-    margin: 5px;
+    margin: 1vw;
     background-color: colors.$mainAmber;
-    border: 1px solid colors.$lightAmber;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
-    padding: 10px 6px;
-    border-radius: 5%;
+   // font-size: 16px;
+    padding: 1vw 1vw;
+    border-radius: 0% 15%;
     border: 1px solid colors.$lightAmber;
     cursor: pointer;
+  }
+  .question{
+    font-size:3vw;
+    color:colors.$darkAmber;
+    padding: 3vw;
+    margin: 3vw;
+    background-color: colors.$lightAmber;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+   // font-size: 16px;
+    padding: 2vw 2vw;
+    border-radius: 0% 15%;
+    border: 1px solid colors.$darkAmber;
+    cursor: crosshair;
+  }
+  input{
+    font-size:2vw;
+    color:colors.$darkAmber;
+    padding: 2vw;
+    margin: 2vw;
+    background-color: colors.$lightAmber;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+   // font-size: 16px;
+    padding: 1vw 1vw;
+    border-radius: 0% 15%;
+    border: 1px solid colors.$darkAmber;
+    cursor: crosshair;
   }
 }
 %amberThemeInverse {

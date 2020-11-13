@@ -2,7 +2,7 @@
 
   <div *ngIf="mode==='none'">
     <div class="centerize">
-      <p>options works!</p>
+      <h1>Opcje:</h1>
       <button (click)='setTheme("amberTheme")'>Motyw bursztynowy</button>
       <button (click)='setTheme("amethystTheme")'>Motyw Ametystowy</button>
       <button (click)='setTheme("turquiseTheme")'>Motyw Turkusowy</button>
@@ -12,7 +12,7 @@
       <button (click)='importClick()'>import</button>
 
     </div>
-    <p>nic</p>
+    
   </div>
   <div *ngIf="mode==='export'" class="centerize">
     <p>eksport</p>

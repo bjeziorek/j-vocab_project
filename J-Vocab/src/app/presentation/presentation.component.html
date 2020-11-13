@@ -3,7 +3,9 @@
         <p>Pozostało: {{listToDisplay.length}}</p>
     </div>
     <div *ngIf="summary===false" class="centerize">
-        <p>{{questionText}} ({{romajiText}})</p>
+        <app-furigana [txtObj]="forFuri"></app-furigana>
+   
+       <!-- <p>{{questionText}} ({{romajiText}})</p>-->
         <div *ngIf="answerShown!==true">
             <button (click)="showAnswerClick()">Pokaż odpowiedź</button>
         </div>

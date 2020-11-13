@@ -22,6 +22,7 @@ export class PresentationComponent implements OnInit {
   rawData;
   listToDisplay;
   save;
+  forFuri;
 
   constructor(
     private readonly themeService: ThemesService,
@@ -29,6 +30,7 @@ export class PresentationComponent implements OnInit {
     private readonly saveService: SaveService
   ) {
 
+   
     this.summary = false;
 
     this.chosenSet = dataService.chosenSet;
@@ -42,6 +44,8 @@ export class PresentationComponent implements OnInit {
     this.generateListFromChosenSet(this.chosenSet);
     this.setTexts();
     console.log(this.listToDisplay[0].character);
+ this.dataService.forFurigana.next(this.listToDisplay[0]);
+ this.dataService.forFuriganaStatic=this.listToDisplay[0];
 
   }
 
@@ -75,6 +79,11 @@ export class PresentationComponent implements OnInit {
     this.questionText = this.listToDisplay[0].character;
     this.answerText = this.listToDisplay[0].meaningPL;
     this.romajiText = this.listToDisplay[0].sylabs;
+    this.forFuri = this.listToDisplay[0];
+    this.dataService.forFurigana.next(this.listToDisplay[0]);
+    
+ this.dataService.forFuriganaStatic=this.listToDisplay[0];
+ console.log(this.listToDisplay[0]);
   }
 
   

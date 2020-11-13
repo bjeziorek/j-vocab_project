@@ -1,12 +1,13 @@
+
 <div class="{{theme}}">
     <div class="centerize">
-        <p>Poprawnych odpowiedzi: {{numberOfGoodAnswers}} Niepoprawnych odpowiedzi: {{numberOfBadAnswers}} Pozostało: {{listToDisplay.length}}</p>
+        <p>Poprawnych odpowiedzi: <span class="green">{{numberOfGoodAnswers}}</span> Niepoprawnych odpowiedzi: <span class="red">{{numberOfBadAnswers}}</span> Pozostało: {{listToDisplay.length}}</p>
     </div>
-
+<div class="border">
     <div *ngIf="exerciseType==='abcd'">
-        <p></p>
+        
         <div *ngIf="summary===false" class="centerize">
-            <p>{{questionText}}</p>
+            <section class="question">{{questionText}}</section>
             <div *ngIf="answerShown!==true">
                 <button (click)="answerAbcdClick('a')">{{answerA}}</button>
                 <button (click)="answerAbcdClick('b')">{{answerB}}</button>
@@ -14,33 +15,31 @@
                 <button (click)="answerAbcdClick('d')">{{answerD}}</button>
             </div>
             <div *ngIf="answerShown===true">
-                <p>Poprawna odpowiedź: {{answerText}} {{romaji}}</p>
-                <p>Twoja odpowiedź: {{myAnswerText}} {{correctOrNot}}</p>
+                <p>Poprawna odpowiedź: {{answerText}} {{romaji}}. Twoja odpowiedź: {{myAnswerText}} {{correctOrNot}}</p>
                 <button (click)="nextClick()">Dalej</button>
             </div>
         </div>
     </div>
 
     <div *ngIf="exerciseType==='writing'">
-        <p></p>
+        
         <div *ngIf="summary===false" class="centerize">
-            <p>{{questionText}}</p>
+            <section class="question">{{questionText}}</section>
             <div *ngIf="answerShown!==true">
                 <input [formControl]="answerInput" placeholder="tu wpisz odpowiedź" matInput type='text'>
                 <button (click)="answerWritingClick()">Pokaż odpowiedź</button>
             </div>
             <div *ngIf="answerShown===true">
-                <p>Poprawna odpowiedź: {{answerText}} {{romaji}}</p>
-                <p>Twoja odpowiedź: {{myAnswerText}} {{correctOrNot}}</p>
+                <p>Poprawna odpowiedź: {{answerText}} {{romaji}}. Twoja odpowiedź: {{myAnswerText}} {{correctOrNot}}</p>
                 <button (click)="nextClick()">Dalej</button>
             </div>
         </div>
     </div>
 
     <div *ngIf="exerciseType==='snapping'">
-        <p></p>
+        
         <div *ngIf="summary===false" class="centerize">
-            <p>{{questionText}}</p>
+            <section class="question">{{questionText}}</section>
 
             <div id="boxes flex" *ngIf="answerShown!==true">
                 <p>Ułóż:</p>
@@ -56,14 +55,13 @@
                 <button (click)="answerSnappingClick($event)">Zatwierdź swoją odpowiedź</button>
             </div>
             <div *ngIf="answerShown===true">
-                <p>Poprawna odpowiedź: {{answerText}} {{romaji}}</p>
-                <p>Twoja odpowiedź: {{myAnswerText}} {{correctOrNot}}</p>
+                <p>Poprawna odpowiedź: {{answerText}} {{romaji}}. Twoja odpowiedź: {{myAnswerText}} {{correctOrNot}}</p>
                 <button (click)="nextClick()">Dalej</button>
             </div>
         </div>
 
     </div>
-
+</div>
 
 
     <div *ngIf="summary===true" class="centerize">

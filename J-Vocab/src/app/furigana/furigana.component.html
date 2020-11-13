@@ -1,0 +1,16 @@
+<div class="centerize {{theme}} ">
+    <div class="">
+    <div class="flex">
+
+        <div *ngFor="let i of iteratingArray">
+
+
+            <div class="smallDown" *ngIf="kanaOn"><p class="furi">{{word.kana[i]}}</p></div>
+            <div *ngIf="characterOn"><p class="kanji">{{word.kanji[i]}}</p></div>
+            <div class="smallUp" *ngIf="romajiOn"><p class="furi">{{word.romaji[i]}}</p></div>
+
+        </div>
+
+    </div>
+  <!-- <div *ngIf="meaningOn"><p>{{txtObj.meaningPL}}</p></div>--> 
+</div></div>

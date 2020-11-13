@@ -14,10 +14,18 @@
 .amberTheme {
   @extend %amberThemeMain;
   .button {
-    color: colors.$lightAmber;
+    font-size:2vw;
+    color:colors.$lightAmber;
+    margin: 1vw;
     background-color: colors.$darkAmber;
-    margin: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+   // font-size: 16px;
+    padding: 1vw 1vw;
+    border-radius: 0% 15%;
     border: 1px solid colors.$lightAmber;
+    cursor: pointer;
 
   }
 }
@@ -26,7 +34,6 @@
   .button {
     color: colors.$lightTurquise;
     background-color: colors.$darkTurquise;
-    margin: 5px;
     border: 1px solid colors.$lightTurquise;
 
   }
@@ -37,4 +44,12 @@
 }
 .pressed {
   background-color: black;
+}
+p, span{
+  color: colors.$lightAmber;
+  font-size:2vw;
+
+}
+mat-toolbar{
+  height: auto;
 }

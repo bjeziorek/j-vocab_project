@@ -1,3 +1,5 @@
+import { Data } from './raw-data.model';
+import { Subject } from 'rxjs';
 import { DataBase } from './data-base';
 import { Injectable } from '@angular/core';
 
@@ -8,6 +10,8 @@ export class DataService {
 
   chosenSet = 'none';
   dataFromDB = new DataBase().getResources();
+  forFurigana = new Subject();
+  forFuriganaStatic :Data;
 
   constructor() { }
 
