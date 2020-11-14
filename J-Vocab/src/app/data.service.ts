@@ -11,7 +11,7 @@ export class DataService {
   chosenSet = 'none';
   dataFromDB = new DataBase().getResources();
   forFurigana = new Subject();
-  forFuriganaStatic :Data;
+  forFuriganaStatic;
 
   constructor() { }
 

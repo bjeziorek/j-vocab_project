@@ -2,8 +2,9 @@
     <div class="centerize">
         <p>Pozostało: {{listToDisplay.length}}</p>
     </div>
+    <div class="border">
     <div *ngIf="summary===false" class="centerize">
-        <app-furigana [txtObj]="forFuri"></app-furigana>
+        <app-furigana class="question" [txtObj]="forFuri"></app-furigana>
    
        <!-- <p>{{questionText}} ({{romajiText}})</p>-->
         <div *ngIf="answerShown!==true">
@@ -11,10 +12,12 @@
         </div>
         <div *ngIf="answerShown===true">
             <p>{{answerText}}</p>
+         
             <button (click)="nextClick()">Dalej</button>
         </div>
 
     </div>
+</div>
     <div *ngIf="summary===true" class="centerize">
         <p>Podsumowanie</p>
     </div>

@@ -12,14 +12,14 @@ margin:auto;
       @extend %centerize;
     }
     .kanji{
-        color: colors.$lightAmber;
-        font-size:3vw;
-      margin: 1vw;
+        color: colors.$darkAmber;
+        font-size:2vw;
+      margin: 0.5vw;
     }
     .furi{
-        color: colors.$lightAmber;
-        font-size:1vw;
-      margin: 1vw;
+        color: colors.$darkAmber;
+        font: size 0.7vw;
+      margin: 0.3vw;
     }
   }
   .amethystTheme {

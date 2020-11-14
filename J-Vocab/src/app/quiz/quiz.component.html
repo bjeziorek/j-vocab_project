@@ -7,15 +7,30 @@
     <div *ngIf="exerciseType==='abcd'">
         
         <div *ngIf="summary===false" class="centerize">
-            <section class="question">{{questionText}}</section>
+         
+            <section  *ngIf="textDirection !== 'jpToPl'">   
+            <span class="question">{{questionText}}</span>
+            </section>
+            <section  *ngIf="textDirection === 'jpToPl'">   
+            <app-furigana class="question" [txtObj]="forFuri"></app-furigana>
+            
+            </section>
             <div *ngIf="answerShown!==true">
-                <button (click)="answerAbcdClick('a')">{{answerA}}</button>
-                <button (click)="answerAbcdClick('b')">{{answerB}}</button>
-                <button (click)="answerAbcdClick('c')">{{answerC}}</button>
-                <button (click)="answerAbcdClick('d')">{{answerD}}</button>
+                <button (click)="answerAbcdClick('a',$event)"><app-furigana *ngIf="textDirection === 'plToJp'" [txtObj]="answerA"></app-furigana><span  *ngIf="textDirection !== 'plToJp'" >{{answerA.meaningPL}}</span></button>
+                <button (click)="answerAbcdClick('b',$event)"><app-furigana *ngIf="textDirection === 'plToJp'" [txtObj]="answerB"></app-furigana><span  *ngIf="textDirection !== 'plToJp'" >{{answerB.meaningPL}}</span></button>
+                <button (click)="answerAbcdClick('c',$event)"><app-furigana *ngIf="textDirection === 'plToJp'" [txtObj]="answerC"></app-furigana><span  *ngIf="textDirection !== 'plToJp'" >{{answerC.meaningPL}}</span></button>
+                <button (click)="answerAbcdClick('d',$event)"><app-furigana *ngIf="textDirection === 'plToJp'" [txtObj]="answerD"></app-furigana><span  *ngIf="textDirection !== 'plToJp'" >{{answerD.meaningPL}}</span></button>
             </div>
             <div *ngIf="answerShown===true">
-                <p>Poprawna odpowiedź: {{answerText}} {{romaji}}. Twoja odpowiedź: {{myAnswerText}} {{correctOrNot}}</p>
+                <p class="answer">Poprawna odpowiedź:
+                    <app-furigana [txtObj]="forFuri"></app-furigana>
+                    {{answerText}}
+                    </p>
+                    <p> Twoja odpowiedź: 
+                        <span *ngIf="textDirection === 'plToJp'">{{myAnswerText.character}}</span> 
+                        <span *ngIf="textDirection !== 'plToJp'">{{myAnswerText.meaningPL}}</span> 
+                        
+                        {{correctOrNot}}</p>
                 <button (click)="nextClick()">Dalej</button>
             </div>
         </div>
@@ -24,13 +39,15 @@
     <div *ngIf="exerciseType==='writing'">
         
         <div *ngIf="summary===false" class="centerize">
+           
             <section class="question">{{questionText}}</section>
             <div *ngIf="answerShown!==true">
                 <input [formControl]="answerInput" placeholder="tu wpisz odpowiedź" matInput type='text'>
                 <button (click)="answerWritingClick()">Pokaż odpowiedź</button>
             </div>
             <div *ngIf="answerShown===true">
-                <p>Poprawna odpowiedź: {{answerText}} {{romaji}}. Twoja odpowiedź: {{myAnswerText}} {{correctOrNot}}</p>
+                <p class="answer">Poprawna odpowiedź: <app-furigana [txtObj]="forFuri"></app-furigana> {{romajiString}}</p>
+                <p>Twoja odpowiedź: {{myAnswerText}} {{correctOrNot}}</p>
                 <button (click)="nextClick()">Dalej</button>
             </div>
         </div>
@@ -39,15 +56,16 @@
     <div *ngIf="exerciseType==='snapping'">
         
         <div *ngIf="summary===false" class="centerize">
-            <section class="question">{{questionText}}</section>
+           
+            <section class="question"> {{questionText}}</section>
 
             <div id="boxes flex" *ngIf="answerShown!==true">
                 <p>Ułóż:</p>
                 <div class="box" id="resourceBox"></div>
                 <p>Dostępne elementy:</p>
                 <div class="box" id="setBox"> 
-                    <button *ngFor="let block of snappingBlocksList"
-                        (click)="switchClick($event)">{{block}}</button>
+                    <button *ngFor="let block of snappingBlocksList2"
+                        (click)="switchClick($event)"><app-furigana class="{{block.sylabs}}" [txtObj]="block"></app-furigana></button>
                 </div>
             </div>
 
@@ -55,7 +73,8 @@
                 <button (click)="answerSnappingClick($event)">Zatwierdź swoją odpowiedź</button>
             </div>
             <div *ngIf="answerShown===true">
-                <p>Poprawna odpowiedź: {{answerText}} {{romaji}}. Twoja odpowiedź: {{myAnswerText}} {{correctOrNot}}</p>
+                <p class="answer">Poprawna odpowiedź: <app-furigana [txtObj]="forFuri"></app-furigana>{{answerText}} {{romajiString}}</p>
+                <p> Twoja odpowiedź: {{myAnswerText}} {{correctOrNot}}</p>
                 <button (click)="nextClick()">Dalej</button>
             </div>
         </div>

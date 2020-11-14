@@ -1,3 +1,4 @@
+import { logging } from 'protractor';
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Data } from '@angular/router';
@@ -26,26 +27,30 @@ export class QuizComponent implements OnInit {
   summaryText;
   correctOrNot = '?';
 
-  answerA = 'odpA';
-  answerB = 'odpB';
-  answerC = 'odpC';
-  answerD = 'odpD';
+  answerA: Data;// = 'odpA';
+  answerB: Data;// = 'odpB';
+  answerC: Data;// = 'odpC';
+  answerD: Data;// = 'odpD';
 
   numberOfGoodAnswers = 0;
   numberOfBadAnswers = 0;
 
   romaji = [];
+  romajiString='';
 
   snappingBlocksList = [];
+  snappingBlocksList2 = [];
 
   textDirection = 'jpToPl'; //
 
   chosenSet;
   rawData: Data[];
-  listToDisplay;
+  listToDisplay: Data[];
   save;
 
   saveState = '';
+
+  forFuri;
 
   constructor(
     private readonly themeService: ThemesService,
@@ -61,9 +66,11 @@ export class QuizComponent implements OnInit {
     if (this.chosenSet === 'none') {
       this.chosenSet = dataService.generateSet(this.rawData, this.save);
     }
-
     this.generateListFromChosenSet(this.chosenSet);
     this.shuffleArray(this.listToDisplay);
+    this.dataService.forFurigana.next(this.listToDisplay[0]);
+    this.dataService.forFuriganaStatic = this.listToDisplay[0];
+
     this.setTexts();
     this.randomizeTypeOfExercise();
 
@@ -96,23 +103,97 @@ export class QuizComponent implements OnInit {
   generateKanjiListForSnappingExercise() {
     this.setTexts();
     this.snappingBlocksList = [];
+    this.snappingBlocksList2 = [];
+
+   /* for (let i = 0; i < this.listToDisplay[0].length; i++) {
+      this.snappingBlocksList.push({
+        character: this.listToDisplay[0].character,
+        sylabs: this.listToDisplay[0].sylabs//,
+        //  meaningPL:this.listToDisplay[0].meaningPL
+      });
+    }
+
+    let rawList = [...this.rawData];
+    rawList = this.removeObjectFromList(this.listToDisplay[0], rawList);
+    let r = this.random(0, rawList.length);
+    for (let i = 0; i < rawList[r].character.length; i++) {
+      this.snappingBlocksList.push({
+        character: rawList[r].character[i],
+        sylabs: rawList[r].sylabs[i]
+      });
+    }
+    rawList = this.removeObjectFromList(rawList[r], rawList);
+    r = this.random(0, rawList.length);
+    for (let i = 0; i < rawList[r].character.length; i++) {
+      this.snappingBlocksList.push({
+        character: rawList[r].character[i],
+        sylabs: rawList[r].sylabs[i]
+      });
+    }
+    this.snappingBlocksList = this.shuffleArray(this.snappingBlocksList);
+    let character = '';
+    let sylabs = [];
+    for (let i = 0; i < this.snappingBlocksList.length; i++) {
+      character += this.snappingBlocksList[i].character;
+      sylabs.push[this.snappingBlocksList[i].sylabs];
+    }
+    this.snappingBlocksList=[];
+    this.snappingBlocksList.push({
+      character:character,
+      sylabs:sylabs
+    });*/
+    
     for (const char of this.answerText) {
       this.snappingBlocksList.push(char);
+    }
+
+    for (let i=0;i<this.listToDisplay[0].character.length;i++) {
+      this.snappingBlocksList.push(this.listToDisplay[0].character[i]);
+      this.snappingBlocksList2.push({
+        character: this.listToDisplay[0].character[i],
+        sylabs:[this.listToDisplay[0].sylabs[i]]
+      });
     }
 
     let rawList = [...this.rawData];
     rawList = this.removeObjectFromList(this.listToDisplay[0], rawList);
     const r = this.random(0, rawList.length);
-    for (const char2 of rawList[r].character) {
+   /*for (const char2 of rawList[r].character) {
       this.snappingBlocksList.push(char2);
+    }*/
+    for (let i=0;i<rawList[r].character.length;i++) {
+      this.snappingBlocksList.push(rawList[r].character[i]);
+      this.snappingBlocksList2.push({
+        character: rawList[r].character[i],
+        sylabs: [rawList[r].sylabs[i]]
+      });
     }
     rawList = this.removeObjectFromList(rawList[r], rawList);
-    for (const char2 of rawList[this.random(0, rawList.length)].character) {
+    /*for (const char2 of rawList[this.random(0, rawList.length)].character) {
       this.snappingBlocksList.push(char2);
+    }*/
+    const temp=rawList[this.random(0, rawList.length)];
+    for (let i=0;i<temp.character.length;i++) {
+      this.snappingBlocksList.push(temp.character[i]);
+      this.snappingBlocksList2.push({
+        character: temp.character[i],
+        sylabs: [temp.sylabs[i]]
+      });
     }
-
     this.snappingBlocksList = this.shuffleArray(this.snappingBlocksList);
+    this.snappingBlocksList2 = this.shuffleArray(this.snappingBlocksList2);
+   
+  /*this.snappingBlocksList2=[];
+    for(let i=0;i<this.snappingBlocksList.length;i++){
+      this.snappingBlocksList2.push({
+        character: this.snappingBlocksList[i],
+        sylabs: ['KO', '-', 'SU'],
+            
+      });
+    }
+*/
   }
+
 
   generateListFromChosenSet(chosenSet) {
     this.listToDisplay = [...this.rawData]; //clone a nie referencja!!
@@ -158,21 +239,21 @@ export class QuizComponent implements OnInit {
     console.log(poolOfPossibleAnswer);
 
     if (this.textDirection === 'plToJp') {
-      this.answerA = this.listToDisplay[0].character;
+      this.answerA = this.listToDisplay[0];//.character;
       poolOfPossibleAnswer = this.removeObjectFromList(this.answerA, poolOfPossibleAnswer);
-      this.answerB = poolOfPossibleAnswer[this.random(0, poolOfPossibleAnswer.length)].character;
+      this.answerB = poolOfPossibleAnswer[this.random(0, poolOfPossibleAnswer.length)];//.character;
       poolOfPossibleAnswer = this.removeObjectFromList(this.answerB, poolOfPossibleAnswer);
-      this.answerC = poolOfPossibleAnswer[this.random(0, poolOfPossibleAnswer.length)].character;
+      this.answerC = poolOfPossibleAnswer[this.random(0, poolOfPossibleAnswer.length)]//..character;
       poolOfPossibleAnswer = this.removeObjectFromList(this.answerC, poolOfPossibleAnswer);
-      this.answerD = poolOfPossibleAnswer[this.random(0, poolOfPossibleAnswer.length)].character;
+      this.answerD = poolOfPossibleAnswer[this.random(0, poolOfPossibleAnswer.length)]//..character;
     } else {
-      this.answerA = this.listToDisplay[0].meaningPL;
+      this.answerA = this.listToDisplay[0];//.meaningPL;
       poolOfPossibleAnswer = this.removeObjectFromList(this.answerA, poolOfPossibleAnswer);
-      this.answerB = poolOfPossibleAnswer[this.random(0, poolOfPossibleAnswer.length)].meaningPL;
+      this.answerB = poolOfPossibleAnswer[this.random(0, poolOfPossibleAnswer.length)];//.meaningPL;
       poolOfPossibleAnswer = this.removeObjectFromList(this.answerB, poolOfPossibleAnswer);
-      this.answerC = poolOfPossibleAnswer[this.random(0, poolOfPossibleAnswer.length)].meaningPL;
+      this.answerC = poolOfPossibleAnswer[this.random(0, poolOfPossibleAnswer.length)];//.meaningPL;
       poolOfPossibleAnswer = this.removeObjectFromList(this.answerC, poolOfPossibleAnswer);
-      this.answerD = poolOfPossibleAnswer[this.random(0, poolOfPossibleAnswer.length)].meaningPL;
+      this.answerD = poolOfPossibleAnswer[this.random(0, poolOfPossibleAnswer.length)];//.meaningPL;
     }
 
     let answers = [this.answerA, this.answerB, this.answerC, this.answerD];
@@ -193,22 +274,28 @@ export class QuizComponent implements OnInit {
     } else {
       this.textDirection = 'plToJp';
     }
-
   }
 
   setTexts() {
+    this.romajiString='';
     this.romaji = this.listToDisplay[0].sylabs;
+    for(let i=0;i<this.listToDisplay[0].length;i++){
+      this.romajiString+=this.listToDisplay[0].sylabs[i];
+    }
 
     if (this.textDirection === 'jpToPl') {
       this.questionText = this.listToDisplay[0].character;
       this.answerText = this.listToDisplay[0].meaningPL;
-
     } else {
       if (this.textDirection === 'plToJp') {
         this.questionText = this.listToDisplay[0].meaningPL;
         this.answerText = this.listToDisplay[0].character;
       }
     }
+    this.forFuri = this.listToDisplay[0];
+    this.dataService.forFurigana.next(this.listToDisplay[0]);
+
+    this.dataService.forFuriganaStatic = this.listToDisplay[0];
   }
 
   showAnswerClick() {
@@ -216,7 +303,11 @@ export class QuizComponent implements OnInit {
     for (let i in this.romaji) {
       concatedRomaji += this.romaji[i];
     }
-    if (this.answerText === this.myAnswerText || concatedRomaji === this.myAnswerText) {
+    console.log(this.answerText ,this.myAnswerText.meaningPL,this.answerText===this.myAnswerText.meaningPL);
+    if (this.answerText === this.myAnswerText ||
+       concatedRomaji === this.myAnswerText ||
+        this.answerText==this.myAnswerText.meaningPL ||
+         this.answerText==this.myAnswerText.character) {
       this.correctOrNot = 'dobrze! :)';
       this.numberOfGoodAnswers++;
     } else {
@@ -226,7 +317,8 @@ export class QuizComponent implements OnInit {
     this.answerShown = true;
   }
 
-  answerAbcdClick(letter) {
+  answerAbcdClick(letter, event) {
+    console.log('e', event);
     switch (letter) {
       case 'a':
         this.myAnswerText = this.answerA;
@@ -250,7 +342,9 @@ export class QuizComponent implements OnInit {
     this.myAnswerText = '';
     for (let i in chosenWords) {
       if (typeof (chosenWords[i]) === 'object') {
-        this.myAnswerText += (chosenWords[i] as HTMLButtonElement).innerText;
+        console.log((chosenWords[i] as HTMLButtonElement).children[0].className);
+        //this.myAnswerText += (chosenWords[i] as HTMLButtonElement).innerText;
+        this.myAnswerText +=(chosenWords[i] as HTMLButtonElement).children[0].className;
       }
     }
 
@@ -266,8 +360,8 @@ export class QuizComponent implements OnInit {
     this.answerInput.reset();
     this.answerShown = false;
     if (this.listToDisplay.length > 1) {
-     
-      
+
+
       this.listToDisplay.shift();
       this.shuffleArray(this.listToDisplay);
       this.randomizeTypeOfExercise();
@@ -278,11 +372,19 @@ export class QuizComponent implements OnInit {
   }
 
   switchClick(event: Event): void {
-    if ((event.target as HTMLButtonElement).parentElement.id === 'resourceBox') {
-      (event.target as HTMLButtonElement).parentElement.parentElement.children[3].appendChild(event.target as HTMLButtonElement);
+
+
+    let btn = (event.target as Element);
+    console.log(btn);
+    while (btn.nodeName !== "BUTTON") {
+      btn = btn.parentElement;
+    }
+    console.log(btn);
+    if ((btn as HTMLButtonElement).parentElement.id === 'resourceBox') {
+      (btn as HTMLButtonElement).parentElement.parentElement.children[3].appendChild(btn as HTMLButtonElement);
     } else {
-      if ((event.target as HTMLButtonElement).parentElement.id === 'setBox') {
-        (event.target as HTMLButtonElement).parentElement.parentElement.children[1].appendChild(event.target as HTMLButtonElement);
+      if ((btn as HTMLButtonElement).parentElement.id === 'setBox') {
+        (btn as HTMLButtonElement).parentElement.parentElement.children[1].appendChild(btn as HTMLButtonElement);
       }
     }
     this.saveState = '';

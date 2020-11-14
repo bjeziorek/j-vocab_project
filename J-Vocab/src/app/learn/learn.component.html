@@ -1,8 +1,9 @@
 <div class="{{theme}}">
-  <div class="centerize">
+ 
+  <div *ngIf="mode==='none'"> 
+    <div class="centerize">
     <h1>Nauka języka japońskiego</h1>
   </div>
-  <div *ngIf="mode==='none'">
     <div class="centerize">
       <div class="border">
         <button (click)='presentationClick()'>Prezentacja materiału</button>

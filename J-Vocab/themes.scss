@@ -119,24 +119,24 @@
   }
   h2{
     color: colors.$lightAmber;
-    font-size:3vw;
+    font-size:2vw;
   margin: 1vw;
   }
   p, span{
     color: colors.$lightAmber;
-    font-size:2vw;
+    font-size:1vw;
   margin: 1vw;
   }
   button, a {
     font-size:2vw;
     color:colors.$lightAmber;
-    margin: 1vw;
+    margin: 0.5vw;
     background-color: colors.$mainAmber;
     text-align: center;
     text-decoration: none;
     display: inline-block;
    // font-size: 16px;
-    padding: 1vw 1vw;
+    padding: 0.3vw 0.3vw;
     border-radius: 0% 15%;
     border: 1px solid colors.$lightAmber;
     cursor: pointer;
@@ -146,6 +146,21 @@
     color:colors.$darkAmber;
     padding: 3vw;
     margin: 3vw;
+    background-color: colors.$lightAmber;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+   // font-size: 16px;
+    padding: 2vw 2vw;
+    border-radius: 0% 15%;
+    border: 1px solid colors.$darkAmber;
+    cursor: crosshair;
+  }
+  .answer{
+    font-size:2vw;
+    color:colors.$darkAmber;
+    padding: 2vw;
+    margin: 2vw;
     background-color: colors.$lightAmber;
     text-align: center;
     text-decoration: none;
