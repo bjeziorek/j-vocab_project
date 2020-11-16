@@ -1,7 +1,7 @@
 <div class="centerize {{theme}} ">
     <div class="">
     <div class="flex">
-
+<!--
         <div *ngFor="let i of iteratingArray">
 
 
@@ -9,6 +9,20 @@
             <div *ngIf="characterOn"><p class="kanji">{{word.kanji[i]}}</p></div>
             <div class="smallUp" *ngIf="romajiOn"><p class="furi">{{word.romaji[i]}}</p></div>
 
+        </div>
+-->
+        <div>
+            <table>
+                <tr>
+                    <td class="smallDown" *ngFor="let i of iteratingArray">{{word.kana[i]}}</td>
+                </tr>
+                <tr>
+                    <td class="kanjiFont" *ngFor="let i of iteratingArray">{{word.kanji[i]}}</td>
+                </tr>
+                <tr>
+                    <td class="smallUp" *ngFor="let i of iteratingArray">{{word.romaji[i]}}</td>
+                </tr>
+            </table>
         </div>
 
     </div>

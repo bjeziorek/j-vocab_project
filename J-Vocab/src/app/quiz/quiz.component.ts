@@ -337,8 +337,15 @@ export class QuizComponent implements OnInit {
   }
 
   answerSnappingClick(event: Event): void {
-    const chosenWords = (event.target as HTMLDivElement).parentElement.parentElement.children[1].children[1].children;
+   
+    //const chosenWords = (event.target as HTMLDivElement).parentElement.parentElement.children[1].children[1].children;
+    let chosenWords = (event.target as HTMLDivElement).parentElement.parentElement.children[1].children[1].children;
 
+
+    const a = (event.target as HTMLDivElement).parentElement.children[0].children[1].children;
+    console.log(a);
+ 
+    chosenWords=a;
     this.myAnswerText = '';
     for (let i in chosenWords) {
       if (typeof (chosenWords[i]) === 'object') {
@@ -353,11 +360,15 @@ export class QuizComponent implements OnInit {
 
   answerWritingClick() {
     this.myAnswerText = this.answerInput.value;
+    if(!this.myAnswerText){
+      this.myAnswerText='<<brak odpowiedzi>>';
+    }
     this.showAnswerClick();
   }
 
   nextClick() {
     this.answerInput.reset();
+    this.myAnswerText=null;
     this.answerShown = false;
     if (this.listToDisplay.length > 1) {
 

@@ -106,7 +106,6 @@ furiObj:Data;
     });
     this.settingsService.updateData.subscribe((data: Data) => {
       this.txtObj = data;
-      console.log('fdhdhdhfhfh', data);
       this.x90deg(this.txtObj);
     });
     this.x90deg(this.txtObj);
@@ -163,7 +162,7 @@ console.log('txtObj',txtObj);
       processed = new Converter().toKana(processed);
       this.kanaArray.push(processed);
       if(this.kanaArray[this.kanaArray.length-1]===this.kanjiArray[this.kanaArray.length-1]){
-        this.kanaArray[this.kanaArray.length-1]='.';
+        this.kanaArray[this.kanaArray.length-1]=''; //kropeczka!
       }
       
     }

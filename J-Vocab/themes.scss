@@ -81,7 +81,11 @@
   //color: colors.$lightTurquise;
   p, span{
     color: colors.$lightTurquise;
+    padding: 10px;
+    margin: 10px;
+    line-height: 5;
   }
+ 
   button, a {
     color: colors.$lightTurquise;
     margin: 5px;
@@ -114,21 +118,17 @@
   //color: colors.$lightAmber;
   h1{
     color: colors.$lightAmber;
-    font-size:4vw;
+    font-size:40px;//4vw;
   margin: 2vw;
   }
-  h2{
-    color: colors.$lightAmber;
-    font-size:2vw;
-  margin: 1vw;
-  }
+ 
   p, span{
     color: colors.$lightAmber;
-    font-size:1vw;
+    font-size:20px;//1vw;
   margin: 1vw;
   }
   button, a {
-    font-size:2vw;
+    font-size:26px;//2vw;
     color:colors.$lightAmber;
     margin: 0.5vw;
     background-color: colors.$mainAmber;
@@ -136,28 +136,43 @@
     text-decoration: none;
     display: inline-block;
    // font-size: 16px;
-    padding: 0.3vw 0.3vw;
+   padding: 10px;
     border-radius: 0% 15%;
     border: 1px solid colors.$lightAmber;
     cursor: pointer;
+    transition: 0.3s;
   }
-  .question{
-    font-size:3vw;
+  button:hover, a:hover {
+    font-size:26px;//2vw;
     color:colors.$darkAmber;
-    padding: 3vw;
-    margin: 3vw;
+    margin: 0.5vw;
     background-color: colors.$lightAmber;
     text-align: center;
     text-decoration: none;
     display: inline-block;
    // font-size: 16px;
-    padding: 2vw 2vw;
+   padding: 10px;
+    border-radius: 15% 0%;
+    border: 1px solid colors.$lightAmber;
+    cursor: pointer;
+  }
+  .question{
+    font-size:26px;//3vw;
+    color:colors.$darkAmber;
+    padding: 3vw;
+    margin: 1vw;
+    background-color: colors.$lightAmber;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+   // font-size: 16px;
+   padding: 10px;
     border-radius: 0% 15%;
     border: 1px solid colors.$darkAmber;
     cursor: crosshair;
   }
   .answer{
-    font-size:2vw;
+    font-size:26px;//2vw;
     color:colors.$darkAmber;
     padding: 2vw;
     margin: 2vw;
@@ -166,13 +181,13 @@
     text-decoration: none;
     display: inline-block;
    // font-size: 16px;
-    padding: 2vw 2vw;
+   padding: 10px;
     border-radius: 0% 15%;
     border: 1px solid colors.$darkAmber;
     cursor: crosshair;
   }
   input{
-    font-size:2vw;
+    font-size:20px;//2vw;
     color:colors.$darkAmber;
     padding: 2vw;
     margin: 2vw;
@@ -181,7 +196,7 @@
     text-decoration: none;
     display: inline-block;
    // font-size: 16px;
-    padding: 1vw 1vw;
+   padding: 10px;
     border-radius: 0% 15%;
     border: 1px solid colors.$darkAmber;
     cursor: crosshair;

@@ -621,7 +621,7 @@ export class DataBase {
         {
             character: '的',
             sylabs: ['teki'],
-            meaningPL: '-yczny, -owy itp, robi z rzeczownika przymiotnik',
+            meaningPL: '-yczny, -owy itp, robi z rz. przym.',
             tags: ['nigashitaSakana']
         },
         {
@@ -813,7 +813,7 @@ export class DataBase {
         {
             character: 'ゴロゴロ',
             sylabs: ['GO', 'RO', 'GO', 'RO'],
-            meaningPL: '(onomatopeja) grzmot, duże toczące się coś, burczenie w brzuchu, nic nie robienie',
+            meaningPL: '(onomatopeja) grzmot, nic nie robienie', //duże toczące się coś, burczenie w brzuchu, nic nie robienie',
             tags: ['nigashitaSakana']
         },
         {
@@ -885,7 +885,7 @@ export class DataBase {
         {
             character: 'アバタもエクボ',
             sylabs: ['A', 'BA', 'TA', 'mo', 'E', 'KU', 'BO'],
-            meaningPL: '(idiom) miłość jest ślepa (gdy się jest zakochanym nawet blizny po ospie wyglądają jak dołeczki)',
+            meaningPL: '(idiom) miłość jest ślepa',// (gdy się jest zakochanym nawet blizny po ospie wyglądają jak dołeczki)',
             tags: ['nigashitaSakana']
         },
         {

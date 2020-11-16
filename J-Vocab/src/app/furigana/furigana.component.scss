@@ -1,69 +1,73 @@
 @use './themes.scss';
 @use './colors.scss';
 
-.bord{
-border: 1px solid red;
-margin:auto;
+.bord {
+  border: 1px solid red;
+  margin: auto;
 }
 
 .amberTheme {
-    @extend %amberThemeDark;
-    .centerize {
-      @extend %centerize;
-    }
-    .kanji{
-        color: colors.$darkAmber;
-        font-size:2vw;
-      margin: 0.5vw;
-    }
-    .furi{
-        color: colors.$darkAmber;
-        font: size 0.7vw;
-      margin: 0.3vw;
-    }
+  @extend %amberThemeDark;
+  .centerize {
+    @extend %centerize;
   }
-  .amethystTheme {
-    @extend %amethystThemeDark;
-    .centerize {
-      @extend %centerize;
-    }
+  .kanji {
+    color: colors.$darkAmber;
+    font-size: 2vw;
+    margin: 0.5vw;
   }
-  .turquiseTheme {
-    @extend %turquiseThemeDark;
-    .centerize {
-      @extend %centerize;
-    }
+  .furi {
+    color: colors.$darkAmber;
+    font: size 0.7vw;
+    margin: 0.3vw;
   }
+}
+.amethystTheme {
+  @extend %amethystThemeDark;
+  .centerize {
+    @extend %centerize;
+  }
+}
+.turquiseTheme {
+  @extend %turquiseThemeDark;
+  .centerize {
+    @extend %centerize;
+  }
+}
 
+.kanjiFont {
+  font-size: 40px;
+  height: 40px;
+  text-align: center;
+ // padding:10px;
+}
 
+.smallUp {
+  font-size: 18px;
+  height: 22px;
 
-   .smallUp {
-     font-size: xx-small;
-     height: fit-content;
-     text-align: center;
-   //  margin-top: -1vw;
-    
-   }
-   .smallDown {
-     font-size: xx-small;
-     height: fit-content;
-     text-align: center;
-    
-  //   margin-bottom: -1vw;
-   }
-   .flex {
-     display: flex;
-     flex-wrap: nowrap;
-     justify-content: center;
-    
-   }
-   .invisible {
-     color:rgba(255, 255, 255, 0);
-   }
-   
-   div{
-    // border:1px solid black;
-   }
-   span{
-     // border:1px solid red;
-     }
+ // margin-top: -22px;
+  margin: auto;
+}
+.smallDown {
+  font-size: 18px;
+  height: 22px;
+  text-align: center;
+
+ // margin-bottom: -32px;
+}
+.flex {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+.invisible {
+  color: rgba(255, 255, 255, 0);
+}
+
+div {
+  // border:1px solid black;
+}
+span {
+  // border:1px solid red;
+}
