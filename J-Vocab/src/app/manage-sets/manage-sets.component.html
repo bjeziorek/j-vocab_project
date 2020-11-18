@@ -2,7 +2,7 @@
     <h1>Zarządzanie zestawami:</h1>
 
     <div id="boxes flex">
-        <p>Tworzony zestaw (wybierz minimum 4 elementy, żeby móc zapisać):
+        <p>Tworzony zestaw <span *ngIf="not0Elements<4"> wybierz minimum 4 elementy, żeby móc zapisać </span>:
             <button *ngIf="not0Elements>0" (click)="clearListClick($event)">Wyczyść listę</button>
             <button *ngIf="not0Elements>3" (click)="saveClick($event)">Zapisz</button>{{saveState}}
         </p>
