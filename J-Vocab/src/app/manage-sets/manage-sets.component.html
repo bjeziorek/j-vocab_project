@@ -1,14 +1,24 @@
 <div class="{{theme}}">
-    <p>Zarządzanie zestawami:</p>
+    <h1>Zarządzanie zestawami:</h1>
 
     <div id="boxes flex">
-        <p>Zestaw: <input><button (click)="SaveClick($event)">Zapisz</button>{{saveState}}</p>
-        <div class="box" id="resourceBox"></div>
-        <p>Zasoby:</p>
-        <div class="box" id="setBox"> 
+        <p>Tworzony zestaw (wybierz minimum 4 elementy, żeby móc zapisać):
+            <button *ngIf="not0Elements>0" (click)="clearListClick($event)">Wyczyść listę</button>
+            <button *ngIf="not0Elements>3" (click)="saveClick($event)">Zapisz</button>{{saveState}}
+        </p>
+        <div class="box border" id="resourceBox"></div>
+        <p>Wybierz zagadnienia do nowego zestawu z poniższej listy:</p>
+        <div class="box border" id="setBox"> 
             <button *ngFor="let block of rawData" id="{{toStr(block)}}" (click)="switchClick($event)">{{block.character}}</button>
         </div>
     </div>
-
-    
+    <div>
+        <h1>Zapisane zestawy</h1>
+        <div *ngFor="let item of loadedData">
+        <p class="border">
+            <span  *ngFor="let el of item">{{el.character}}</span>
+            <button (click)="deleteClick($event)" id="{{item | json}}">Usuń zestaw</button>
+        </p>
+       </div>
+    </div>
 </div>

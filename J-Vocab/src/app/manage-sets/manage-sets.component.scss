@@ -6,18 +6,69 @@
     .box{
         border: 1px solid colors.$lightAmber;
     }
+    .border{
+        border-radius: 0px 35px;
+        border: 2px solid colors.$lightAmberTrans;
+        margin: 1vw;
+        padding: 1vw;
+        background-color:colors.$fullTransparent;
+        transition: 0.3s;
+      }
+      .border:hover{
+        border-radius: 35px 0px;
+        border: 2px solid colors.$lightAmber;
+        margin-top: 3vw;
+        margin-bottom: 3vw;
+        padding: 1vw;
+        background-color:colors.$darkAmberTrans ;
+    
+      }
 }
 .amethystTheme {
     @extend %amethystThemeDark;
     .box{
         border: 1px solid colors.$lightPurple;
     }
+    .border{
+        border-radius: 0px 35px;
+        border: 2px solid colors.$lightPurpleTrans;
+        margin: 1vw;
+        padding: 1vw;
+        background-color:colors.$fullTransparent;
+        transition: 0.3s;
+      }
+      .border:hover{
+        border-radius: 35px 0px;
+        border: 2px solid colors.$lightPurple;
+        margin-top: 3vw;
+        margin-bottom: 3vw;
+        padding: 1vw;
+        background-color:colors.$darkPurpleTrans ;
+    
+      }
 }
 .turquiseTheme {
     @extend %turquiseThemeDark;
     .box{
         border: 1px solid colors.$lightTurquise;
     }
+    .border{
+        border-radius: 0px 35px;
+        border: 2px solid colors.$lightTurquiseTrans;
+        margin: 1vw;
+        padding: 1vw;
+        background-color:colors.$fullTransparent;
+        transition: 0.3s;
+      }
+      .border:hover{
+        border-radius: 35px 0px;
+        border: 2px solid colors.$lightTurquise;
+        margin-top: 3vw;
+        margin-bottom: 3vw;
+        padding: 1vw;
+        background-color:colors.$darkTurquiseTrans ;
+    
+      }
 }
 
 

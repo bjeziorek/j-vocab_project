@@ -8,7 +8,8 @@ import { Injectable } from '@angular/core';
 })
 export class DataService {
 
-  chosenSet = 'none';
+  chosenSet = [];
+  chosenSetDynamic = new Subject();
   dataFromDB = new DataBase().getResources();
   forFurigana = new Subject();
   forFuriganaStatic;

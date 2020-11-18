@@ -1,24 +1,30 @@
 <div class="{{theme}}">
-    <div class="centerize">
-        <p>Pozostało: {{listToDisplay.length}}</p>
-    </div>
-    <div class="border">
-    <div *ngIf="summary===false" class="centerize">
-        <app-furigana class="question" [txtObj]="forFuri"></app-furigana>
-   
-       <!-- <p>{{questionText}} ({{romajiText}})</p>-->
-        <div *ngIf="answerShown!==true">
-            <button (click)="showAnswerClick()">Pokaż odpowiedź</button>
-        </div>
-        <div *ngIf="answerShown===true">
-            <p>{{answerText}}</p>
-         
-            <button (click)="nextClick()">Dalej</button>
-        </div>
 
+
+    <div *ngIf="summary===false" >
+        
+        <div class="border centerize">
+            <div class="centerize">
+                <p>Pozostało: {{listToDisplay.length}}</p>
+            </div>
+            <app-furigana class="question" [txtObj]="forFuri"></app-furigana>
+
+            <!-- <p>{{questionText}} ({{romajiText}})</p>-->
+            <div *ngIf="answerShown!==true">
+                <button (click)="showAnswerClick()">Pokaż odpowiedź</button>
+            </div>
+            <div *ngIf="answerShown===true">
+                <p>{{answerText}}</p>
+
+                <button (click)="nextClick()">Dalej</button>
+            </div>
+
+        </div>
     </div>
-</div>
-    <div *ngIf="summary===true" class="centerize">
-        <p>Podsumowanie</p>
+    <div *ngIf="summary===true" class=" border centerize">
+        <p><span>Przeglądnięto </span><span>{{chosenSet.length}}</span> 
+            <span *ngIf="grammarBool234">elementy.</span>
+            <span *ngIf="!grammarBool234">elementów.</span>
+        </p>
     </div>
 </div>

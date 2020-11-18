@@ -15,16 +15,19 @@ export class ManageSetsComponent implements OnInit {
   theme = 'amethystTheme';
   saveState = '';
   rawData: Data[];
-  saveHelper=new SaveHelper();
+  saveHelper = new SaveHelper();
+  loadedData;
+  keyStringForSavedSets = 'set1';
+  not0Elements = 0;
 
   constructor(
     private readonly themeService: ThemesService,
     private readonly dataService: DataService,
     private readonly saveService: SaveService
   ) {
-   this.rawData = dataService.dataFromDB;
-   this.saveHelper.save('test',this.rawData);
-
+    this.rawData = dataService.dataFromDB;
+    this.saveHelper.save('test', this.rawData);
+    this.loadedData = this.saveHelper.load(this.keyStringForSavedSets);
   }
   ngOnInit(): void {
     this.theme = this.themeService.currentTheme;
@@ -33,42 +36,62 @@ export class ManageSetsComponent implements OnInit {
     });
   }
 
-toStr(obj:Data):string{
-  return JSON.stringify(obj);
-}
+  toStr(obj: Data): string {
+    return JSON.stringify(obj);
+  }
 
   switchClick(event: Event): void {
     if ((event.target as HTMLButtonElement).parentElement.id === 'resourceBox') {
+      this.not0Elements--;
       (event.target as HTMLButtonElement).parentElement.parentElement.children[3].appendChild(event.target as HTMLButtonElement);
     } else {
       if ((event.target as HTMLButtonElement).parentElement.id === 'setBox') {
+        this.not0Elements++;
         (event.target as HTMLButtonElement).parentElement.parentElement.children[1].appendChild(event.target as HTMLButtonElement);
       }
     }
     this.saveState = '';
   }
 
-  SaveClick(event): void {
-    let p=(event.target as HTMLButtonElement).parentElement.parentElement.children[1].children;
-   
+  clearListClick(event) {
+    const el = (event.target as HTMLButtonElement).parentElement.nextElementSibling;
+    //console.log(el.children);
+   const length=el.children.length
+    for (let i = 0; i < length; i++) {
+      this.not0Elements--;
+      console.log(el.children[i],length);
+      if(el.children[0].tagName==='BUTTON'){
+      el.children[0].parentElement.parentElement.children[3].appendChild(el.children[0] as HTMLButtonElement);
+    }
+  }
+  }
 
-    //pobierz sets
-    //dodaj nowy/edytuj
-    //zapisz
+  saveClick(event): void {
+    let p = (event.target as HTMLButtonElement).parentElement.parentElement.children[1].children;
 
-    let setToSave=[];
-    let z:Data;
+    let setToSave = [];
+    let z: Data;
 
-    for(let i=0;i<p.length;i++){ 
-     console.log(p.length);
-      z=JSON.parse(p[i].id);
+    for (let i = 0; i < p.length; i++) {
+      console.log(p.length);
+      z = JSON.parse(p[i].id);
       setToSave.push(z);
-      console.log(z,setToSave);
+      console.log(z, setToSave);
     }
 
-    this.saveHelper.save('set1', setToSave);
+    this.loadedData.push(setToSave);
+
+    this.saveHelper.add(this.keyStringForSavedSets, setToSave);
 
     this.saveState = 'zapisano';
+    this.clearListClick(event);
+  }
+
+
+  deleteClick(event) {
+
+    this.saveHelper.remove(this.keyStringForSavedSets, JSON.parse((event.target as HTMLButtonElement).id));
+    (event.target as HTMLButtonElement).parentElement.parentElement.removeChild((event.target as HTMLButtonElement).parentElement);
   }
 
 }

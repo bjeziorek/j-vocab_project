@@ -1,7 +1,7 @@
 <div class="{{theme}}">
     <div class="centerize">
         <p class="bigHorizSpace">Poprawnych odpowiedzi: <span class="green">{{numberOfGoodAnswers}}</span> Niepoprawnych odpowiedzi: <span
-                class="red">{{numberOfBadAnswers}}</span> Pozostało: {{listToDisplay.length}}</p>
+                class="red">{{numberOfBadAnswers}}</span> <span *ngIf="summary!==true">Pozostało: {{listToDisplay.length}}</span></p>
     </div>
     <div class="border">
         <div *ngIf="exerciseType==='abcd'">
@@ -96,12 +96,14 @@
             </div>
 
         </div>
-    </div>
 
 
     <div *ngIf="summary===true" class="centerize">
-        <p>Podsumowanie</p>
+        <p>Koniec testu</p>
     </div>
+    </div>
+
+
 
 
 </div>

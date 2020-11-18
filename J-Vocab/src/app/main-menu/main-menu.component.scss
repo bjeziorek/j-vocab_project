@@ -4,11 +4,37 @@
 
 .amethystTheme {
   @extend %amethystThemeMain;
-  .button {
-    color: colors.$lightPurple;
+  span{
+    font-size:20px;//1.5vw;
+  }
+  button, a {
+    font-size:20px;//1vw;
+    color:colors.$lightPurple;
+    margin: 0.5vw;
     background-color: colors.$darkPurple;
-    margin: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+   // font-size: 16px;
+    padding: 10px;
+    border-radius: 0% 15%;
     border: 1px solid colors.$lightPurple;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  button:hover, a:hover {
+    font-size:20px;//1vw;
+    color:colors.$darkPurple;
+    margin: 0.5vw;
+    background-color: colors.$lightPurple;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+   // font-size: 16px;
+    padding: 10px;
+    border-radius: 15% 0%;
+    border: 1px solid colors.$lightPurple;
+    cursor: pointer;
   }
 }
 .amberTheme {
@@ -48,11 +74,37 @@
 }
 .turquiseTheme {
   @extend %turquiseThemeMain;
-  .button {
-    color: colors.$lightTurquise;
+  span{
+    font-size:20px;//1.5vw;
+  }
+  button, a {
+    font-size:20px;//1vw;
+    color:colors.$lightTurquise;
+    margin: 0.5vw;
     background-color: colors.$darkTurquise;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+   // font-size: 16px;
+    padding: 10px;
+    border-radius: 0% 15%;
     border: 1px solid colors.$lightTurquise;
-
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  button:hover, a:hover {
+    font-size:20px;//1vw;
+    color:colors.$darkTurquise;
+    margin: 0.5vw;
+    background-color: colors.$lightTurquise;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+   // font-size: 16px;
+    padding: 10px;
+    border-radius: 15% 0%;
+    border: 1px solid colors.$lightTurquise;
+    cursor: pointer;
   }
 }
 .group {

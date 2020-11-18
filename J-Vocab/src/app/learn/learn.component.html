@@ -7,11 +7,19 @@
     <div class="centerize">
       <div class="border">
         <button (click)='presentationClick()'>Prezentacja materiału</button>
-        <p>Oglądnij prezentację, żeby poznać nowe słówka i zwroty</p>
+        <p>Oglądnij prezentację, żeby poznać nowe słówka i zwroty (wybrany zestaw: {{chosenSetString}})</p>
       </div>
       <div class="border">
         <button (click)='quizClick()'>Test</button>
-        <p>Sprawdź swoje siły w teście</p>
+        <p>Sprawdź swoje siły w teście (wybrany zestaw: {{chosenSetString}})</p>
+      </div>
+      <div class="border">
+        <p>Lista dostępnych zestawów:</p>
+        <div>
+          <button  *ngFor="let item of preparedSets" (click)="chosenSetClick($event)" id="{{item | json}}">
+            {{item.string}}
+          </button>
+        </div>
       </div>
     </div>
   </div>

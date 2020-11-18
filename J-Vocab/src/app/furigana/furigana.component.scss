@@ -1,10 +1,7 @@
 @use './themes.scss';
 @use './colors.scss';
 
-.bord {
-  border: 1px solid red;
-  margin: auto;
-}
+
 
 .amberTheme {
   @extend %amberThemeDark;
@@ -27,11 +24,31 @@
   .centerize {
     @extend %centerize;
   }
+  .kanji {
+    color: colors.$darkPurple;
+    font-size: 2vw;
+    margin: 0.5vw;
+  }
+  .furi {
+    color: colors.$darkPurple;
+    font: size 0.7vw;
+    margin: 0.3vw;
+  }
 }
 .turquiseTheme {
   @extend %turquiseThemeDark;
   .centerize {
     @extend %centerize;
+  }
+  .kanji {
+    color: colors.$darkTurquise;
+    font-size: 2vw;
+    margin: 0.5vw;
+  }
+  .furi {
+    color: colors.$darkTurquise;
+    font: size 0.7vw;
+    margin: 0.3vw;
   }
 }
 

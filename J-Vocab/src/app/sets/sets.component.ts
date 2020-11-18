@@ -27,7 +27,7 @@ export class SetsComponent implements OnInit {
   manageResourcesClick(): void {
     this.mode = 'manage-resources';
   }
-  backToLearnClick(): void {
+  backToSetsClick(): void {
     this.mode = 'none';
   }
 

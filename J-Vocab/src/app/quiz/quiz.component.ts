@@ -51,7 +51,8 @@ export class QuizComponent implements OnInit {
   saveState = '';
 
   forFuri;
-
+  chosenSetLength=0;
+  
   constructor(
     private readonly themeService: ThemesService,
     private readonly dataService: DataService,
@@ -63,7 +64,7 @@ export class QuizComponent implements OnInit {
     this.rawData = dataService.dataFromDB;
     this.save = saveService.getSave(null);
 
-    if (this.chosenSet === 'none') {
+    if (this.chosenSet === []) {
       this.chosenSet = dataService.generateSet(this.rawData, this.save);
     }
     this.generateListFromChosenSet(this.chosenSet);
@@ -82,7 +83,19 @@ export class QuizComponent implements OnInit {
     this.themeService.theme.subscribe((receivedTheme: string) => {
       this.theme = receivedTheme;
     });
+    this.dataService.chosenSetDynamic.subscribe((receivedTheme: string) => {
+      this.chosenSet = receivedTheme;
+      this.initListToDisplay();
+    });
   }
+
+  initListToDisplay(): void {
+    this.generateListFromChosenSet(this.chosenSet);
+    this.setTexts();
+    this.dataService.forFurigana.next(this.listToDisplay[0]);
+    this.dataService.forFuriganaStatic = this.listToDisplay[0];
+  }
+
 
   random(minInclusive: number, maxExclusive: number): number {
     const rand = Math.floor((Math.random() * maxExclusive - minInclusive) + minInclusive);
@@ -105,44 +118,6 @@ export class QuizComponent implements OnInit {
     this.snappingBlocksList = [];
     this.snappingBlocksList2 = [];
 
-   /* for (let i = 0; i < this.listToDisplay[0].length; i++) {
-      this.snappingBlocksList.push({
-        character: this.listToDisplay[0].character,
-        sylabs: this.listToDisplay[0].sylabs//,
-        //  meaningPL:this.listToDisplay[0].meaningPL
-      });
-    }
-
-    let rawList = [...this.rawData];
-    rawList = this.removeObjectFromList(this.listToDisplay[0], rawList);
-    let r = this.random(0, rawList.length);
-    for (let i = 0; i < rawList[r].character.length; i++) {
-      this.snappingBlocksList.push({
-        character: rawList[r].character[i],
-        sylabs: rawList[r].sylabs[i]
-      });
-    }
-    rawList = this.removeObjectFromList(rawList[r], rawList);
-    r = this.random(0, rawList.length);
-    for (let i = 0; i < rawList[r].character.length; i++) {
-      this.snappingBlocksList.push({
-        character: rawList[r].character[i],
-        sylabs: rawList[r].sylabs[i]
-      });
-    }
-    this.snappingBlocksList = this.shuffleArray(this.snappingBlocksList);
-    let character = '';
-    let sylabs = [];
-    for (let i = 0; i < this.snappingBlocksList.length; i++) {
-      character += this.snappingBlocksList[i].character;
-      sylabs.push[this.snappingBlocksList[i].sylabs];
-    }
-    this.snappingBlocksList=[];
-    this.snappingBlocksList.push({
-      character:character,
-      sylabs:sylabs
-    });*/
-    
     for (const char of this.answerText) {
       this.snappingBlocksList.push(char);
     }
@@ -196,7 +171,12 @@ export class QuizComponent implements OnInit {
 
 
   generateListFromChosenSet(chosenSet) {
-    this.listToDisplay = [...this.rawData]; //clone a nie referencja!!
+    if (chosenSet.length > 0) {
+      this.listToDisplay = [...chosenSet];
+    } else {
+      this.listToDisplay = [...this.rawData]; //clone a nie referencja!!
+    }
+    this.chosenSetLength=this.listToDisplay.length;
   }
 
   randomizeTypeOfExercise() {

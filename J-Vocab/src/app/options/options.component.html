@@ -1,13 +1,17 @@
 <div class="{{theme}}">
 
-  <div *ngIf="mode==='none'">
+  <div *ngIf="mode==='none'"> 
     <div class="centerize">
-      <h1>Opcje:</h1>
+    <h1>Opcje:</h1>
+  </div>
+    <div class="centerize border">
+     
       <button (click)='setTheme("amberTheme")'>Motyw bursztynowy</button>
       <button (click)='setTheme("amethystTheme")'>Motyw Ametystowy</button>
       <button (click)='setTheme("turquiseTheme")'>Motyw Turkusowy</button>
     </div>
-    <div class="centerize">
+    <div>&nbsp;</div>
+   <!-- <div class="centerize">
       <button (click)='exportClick()'>eksport</button>
       <button (click)='importClick()'>import</button>
 
@@ -23,5 +27,5 @@
     <p>import</p>
     <app-import></app-import>
     <button (click)='backToLearnClick()'>Wróć</button>
-  </div>
+  </div>-->
 </div>

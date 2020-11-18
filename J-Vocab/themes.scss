@@ -11,29 +11,90 @@
 //amethyst
 %amethystThemeDark {
   
- // background-color: colors.$darkPurple;
- // color: colors.$lightPurple;
- p, span{
-  color: colors.$lightPurple;
-}
-  button, a {
-    color:colors.$lightPurple;
-    margin: 5px;
-    background-color: colors.$mainPurple;
-    border: 1px solid colors.$lightPurple;
+  h1{
     color: colors.$lightPurple;
-    padding: 10px 6px;
+    font-size:40px;//4vw;
+  margin: 2vw;
+  }
+ 
+  p, span{
+    color: colors.$lightPurple;
+    font-size:20px;//1vw;
+  margin: 1vw;
+  }
+  button, a {
+    font-size:26px;//2vw;
+    color:colors.$lightPurple;
+    margin: 0.5vw;
+    background-color: colors.$mainPurple;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
-    
-    border-radius: 5%;
-   // border: 1px solid colors.$lightPurple;
+   // font-size: 16px;
+   padding: 10px;
+    border-radius: 0% 15%;
+    border: 1px solid colors.$lightPurple;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  button:hover, a:hover {
+    font-size:26px;//2vw;
+    color:colors.$darkPurple;
+    margin: 0.5vw;
+    background-color: colors.$lightPurple;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+   // font-size: 16px;
+   padding: 10px;
+    border-radius: 15% 0%;
+    border: 1px solid colors.$lightPurple;
     cursor: pointer;
   }
-  .clicked{
-
+  .question{
+    font-size:26px;//3vw;
+    color:colors.$darkPurple;
+    padding: 3vw;
+    margin: 1vw;
+    background-color: colors.$lightPurple;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+   // font-size: 16px;
+   padding: 10px;
+    border-radius: 0% 15%;
+    border: 1px solid colors.$darkPurple;
+    cursor: crosshair;
+  }
+  .answer{
+    font-size:26px;//2vw;
+    color:colors.$darkPurple;
+    padding: 2vw;
+    margin: 2vw;
+    background-color: colors.$lightPurple;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+   // font-size: 16px;
+   padding: 10px;
+    border-radius: 0% 15%;
+    border: 1px solid colors.$darkPurple;
+    cursor: crosshair;
+  }
+  input{
+    font-size:20px;//2vw;
+    color:colors.$darkPurple;
+    padding: 2vw;
+    margin: 2vw;
+    background-color: colors.$lightPurple;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+   // font-size: 16px;
+   padding: 10px;
+    border-radius: 0% 15%;
+    border: 1px solid colors.$darkPurple;
+    cursor: crosshair;
   }
  
 }
@@ -77,30 +138,90 @@
 
 //turquise
 %turquiseThemeDark {
-  //background-color: colors.$darkTurquise;
-  //color: colors.$lightTurquise;
-  p, span{
+  h1{
     color: colors.$lightTurquise;
-    padding: 10px;
-    margin: 10px;
-    line-height: 5;
+    font-size:40px;//4vw;
+  margin: 2vw;
   }
  
+  p, span{
+    color: colors.$lightTurquise;
+    font-size:20px;//1vw;
+  margin: 1vw;
+  }
   button, a {
-    color: colors.$lightTurquise;
-    margin: 5px;
+    font-size:26px;//2vw;
+    color:colors.$lightTurquise;
+    margin: 0.5vw;
     background-color: colors.$mainTurquise;
-    border: 1px solid colors.$lightTurquise;
-    color: colors.$lightTurquise;
-    
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
-    padding: 10px 6px;
-    border-radius: 5%;
+   // font-size: 16px;
+   padding: 10px;
+    border-radius: 0% 15%;
     border: 1px solid colors.$lightTurquise;
     cursor: pointer;
+    transition: 0.3s;
+  }
+  button:hover, a:hover {
+    font-size:26px;//2vw;
+    color:colors.$darkTurquise;
+    margin: 0.5vw;
+    background-color: colors.$lightTurquise;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+   // font-size: 16px;
+   padding: 10px;
+    border-radius: 15% 0%;
+    border: 1px solid colors.$lightTurquise;
+    cursor: pointer;
+  }
+  .question{
+    font-size:26px;//3vw;
+    color:colors.$darkTurquise;
+    padding: 3vw;
+    margin: 1vw;
+    background-color: colors.$lightTurquise;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+   // font-size: 16px;
+   padding: 10px;
+    border-radius: 0% 15%;
+    border: 1px solid colors.$darkTurquise;
+    cursor: crosshair;
+  }
+  .answer{
+    font-size:26px;//2vw;
+    color:colors.$darkTurquise;
+    padding: 2vw;
+    margin: 2vw;
+    background-color: colors.$lightTurquise;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+   // font-size: 16px;
+   padding: 10px;
+    border-radius: 0% 15%;
+    border: 1px solid colors.$darkTurquise;
+    cursor: crosshair;
+  }
+  input{
+    font-size:20px;//2vw;
+    color:colors.$darkTurquise;
+    padding: 2vw;
+    margin: 2vw;
+    background-color: colors.$lightTurquise;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+   // font-size: 16px;
+   padding: 10px;
+    border-radius: 0% 15%;
+    border: 1px solid colors.$darkTurquise;
+    cursor: crosshair;
   }
 }
 %turquiseThemeInverse {
