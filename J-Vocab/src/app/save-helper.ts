@@ -17,9 +17,6 @@ export class SaveHelper {
         const currentSave = this.load(key) || [];
         let newListToSave = [];
         for (let i = 0; i < currentSave.length; i++) {
-
-          
-
             if (JSON.stringify(currentSave[i]) != JSON.stringify(dataToRemove)) {
                 newListToSave.push(currentSave[i]);
                 console.log(currentSave[i], dataToRemove, JSON.stringify(currentSave[i]) != JSON.stringify(dataToRemove));
@@ -35,8 +32,5 @@ export class SaveHelper {
         const currentSave = this.load(key) || [];
         currentSave.push(dataToSave);
         this.save(key, currentSave);
-
-
-
     }
 }

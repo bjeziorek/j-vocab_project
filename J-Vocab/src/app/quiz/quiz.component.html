@@ -16,22 +16,34 @@
 
                     </section>
 
-                    <button (click)="answerAbcdClick('a',$event)">
-                        <app-furigana *ngIf="textDirection === 'plToJp'" [txtObj]="answerA"></app-furigana><span
-                            class="darkFont" *ngIf="textDirection !== 'plToJp'">{{answerA.meaningPL}}</span>
+                    <button *ngIf="textDirection === 'plToJp'" class="darkFont" (click)="answerAbcdClick('a',$event)">
+                        <app-furigana [txtObj]="answerA"></app-furigana>
                     </button>
-                    <button (click)="answerAbcdClick('b',$event)">
-                        <app-furigana *ngIf="textDirection === 'plToJp'" [txtObj]="answerB"></app-furigana><span
-                            class="darkFont" *ngIf="textDirection !== 'plToJp'">{{answerB.meaningPL}}</span>
+                    <button *ngIf="textDirection !== 'plToJp'" class="darkFont" (click)="answerAbcdClick('a',$event)">
+                           {{answerA.meaningPL}}
                     </button>
-                    <button (click)="answerAbcdClick('c',$event)">
-                        <app-furigana *ngIf="textDirection === 'plToJp'" [txtObj]="answerC"></app-furigana><span
-                            class="darkFont" *ngIf="textDirection !== 'plToJp'">{{answerC.meaningPL}}</span>
+                    
+                    <button *ngIf="textDirection === 'plToJp'" class="darkFont" (click)="answerAbcdClick('b',$event)">
+                        <app-furigana  [txtObj]="answerB"></app-furigana>
                     </button>
-                    <button (click)="answerAbcdClick('d',$event)">
-                        <app-furigana *ngIf="textDirection === 'plToJp'" [txtObj]="answerD"></app-furigana><span
-                            class="darkFont" *ngIf="textDirection !== 'plToJp'">{{answerD.meaningPL}}</span>
+                    <button *ngIf="textDirection !== 'plToJp'" class="darkFont" (click)="answerAbcdClick('b',$event)">
+                        {{answerB.meaningPL}}
                     </button>
+
+                    <button *ngIf="textDirection === 'plToJp'" class="darkFont" (click)="answerAbcdClick('c',$event)">
+                        <app-furigana  [txtObj]="answerC"></app-furigana>
+                    </button>
+                    <button *ngIf="textDirection !== 'plToJp'" class="darkFont" (click)="answerAbcdClick('b',$event)">
+                        {{answerC.meaningPL}}
+                    </button>
+
+                    <button *ngIf="textDirection === 'plToJp'" class="darkFont" (click)="answerAbcdClick('d',$event)">
+                        <app-furigana  [txtObj]="answerD"></app-furigana>
+                    </button>
+                    <button *ngIf="textDirection !== 'plToJp'" class="darkFont" (click)="answerAbcdClick('b',$event)">
+                        {{answerD.meaningPL}}
+                    </button>
+
                 </div>
                 <div *ngIf="answerShown===true">
                     <p class="answer">Poprawna odpowiedź:<br> <br><app-furigana [txtObj]="forFuri"></app-furigana>
