@@ -33,14 +33,14 @@
                     <button *ngIf="textDirection === 'plToJp'" class="darkFont" (click)="answerAbcdClick('c',$event)">
                         <app-furigana  [txtObj]="answerC"></app-furigana>
                     </button>
-                    <button *ngIf="textDirection !== 'plToJp'" class="darkFont" (click)="answerAbcdClick('b',$event)">
+                    <button *ngIf="textDirection !== 'plToJp'" class="darkFont" (click)="answerAbcdClick('c',$event)">
                         {{answerC.meaningPL}}
                     </button>
 
                     <button *ngIf="textDirection === 'plToJp'" class="darkFont" (click)="answerAbcdClick('d',$event)">
                         <app-furigana  [txtObj]="answerD"></app-furigana>
                     </button>
-                    <button *ngIf="textDirection !== 'plToJp'" class="darkFont" (click)="answerAbcdClick('b',$event)">
+                    <button *ngIf="textDirection !== 'plToJp'" class="darkFont" (click)="answerAbcdClick('d',$event)">
                         {{answerD.meaningPL}}
                     </button>
 

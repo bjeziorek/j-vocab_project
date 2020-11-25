@@ -60,7 +60,6 @@ export class LearnComponent implements OnInit {
       const data = JSON.parse((event.target as HTMLButtonElement).id).data
       this.dataService.chosenSet = data;
       this.dataService.chosenSetDynamic.next(data);
-      console.log(data);
     } else {
       // const rawData = this.dataService.dataFromDB;
       // const save = saveService.getSave(null);
@@ -69,8 +68,6 @@ export class LearnComponent implements OnInit {
       const data = this.dataService.dataFromDB;
       this.dataService.chosenSet = data;
       this.dataService.chosenSetDynamic.next(data);//this.dataService.generateSet(this.rawData, this.save));
-      console.log(data);
-      
     }
   }
 
