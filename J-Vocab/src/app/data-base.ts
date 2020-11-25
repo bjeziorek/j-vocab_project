@@ -326,7 +326,7 @@ export class DataBase {
         },
         {
             character: '一冊',
-            sylabs: ['isx', 'satsu'],
+            sylabs: ['ix', 'satsu'],
             meaningPL: '1 egzemplarz (książki)',
             tags: ['nigashitaSakana']
         },
