@@ -1,5 +1,6 @@
 import { ThemesService } from './../themes.service';
 import { Component, OnInit } from '@angular/core';
+import { Converter } from '../converter';
 
 @Component({
   selector: 'app-options',
@@ -10,7 +11,8 @@ export class OptionsComponent implements OnInit {
 
   mode = 'none';
   theme = 'amethystTheme';
-
+  txt: any;
+  
   constructor(private readonly themeService: ThemesService) { }
 
   ngOnInit(): void {
@@ -34,5 +36,10 @@ export class OptionsComponent implements OnInit {
     this.themeService.theme.next(theme);
     this.themeService.currentTheme = theme;
   }
+
+  onInputChange(e: Event): void {
+
+    this.txt = new Converter().toKana((e.target as HTMLInputElement).value);
+   }
 
 }

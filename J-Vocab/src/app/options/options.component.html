@@ -10,7 +10,13 @@
       <button (click)='setTheme("amberTheme")'>Motyw Bursztynowy</button>
       <button (click)='setTheme("turquiseTheme")'>Motyw Turkusowy</button>
     </div>
-    <div>&nbsp;</div>
+   
+    <div class="centerize border">
+    <h1>Konwerter romaji na kanę:</h1>
+                
+    <input type="text" placeholder="tu pisz w romaji" (input)="onInputChange($event)"/><span>{{txt}}</span>
+    </div>
+     <div>&nbsp;</div>
     <!-- <div class="centerize">
       <button (click)='exportClick()'>eksport</button>
       <button (click)='importClick()'>import</button>

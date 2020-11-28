@@ -46,6 +46,7 @@ export class Converter {
         ['pa', 'ぱ', 'パ', 'pa'], ['pi', 'ぴ', 'ピ', 'pi'], ['pu', 'ぷ', 'プ', 'pu'], ['pe', 'ぺ', 'ペ', 'pe'], ['po', 'ぽ', 'ポ', 'po'], ['pya', 'ぴゃ', 'ピャ', 'pya'], ['pyu', 'ぴゅ', 'ピュ', 'pyu'], ['pyo', 'ぴょ', 'ピョ', 'pyo'],
         ['ts', 'っ', 'ッ', '$'],
         ['.', '。', '。', '.'],
+        [',', '、', '、', ','],
         ['-', 'ー', 'ー'],
         ['x', 'っ', 'ッ', 'x']
     ];
@@ -183,7 +184,18 @@ export class Converter {
 
             switch (txt[i]) {
 
-
+                case '.': // a
+                // console.log("a");
+                sylaba = this.szukajWKanie(txt[i], 'hiragana');
+                break;
+                case '-': // a
+                // console.log("a");
+                sylaba = this.szukajWKanie(txt[i], 'hiragana');
+                break;
+                case ',': // a
+                // console.log("a");
+                sylaba = this.szukajWKanie(txt[i], 'hiragana');
+                break;
                 //////////////// HIRAGANA
 
                 case 'a': // a
@@ -381,7 +393,7 @@ export class Converter {
                             if (txt[i - 1] == 'd') {
                                 sylaba = this.szukajWKanie('dju', 'hiragana');
                             } else {
-                                sylaba = this.szukajWKanie('jo', 'hiragana');
+                                sylaba = this.szukajWKanie('ju', 'hiragana');
                             }
                             break;
                         case 'o':
