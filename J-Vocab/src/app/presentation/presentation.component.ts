@@ -75,6 +75,20 @@ chosenSetLength=0;
     this.chosenSetLength=this.listToDisplay.length;
   }
 
+  setTexts(): void {
+    this.questionText = this.listToDisplay[0].character;
+    this.answerText = this.listToDisplay[0].meaningPL;
+    this.romajiText = this.listToDisplay[0].sylabs;
+    this.forFuri = this.listToDisplay[0];
+    this.dataService.forFurigana.next(this.listToDisplay[0]);
+
+    this.dataService.forFuriganaStatic = this.listToDisplay[0];
+    console.log(this.listToDisplay[0]);
+  }
+
+  shuffleList(list): void {
+    return list;
+  }
   showAnswerClick(): void {
     this.answerShown = true;
   }
@@ -94,34 +108,4 @@ chosenSetLength=0;
         console.log(this.grammarBool234,x.charAt(x.length-1));
     }
   }
-
-  setTexts(): void {
-    this.questionText = this.listToDisplay[0].character;
-    this.answerText = this.listToDisplay[0].meaningPL;
-    this.romajiText = this.listToDisplay[0].sylabs;
-    this.forFuri = this.listToDisplay[0];
-    this.dataService.forFurigana.next(this.listToDisplay[0]);
-
-    this.dataService.forFuriganaStatic = this.listToDisplay[0];
-    console.log(this.listToDisplay[0]);
-  }
-
-
-
-  shuffleList(list): void {
-    return list;
-  }
-
-  /*
-  wybranyZestaw=pobierzWybranyZestaw();
-  suroweDane=pobierzDaneZBazy(wybranyZestaw);
-  lista=przygotujListę(suroweDane);
-  dopóki lista niepusta:
-    wyświetl pierwszy element i czekaj na 'pokaż odpowiedź'
-    wyświetl odpowiedź i czekaj na 'dalej'
-    usuń pierwszy element i przesuń całą listę o 1
-  lista pusta – wyświetl podsumowanie
-  czekaj na 'zakończ'
-  */
-
 }
