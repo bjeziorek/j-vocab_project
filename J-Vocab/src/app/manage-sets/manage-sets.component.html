@@ -7,6 +7,9 @@
             <button *ngIf="not0Elements>3" (click)="saveClick($event)">Zapisz</button>{{saveState}}
         </p>
         <div class="box border" id="resourceBox"></div>
+        <p>Tagi: 
+            <span *ngFor="let tag of tags">{{tag}}</span>
+        </p>
         <p>Wybierz zagadnienia do nowego zestawu z poniższej listy:</p>
         <div class="box border" id="setBox"> 
             <button *ngFor="let block of rawData" id="{{toStr(block)}}" (click)="switchClick($event)">{{block.character}}</button>

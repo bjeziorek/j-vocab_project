@@ -1441,16 +1441,82 @@ export class DataBase {
             meaningPL: 'marzenie',
             tags: ['j-pop', 'n4']
         },
+        {
+            character: '挑戦',
+            sylabs: ['chou','sen'],
+            meaningPL: 'wyzwanie',
+            tags: ['j-pop', 'n1']
+        },
+        {
+            character: '携帯',
+            sylabs: ['kei','tai'],
+            meaningPL: 'wyzwanie',
+            tags: ['j-pop', 'n1']
+        },
+        {
+            character: '形態',
+            sylabs: ['kei','tai'],
+            meaningPL: 'forma, kształt',
+            tags: ['j-pop', 'n1']
+        },
+        {
+            character: '質問',
+            sylabs: ['shitsu','mon'],
+            meaningPL: 'pytanie',
+            tags: ['j-pop', 'n5']
+        },
+        {
+            character: '教科書',
+            sylabs: ['kyou','ka','sho'],
+            meaningPL: 'podręcznik',
+            tags: ['j-pop', 'n3']
+        },
+        {
+            character: '上司',
+            sylabs: ['jou','shi'],
+            meaningPL: 'szef',
+            tags: ['j-pop', 'n1']
+        },
+        {
+            character: '文法',
+            sylabs: ['bun','pou'],
+            meaningPL: 'gramatyka',
+            tags: ['j-pop', 'n4']
+        },
+        {
+            character: '覚える',
+            sylabs: ['obo','e','ru'],
+            meaningPL: 'zapamiętać',
+            tags: ['j-pop', 'n5']
+        },
+        {
+            character: '発問する',
+            sylabs: ['hatsu','mon','su','ru'],
+            meaningPL: 'wymówić',
+            tags: ['j-pop', 'n?']
+        },
+        {
+            character: '固体',
+            sylabs: ['ko','tai'],
+            meaningPL: 'stały, solidny, twardy',
+            tags: ['j-pop', 'n1']
+        },
+        {
+            character: '固体',
+            sylabs: ['ko','tai'],
+            meaningPL: 'stały, solidny, twardy',
+            tags: []
+        }//,
 
 
 
         ///zdania
-        {
+      /*  {
             character: 'その猫の一方は黒で、もう一方は茶だ。',
             sylabs: ['so', 'no', 'neko', 'no', 'ix', 'pou', 'ha', 'kuro', 'de',',', 'mo', 'u', 'ix', 'pou', 'ha', 'cha', 'da', '.'],
             meaningPL: 'Ten kot jest czarny, ale ten drugi jest brązowy.',
             tags: ['jisho']
-        },
+        },*/
     ];//*/
     getResources() {
         return this.resources;

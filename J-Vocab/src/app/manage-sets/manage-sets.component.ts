@@ -1,3 +1,4 @@
+import { Tags } from './tags';
 import { Data } from './../raw-data.model';
 import { SaveHelper } from './../save-helper';
 import { Component, EventEmitter, OnInit, SystemJsNgModuleLoader } from '@angular/core';
@@ -11,6 +12,8 @@ import { ThemesService } from '../themes.service';
   styleUrls: ['./manage-sets.component.scss']
 })
 export class ManageSetsComponent implements OnInit {
+
+  tags=new Tags().listTags();
 
   theme = 'amethystTheme';
   saveState = '';
