@@ -1,17 +1,17 @@
 <div class="{{theme}}">
     <h1>Zarządzanie zestawami:</h1>
     <div class="tags"><span class="tagName">Tagi: </span>
-        <span *ngFor="let tag of tags" (click)="tagClick($event)" class="unclicked" id="{{tag}}">{{tag}}</span>
+        <span *ngFor="let tag of tags" (click)="tagClick($event)" class="unclicked">{{tag}}</span>
     </div>
     <div id="boxes flex">
         <p>Tworzony zestaw <span *ngIf="not0Elements<4"> wybierz minimum 4 elementy, żeby móc zapisać </span>:
             <button *ngIf="not0Elements>0" (click)="clearListClick($event)">Wyczyść listę</button>
             <button *ngIf="not0Elements>3" (click)="saveClick($event)">Zapisz</button>{{saveState}}
         </p>
-        <div class="box border" id="resourceBox"></div>
+        <div class="box border" #resourceBox id="resourceBox"></div>
         
         <p>Wybierz zagadnienia do nowego zestawu z poniższej listy:</p>
-        <div class="box border" id="setBox"> 
+        <div class="box border" #setBox id="setBox"> 
             <button *ngFor="let block of rawData" id="{{toStr(block)}}" (click)="switchClick($event)">{{block.character}}</button>
         </div>
     </div>

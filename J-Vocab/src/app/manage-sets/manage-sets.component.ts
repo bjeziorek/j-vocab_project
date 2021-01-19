@@ -1,10 +1,11 @@
 import { Tags } from './tags';
 import { Data } from './../raw-data.model';
 import { SaveHelper } from './../save-helper';
-import { Component, EventEmitter, OnInit, SystemJsNgModuleLoader } from '@angular/core';
+import { Component, EventEmitter, OnInit, SystemJsNgModuleLoader, ViewChild } from '@angular/core';
 import { DataService } from '../data.service';
 import { SaveService } from '../save.service';
 import { ThemesService } from '../themes.service';
+import { ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-manage-sets',
@@ -12,6 +13,9 @@ import { ThemesService } from '../themes.service';
   styleUrls: ['./manage-sets.component.scss']
 })
 export class ManageSetsComponent implements OnInit {
+
+  @ViewChild('setBox', { static: false }) public setBox: ElementRef;  
+  @ViewChild('resourceBox', { static: false }) public resourceBox: ElementRef;  
 
   tagsHandler=new Tags();
   tags = this.tagsHandler.listTags();
@@ -44,8 +48,8 @@ export class ManageSetsComponent implements OnInit {
     let btnEl = evt.target as HTMLButtonElement;
     btnEl.classList.toggle("clicked");
     btnEl.classList.toggle("unclicked");
-    console.log('tagclick test',btnEl.id);
-    this.rawData = this.tagsHandler.newDb(btnEl.id);
+    console.log('tagclick test',btnEl.innerHTML,this.setBox.nativeElement);
+    this.rawData = this.tagsHandler.newDb(btnEl.innerHTML);
   }
 
   toStr(obj: Data): string {
@@ -55,11 +59,13 @@ export class ManageSetsComponent implements OnInit {
   switchClick(event: Event): void {
     if ((event.target as HTMLButtonElement).parentElement.id === 'resourceBox') {
       this.not0Elements--;
-      (event.target as HTMLButtonElement).parentElement.parentElement.children[3].appendChild(event.target as HTMLButtonElement);
+      this.setBox.nativeElement.appendChild(event.target as HTMLButtonElement);
+     // (event.target as HTMLButtonElement).parentElement.parentElement.children[3].appendChild(event.target as HTMLButtonElement);
     } else {
       if ((event.target as HTMLButtonElement).parentElement.id === 'setBox') {
         this.not0Elements++;
-        (event.target as HTMLButtonElement).parentElement.parentElement.children[1].appendChild(event.target as HTMLButtonElement);
+        this.resourceBox.nativeElement.appendChild(event.target as HTMLButtonElement);
+       // (event.target as HTMLButtonElement).parentElement.parentElement.children[1].appendChild(event.target as HTMLButtonElement);
       }
     }
     this.saveState = '';
