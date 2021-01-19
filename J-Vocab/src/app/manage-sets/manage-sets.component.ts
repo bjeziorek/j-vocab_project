@@ -43,13 +43,29 @@ export class ManageSetsComponent implements OnInit {
       this.theme = receivedTheme;
     });
   }
-
+childList=[];
   tagClick(evt:Event) {
+
+    let child=this.resourceBox.nativeElement.firstChild as HTMLButtonElement;
+    child.addEventListener('click',this.switchClick);
+    this.childList.push(child);
+    console.log(this.childList[0].parentElement);
+   // let y= Object.assign({},this.resourceBox);
+   
     let btnEl = evt.target as HTMLButtonElement;
     btnEl.classList.toggle("clicked");
     btnEl.classList.toggle("unclicked");
     console.log('tagclick test',btnEl.innerHTML,this.setBox.nativeElement);
+ 
     this.rawData = this.tagsHandler.newDb(btnEl.innerHTML);
+   // console.log(x);
+   // this.resourceBox=y;
+
+   setTimeout(()=>{ (this.resourceBox.nativeElement as HTMLDivElement).appendChild(this.childList[0] as HTMLButtonElement);
+   },1000);
+   
+
+    console.log(this.childList[0].parentElement);
   }
 
   toStr(obj: Data): string {
@@ -57,15 +73,16 @@ export class ManageSetsComponent implements OnInit {
   }
 
   switchClick(event: Event): void {
+    console.log('t',(event.target as HTMLButtonElement).parentElement.id);
     if ((event.target as HTMLButtonElement).parentElement.id === 'resourceBox') {
       this.not0Elements--;
-      this.setBox.nativeElement.appendChild(event.target as HTMLButtonElement);
-     // (event.target as HTMLButtonElement).parentElement.parentElement.children[3].appendChild(event.target as HTMLButtonElement);
+    //  this.setBox.nativeElement.appendChild(event.target as HTMLButtonElement);
+      (event.target as HTMLButtonElement).parentElement.parentElement.children[3].appendChild(event.target as HTMLButtonElement);
     } else {
       if ((event.target as HTMLButtonElement).parentElement.id === 'setBox') {
         this.not0Elements++;
-        this.resourceBox.nativeElement.appendChild(event.target as HTMLButtonElement);
-       // (event.target as HTMLButtonElement).parentElement.parentElement.children[1].appendChild(event.target as HTMLButtonElement);
+     //   this.resourceBox.nativeElement.appendChild(event.target as HTMLButtonElement);
+        (event.target as HTMLButtonElement).parentElement.parentElement.children[1].appendChild(event.target as HTMLButtonElement);
       }
     }
     this.saveState = '';
@@ -79,13 +96,15 @@ export class ManageSetsComponent implements OnInit {
       this.not0Elements--;
       console.log(el.children[i], length);
       if (el.children[0].tagName === 'BUTTON') {
-        el.children[0].parentElement.parentElement.children[3].appendChild(el.children[0] as HTMLButtonElement);
+        this.setBox.nativeElement.appendChild(el.children[0] as HTMLButtonElement);
+       // el.children[0].parentElement.parentElement.children[3].appendChild(el.children[0] as HTMLButtonElement);
       }
     }
   }
 
   saveClick(event): void {
-    let p = (event.target as HTMLButtonElement).parentElement.parentElement.children[1].children;
+    let p =this.resourceBox.nativeElement.children;
+   // let p = (event.target as HTMLButtonElement).parentElement.parentElement.children[1].children;
 
     let setToSave = [];
     let z: Data;
