@@ -42,6 +42,8 @@ export class ManageSetsComponent implements OnInit {
 
   tagClick(evt:Event) {
     let btnEl = evt.target as HTMLButtonElement;
+    btnEl.classList.toggle("clicked");
+    btnEl.classList.toggle("unclicked");
     console.log('tagclick test',btnEl.id);
     this.rawData = this.tagsHandler.newDb(btnEl.id);
   }

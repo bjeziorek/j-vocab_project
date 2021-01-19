@@ -1,6 +1,6 @@
 import { DataBase } from './../data-base';
 export class Tags {
-    tagList = ['n1', 'n5'];
+    tagList = [];
 
 
     newDb(tag) {
