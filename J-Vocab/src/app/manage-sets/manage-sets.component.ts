@@ -13,7 +13,8 @@ import { ThemesService } from '../themes.service';
 })
 export class ManageSetsComponent implements OnInit {
 
-  tags=new Tags().listTags();
+  tagsHandler=new Tags();
+  tags = this.tagsHandler.listTags();
 
   theme = 'amethystTheme';
   saveState = '';
@@ -39,6 +40,12 @@ export class ManageSetsComponent implements OnInit {
     });
   }
 
+  tagClick(evt:Event) {
+    let btnEl = evt.target as HTMLButtonElement;
+    console.log('tagclick test',btnEl.id);
+    this.rawData = this.tagsHandler.newDb(btnEl.id);
+  }
+
   toStr(obj: Data): string {
     return JSON.stringify(obj);
   }
@@ -59,14 +66,14 @@ export class ManageSetsComponent implements OnInit {
   clearListClick(event) {
     const el = (event.target as HTMLButtonElement).parentElement.nextElementSibling;
     //console.log(el.children);
-   const length=el.children.length
+    const length = el.children.length
     for (let i = 0; i < length; i++) {
       this.not0Elements--;
-      console.log(el.children[i],length);
-      if(el.children[0].tagName==='BUTTON'){
-      el.children[0].parentElement.parentElement.children[3].appendChild(el.children[0] as HTMLButtonElement);
+      console.log(el.children[i], length);
+      if (el.children[0].tagName === 'BUTTON') {
+        el.children[0].parentElement.parentElement.children[3].appendChild(el.children[0] as HTMLButtonElement);
+      }
     }
-  }
   }
 
   saveClick(event): void {
