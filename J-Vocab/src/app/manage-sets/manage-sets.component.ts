@@ -6,6 +6,7 @@ import { DataService } from '../data.service';
 import { SaveService } from '../save.service';
 import { ThemesService } from '../themes.service';
 import { ElementRef } from '@angular/core';
+import { removeSummaryDuplicates } from '@angular/compiler';
 
 @Component({
   selector: 'app-manage-sets',
@@ -14,15 +15,19 @@ import { ElementRef } from '@angular/core';
 })
 export class ManageSetsComponent implements OnInit {
 
-  @ViewChild('setBox', { static: false }) public setBox: ElementRef;  
-  @ViewChild('resourceBox', { static: false }) public resourceBox: ElementRef;  
+  @ViewChild('setBox', { static: false }) public setBox: ElementRef;
+  @ViewChild('resourceBox', { static: false }) public resourceBox: ElementRef;
 
-  tagsHandler=new Tags();
+  tagsHandler = new Tags();
   tags = this.tagsHandler.listTags();
 
   theme = 'amethystTheme';
   saveState = '';
   rawData: Data[];
+  resourceBoxContent: Data[];
+  setBoxContent: Data[];
+
+
   saveHelper = new SaveHelper();
   loadedData;
   keyStringForSavedSets = 'set1';
@@ -33,8 +38,12 @@ export class ManageSetsComponent implements OnInit {
     private readonly dataService: DataService,
     private readonly saveService: SaveService
   ) {
-    this.rawData = dataService.dataFromDB;
-    this.saveHelper.save('test', this.rawData);
+    this.resourceBoxContent = [];
+    this.setBoxContent = [];
+
+    this.setBoxContent = this.rawData = dataService.dataFromDB;
+    //  this.saveHelper.save('test', this.rawData);
+    this.saveHelper.save('test', this.setBoxContent);
     this.loadedData = this.saveHelper.load(this.keyStringForSavedSets);
   }
   ngOnInit(): void {
@@ -43,68 +52,124 @@ export class ManageSetsComponent implements OnInit {
       this.theme = receivedTheme;
     });
   }
-childList=[];
-  tagClick(evt:Event) {
+  childList = [];
+  tagClick(evt: Event) {
+    //todo - przed przeslanie listy usunac z niej elementy ktore sa w wybrane bo sie duplikuja
 
-    let child=this.resourceBox.nativeElement.firstChild as HTMLButtonElement;
-    child.addEventListener('click',this.switchClick);
+    let child = this.resourceBox.nativeElement.firstChild as HTMLButtonElement;
+    child.addEventListener('click', this.switchClick);
     this.childList.push(child);
     console.log(this.childList[0].parentElement);
-   // let y= Object.assign({},this.resourceBox);
-   
+    // let y= Object.assign({},this.resourceBox);
+
     let btnEl = evt.target as HTMLButtonElement;
     btnEl.classList.toggle("clicked");
     btnEl.classList.toggle("unclicked");
-    console.log('tagclick test',btnEl.innerHTML,this.setBox.nativeElement);
- 
-    this.rawData = this.tagsHandler.newDb(btnEl.innerHTML);
-   // console.log(x);
-   // this.resourceBox=y;
+    console.log('tagclick test', btnEl.innerHTML, this.setBox.nativeElement);
 
-   setTimeout(()=>{ (this.resourceBox.nativeElement as HTMLDivElement).appendChild(this.childList[0] as HTMLButtonElement);
-   },1000);
-   
+    this.setBoxContent = this.rawData = this.tagsHandler.newDb(btnEl.innerHTML);
+    // console.log(x);
+    // this.resourceBox=y;
+
+    setTimeout(() => {
+      //   (this.resourceBox.nativeElement as HTMLDivElement).appendChild(this.childList[0] as HTMLButtonElement);
+    }, 1000);
+
 
     console.log(this.childList[0].parentElement);
+    this.removeDuplicates();
+  }
+  removeDuplicates() {
+    for (let i = 0; i < this.setBoxContent.length; i++) {
+      for (let j = 0; j < this.resourceBoxContent.length; j++) {
+        if (this.setBoxContent[i].character === this.resourceBoxContent[j].character) {
+          this.setBoxContent.splice(i, 1);
+        }
+      }
+    }
   }
 
   toStr(obj: Data): string {
     return JSON.stringify(obj);
   }
 
+  moveFromArrayToArray(rawWhat, setToResource) {
+    let what = JSON.parse((rawWhat as HTMLButtonElement).id);
+    if (setToResource) {
+      const index = findIndex(what, this.setBoxContent);
+      if (index > -1) {
+        let z = this.setBoxContent.splice(index, 1);
+        this.resourceBoxContent.push(z[0]);
+      } else {
+        console.log("nie ma takiego elementu!!!");
+      }
+    } else {
+      const index = findIndex(what, this.resourceBoxContent);
+      if (index > -1) {
+        let z = this.resourceBoxContent.splice(index, 1);
+        console.log(z);
+        this.setBoxContent.push(z[0]);
+      }
+    }
+    function findIndex(what, source) {
+      for (let i = 0; i < source.length; i++) {
+        if (source[i].character === what.character) {
+          return i;
+        }
+      }
+      return -1;
+    }
+  }
+
   switchClick(event: Event): void {
-    console.log('t',(event.target as HTMLButtonElement).parentElement.id);
+    //  console.log(this.setBoxContent);
+    //  console.log('t', (event.target as HTMLButtonElement).parentElement.id);
+    if((event.target as HTMLButtonElement).parentElement){
+
+    
     if ((event.target as HTMLButtonElement).parentElement.id === 'resourceBox') {
       this.not0Elements--;
-    //  this.setBox.nativeElement.appendChild(event.target as HTMLButtonElement);
-      (event.target as HTMLButtonElement).parentElement.parentElement.children[3].appendChild(event.target as HTMLButtonElement);
+      this.moveFromArrayToArray(event.target as HTMLButtonElement, false);
+      //  this.setBox.nativeElement.appendChild(event.target as HTMLButtonElement);
+      ////  (event.target as HTMLButtonElement).parentElement.parentElement.children[3].appendChild(event.target as HTMLButtonElement);
     } else {
       if ((event.target as HTMLButtonElement).parentElement.id === 'setBox') {
         this.not0Elements++;
-     //   this.resourceBox.nativeElement.appendChild(event.target as HTMLButtonElement);
-        (event.target as HTMLButtonElement).parentElement.parentElement.children[1].appendChild(event.target as HTMLButtonElement);
+        this.moveFromArrayToArray(event.target as HTMLButtonElement, true);
+
+        //   this.resourceBox.nativeElement.appendChild(event.target as HTMLButtonElement);
+        /////   (event.target as HTMLButtonElement).parentElement.parentElement.children[1].appendChild(event.target as HTMLButtonElement);
       }
     }
+  }else{
+    console.log('warining! event.target as HTMLButtonElement).parentElement is '+(event.target as HTMLButtonElement).parentElement);
+  }
     this.saveState = '';
+    console.log(this.setBoxContent);
   }
 
   clearListClick(event) {
     const el = (event.target as HTMLButtonElement).parentElement.nextElementSibling;
-    //console.log(el.children);
-    const length = el.children.length
+
+    for (let i = 0; i < el.children.length; i++) {
+      this.not0Elements--;
+      this.moveFromArrayToArray(el.children[i], false);
+    }
+    /*const length = el.children.length
     for (let i = 0; i < length; i++) {
       this.not0Elements--;
-      console.log(el.children[i], length);
       if (el.children[0].tagName === 'BUTTON') {
-        this.setBox.nativeElement.appendChild(el.children[0] as HTMLButtonElement);
-       // el.children[0].parentElement.parentElement.children[3].appendChild(el.children[0] as HTMLButtonElement);
+        //  this.setBox.nativeElement.appendChild(el.children[0] as HTMLButtonElement);
+        // el.children[0].parentElement.parentElement.children[3].appendChild(el.children[0] as HTMLButtonElement);
+        
+
       }
-    }
+    }*/
   }
 
   saveClick(event): void {
-    let p =this.resourceBox.nativeElement.children;
-   // let p = (event.target as HTMLButtonElement).parentElement.parentElement.children[1].children;
+    let p = this.resourceBox.nativeElement.children;
+    // let p = (event.target as HTMLButtonElement).parentElement.parentElement.children[1].children;
 
     let setToSave = [];
     let z: Data;

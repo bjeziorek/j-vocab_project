@@ -11,14 +11,14 @@ export class Tags {
         let newDb = [];
         //tagList=//update from service
         function switchTag(tag) {
-            console.log(tagList);
+            console.log(tagList);let m;
             const index = tagList.indexOf(tag);
             if (index > -1) {
-                tagList.splice(index, 1);
+               m= tagList.splice(index, 1);
             }else{
                 tagList.push(tag);
             }
-             console.log(tagList);
+             console.log(tagList,m);
         }
         function containsTag(el) {
             for (let i = 0; i < el.tags.length; i++) {

@@ -20,5 +20,4 @@ export class DataService {
     let set = '';
     return set;
   }
-
 }

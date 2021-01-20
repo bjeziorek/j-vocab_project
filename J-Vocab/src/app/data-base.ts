@@ -1500,12 +1500,6 @@ export class DataBase {
             sylabs: ['ko','tai'],
             meaningPL: 'stały, solidny, twardy',
             tags: ['j-pop', 'n1']
-        },
-        {
-            character: '固体',
-            sylabs: ['ko','tai'],
-            meaningPL: 'stały, solidny, twardy',
-            tags: []
         }//,
 
 
