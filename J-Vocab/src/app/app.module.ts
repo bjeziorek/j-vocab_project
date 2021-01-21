@@ -1,3 +1,4 @@
+import { GamesComponent } from './games/games.component';
 import { FuriganaComponent } from './furigana/furigana.component';
 import { ExportComponent } from './export/export.component';
 import { ImportComponent } from './import/import.component';
@@ -35,7 +36,8 @@ import {MatButtonModule} from '@angular/material/button';
     ManageSetsComponent,
     ManageResourcesComponent,
     MainMenuComponent,
-    FuriganaComponent
+    FuriganaComponent,
+    GamesComponent
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,4 @@
+import { GamesComponent } from './games/games.component';
 import { ExportComponent } from './export/export.component';
 import { ImportComponent } from './import/import.component';
 import { OptionsComponent } from './options/options.component';
@@ -23,6 +24,10 @@ const routes: Routes = [
   {
     path: 'options',
     component: OptionsComponent
+  },
+  {
+    path: 'games',
+    component: GamesComponent
   }
 ];
 
