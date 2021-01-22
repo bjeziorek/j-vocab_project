@@ -1500,7 +1500,77 @@ export class DataBase {
             sylabs: ['ko','tai'],
             meaningPL: 'stały, solidny, twardy',
             tags: ['j-pop', 'n1']
-        }//,
+        },
+        {
+            character: '指輪',
+            sylabs: ['yubi','wa'],
+            meaningPL: 'pierścionek',
+            tags: ['NHK', 'n4']
+        },
+        {
+            character: '個',
+            sylabs: ['ko'],
+            meaningPL: 'licznik artykułów, jednostek wojskowych, diamentów',
+            tags: ['NHK', 'n2']
+        },
+        {
+            character: 'ダイヤモンド',
+            sylabs: ['DAIYAMONDO'],
+            meaningPL: 'diament',
+            tags: ['NHK', 'n?']
+        },
+        {
+            character: '最も',
+            sylabs: ['motto','mo'],
+            meaningPL: 'większość',
+            tags: ['NHK', 'n2']
+        },
+        {
+            character: '若しくは',
+            sylabs: ['mo','shi','ku','wha'],
+            meaningPL: 'lub',
+            tags: ['NHK', 'n1']
+        },
+        {
+            character: 'デザインする',
+            sylabs: ['DE','ZA','I','N','su','ru'],
+            meaningPL: 'zaprojektować',
+            tags: ['NHK', 'n1']
+        },
+        {
+            character: '天然',
+            sylabs: ['ten','nen'],
+            meaningPL: 'naturalny, spontaniczny',
+            tags: ['NHK', 'n3']
+        },
+        {
+            character: '重さ',
+            sylabs: ['omo','sa'],
+            meaningPL: 'waga, ciężar',
+            tags: ['NHK', 'n?']
+        },
+        {
+            character: '宝石商',
+            sylabs: ['hou','seki','shou'],
+            meaningPL: 'jubiler',
+            tags: ['NHK', 'n?']
+        },
+        {
+            character: 'に依る',
+            sylabs: ['ni','yo','ru'],
+            meaningPL: 'według, zgodnie z',
+            tags: ['NHK', 'n?']
+        },
+        {
+            character: '破る',
+            sylabs: ['yabu','ru'],
+            meaningPL: 'przerwać',
+            tags: ['NHK', 'n3']
+        }
+        
+        
+        
+        //,
 
 
 
