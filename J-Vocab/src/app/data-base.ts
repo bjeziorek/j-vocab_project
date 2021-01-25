@@ -1566,7 +1566,110 @@ export class DataBase {
             sylabs: ['yabu','ru'],
             meaningPL: 'przerwać',
             tags: ['NHK', 'n3']
+        },
+        {
+            character: '増える',
+            sylabs: ['fu','e','ru'],
+            meaningPL: 'wzrastać',
+            tags: ['NHK', 'n4']
+        },
+        {
+            character: 'や',
+            sylabs: ['ya'],
+            meaningPL: 'lub',
+            tags: ['NHK', 'n?']
+        },
+        {
+            character: '破る',
+            sylabs: ['yabu','ru'],
+            meaningPL: 'przerwać',
+            tags: ['NHK', 'n3']
+        },
+        {
+            character: '破る',
+            sylabs: ['yabu','ru'],
+            meaningPL: 'przerwać',
+            tags: ['NHK', 'n3']
+        },
+        {
+            character: '破る',
+            sylabs: ['yabu','ru'],
+            meaningPL: 'przerwać',
+            tags: ['NHK', 'n3']
+        },
+        {
+            character: '破る',
+            sylabs: ['yabu','ru'],
+            meaningPL: 'przerwać',
+            tags: ['NHK', 'n3']
+        },
+        {
+            character: '破る',
+            sylabs: ['yabu','ru'],
+            meaningPL: 'przerwać',
+            tags: ['NHK', 'n3']
+        },
+        {
+            character: '破る',
+            sylabs: ['yabu','ru'],
+            meaningPL: 'przerwać',
+            tags: ['NHK', 'n3']
+        },
+        {
+            character: '破る',
+            sylabs: ['yabu','ru'],
+            meaningPL: 'przerwać',
+            tags: ['NHK', 'n3']
+        },
+        {
+            character: '破る',
+            sylabs: ['yabu','ru'],
+            meaningPL: 'przerwać',
+            tags: ['NHK', 'n3']
+        },
+        {
+            character: '破る',
+            sylabs: ['yabu','ru'],
+            meaningPL: 'przerwać',
+            tags: ['NHK', 'n3']
+        },
+        {
+            character: '破る',
+            sylabs: ['yabu','ru'],
+            meaningPL: 'przerwać',
+            tags: ['NHK', 'n3']
+        },
+        {
+            character: '破る',
+            sylabs: ['yabu','ru'],
+            meaningPL: 'przerwać',
+            tags: ['NHK', 'n3']
+        },
+        {
+            character: '破る',
+            sylabs: ['yabu','ru'],
+            meaningPL: 'przerwać',
+            tags: ['NHK', 'n3']
+        },
+        {
+            character: '破る',
+            sylabs: ['yabu','ru'],
+            meaningPL: 'przerwać',
+            tags: ['NHK', 'n3']
+        },
+        {
+            character: '破る',
+            sylabs: ['yabu','ru'],
+            meaningPL: 'przerwać',
+            tags: ['NHK', 'n3']
+        },
+        {
+            character: '破る',
+            sylabs: ['yabu','ru'],
+            meaningPL: 'przerwać',
+            tags: ['NHK', 'n3']
         }
+
         
         
         
