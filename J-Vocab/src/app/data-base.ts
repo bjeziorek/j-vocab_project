@@ -346,7 +346,7 @@ export class DataBase {
             character: '亡くなる',
             sylabs: ['na', 'ku', 'na', 'ru'],
             meaningPL: 'umrzeć',
-            tags: ['nigashitaSakana', 'n4']
+            tags: ['nigashitaSakana', 'NHK', 'n4']
         },
         {
             character: 'コース',
@@ -520,7 +520,7 @@ export class DataBase {
             character: '必要',
             sylabs: ['hitsu', 'you'],
             meaningPL: 'niezbędne',
-            tags: ['nigashitaSakana', 'n4']
+            tags: ['nigashitaSakana', 'NHK', 'n4']
         },
         {
             character: '世話をする',
@@ -1580,94 +1580,100 @@ export class DataBase {
             tags: ['NHK', 'n?']
         },
         {
-            character: '破る',
-            sylabs: ['yabu','ru'],
-            meaningPL: 'przerwać',
+            character: '入院',
+            sylabs: ['nyuu','in'],
+            meaningPL: 'hospitalizacja',
+            tags: ['NHK', 'n4']
+        },
+        {
+            character: '警察',
+            sylabs: ['kei','satsu'],
+            meaningPL: 'policja',
+            tags: ['NHK', 'n4']
+        },
+        {
+            character: 'に依ると',
+            sylabs: ['ni','yo','ru','to'],
+            meaningPL: 'według',
+            tags: ['NHK', 'n?']
+        },
+        {
+            character: '具合',
+            sylabs: ['gu','ai'],
+            meaningPL: 'stan, kondycja',
+            tags: ['NHK', 'n4']
+        },
+        {
+            character: '急に',
+            sylabs: ['kyuu','ni'],
+            meaningPL: 'nagły',
             tags: ['NHK', 'n3']
         },
         {
-            character: '破る',
-            sylabs: ['yabu','ru'],
-            meaningPL: 'przerwać',
-            tags: ['NHK', 'n3']
+            character: '悪くなる',
+            sylabs: ['waru','ku','na','ru'],
+            meaningPL: 'pogarszać się',
+            tags: ['NHK', 'n?']
         },
         {
-            character: '破る',
-            sylabs: ['yabu','ru'],
-            meaningPL: 'przerwać',
-            tags: ['NHK', 'n3']
+            character: '特に',
+            sylabs: ['toku','ni'],
+            meaningPL: 'w szczególności',
+            tags: ['NHK', 'n4']
         },
         {
-            character: '破る',
-            sylabs: ['yabu','ru'],
-            meaningPL: 'przerwać',
-            tags: ['NHK', 'n3']
+            character: 'この内',
+            sylabs: ['ko','no','uchi'],
+            meaningPL: 'spośród nich',
+            tags: ['NHK', 'n?']
         },
         {
-            character: '破る',
-            sylabs: ['yabu','ru'],
-            meaningPL: 'przerwać',
-            tags: ['NHK', 'n3']
+            character: 'など',
+            sylabs: ['na','do'],
+            meaningPL: 'taki, i tym podobny',
+            tags: ['NHK', 'n5']
         },
         {
-            character: '破る',
-            sylabs: ['yabu','ru'],
-            meaningPL: 'przerwać',
-            tags: ['NHK', 'n3']
+            character: '体',
+            sylabs: ['karada'],
+            meaningPL: 'ciało',
+            tags: ['NHK', 'n5']
         },
         {
-            character: '破る',
-            sylabs: ['yabu','ru'],
-            meaningPL: 'przerwać',
-            tags: ['NHK', 'n3']
+            character: 'すぐ',
+            sylabs: ['su','gu'],
+            meaningPL: 'wkrótce, natychmiast',
+            tags: ['NHK', 'n1']
         },
         {
-            character: '破る',
-            sylabs: ['yabu','ru'],
-            meaningPL: 'przerwać',
-            tags: ['NHK', 'n3']
+            character: '専門家',
+            sylabs: ['sen','mon','ka'],
+            meaningPL: 'specjalista',
+            tags: ['NHK', 'n?']
         },
         {
-            character: '破る',
-            sylabs: ['yabu','ru'],
-            meaningPL: 'przerwać',
-            tags: ['NHK', 'n3']
+            character: '軽い',
+            sylabs: ['karu','i'],
+            meaningPL: 'lekki',
+            tags: ['NHK', 'n5']
         },
         {
-            character: '破る',
-            sylabs: ['yabu','ru'],
-            meaningPL: 'przerwać',
-            tags: ['NHK', 'n3']
+            character: '場合',
+            sylabs: ['ba','ai'],
+            meaningPL: 'gdyby',
+            tags: ['NHK', 'n4']
         },
         {
-            character: '破る',
-            sylabs: ['yabu','ru'],
-            meaningPL: 'przerwać',
-            tags: ['NHK', 'n3']
+            character: '治療',
+            sylabs: ['chi','ryou'],
+            meaningPL: 'leczenie',
+            tags: ['NHK', 'n1']
         },
         {
-            character: '破る',
-            sylabs: ['yabu','ru'],
-            meaningPL: 'przerwać',
-            tags: ['NHK', 'n3']
-        },
-        {
-            character: '破る',
-            sylabs: ['yabu','ru'],
-            meaningPL: 'przerwać',
-            tags: ['NHK', 'n3']
-        },
-        {
-            character: '破る',
-            sylabs: ['yabu','ru'],
-            meaningPL: 'przerwać',
-            tags: ['NHK', 'n3']
-        },
-        {
-            character: '破る',
-            sylabs: ['yabu','ru'],
-            meaningPL: 'przerwać',
-            tags: ['NHK', 'n3']
+            character: '受ける',
+            sylabs: ['u','ke','ru'],
+            meaningPL: 'otrzymać',
+            tags: ['NHK', 'n4']
         }
 
         
