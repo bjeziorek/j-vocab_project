@@ -1,3 +1,4 @@
+import { KanjiDatabase } from './kanji-database';
 import { Component, OnInit } from '@angular/core';
 import { ThemesService } from '../themes.service';
 
@@ -7,6 +8,9 @@ import { ThemesService } from '../themes.service';
   styleUrls: ['./kanji.component.scss']
 })
 export class KanjiComponent implements OnInit {
+
+  kanjiDb=new KanjiDatabase().jouyouKanji;
+
   theme = 'amethystTheme';
   constructor(private readonly themeService: ThemesService) {
   }

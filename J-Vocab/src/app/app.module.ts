@@ -1,3 +1,4 @@
+import { KanjiComponent } from './kanji/kanji.component';
 import { GamesComponent } from './games/games.component';
 import { FuriganaComponent } from './furigana/furigana.component';
 import { ExportComponent } from './export/export.component';
@@ -37,7 +38,8 @@ import {MatButtonModule} from '@angular/material/button';
     ManageResourcesComponent,
     MainMenuComponent,
     FuriganaComponent,
-    GamesComponent
+    GamesComponent,
+    KanjiComponent
   ],
   imports: [
     BrowserModule,
