@@ -1,3 +1,4 @@
+import { KanjiComponent } from './kanji/kanji.component';
 import { GamesComponent } from './games/games.component';
 import { ExportComponent } from './export/export.component';
 import { ImportComponent } from './import/import.component';
@@ -20,6 +21,10 @@ const routes: Routes = [
   {
     path: 'sets',
     component: SetsComponent
+  },
+  {
+    path: 'kanji',
+    component: KanjiComponent
   },
   {
     path: 'options',
