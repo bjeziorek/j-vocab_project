@@ -513,7 +513,7 @@ export class KanjiDatabase{
         {
             nr:'43',
             New:'逸',
-            Old:'逸<span style="font-size:42%">&nbsp;<sup id="cite_ref-B_4-0" class="reference">[4]</sup></span>',
+            Old:'逸',
             Radical:'辵',
             Strokes:'11',
             Grade:'S',
@@ -524,14 +524,14 @@ export class KanjiDatabase{
         },
         {
             nr:'44',
-            New:'茨<span style="font-size:42%">&nbsp;<sup id="cite_ref-C_5-0" class="reference">[5]</sup></span>',
+            New:'茨',
             Old:'',
             Radical:'艸',
             Strokes:'9',
             Grade:'S',
             Year_added:'2010',
             English_meaning:'thorn',
-            Readings_kana:'（いばら）<sup id="cite_ref-D_6-0" class="reference"',
+            Readings_kana:'（いばら）',
             Readings_romaji:'(ibara)'
         },
         {
@@ -632,7 +632,7 @@ export class KanjiDatabase{
         },
         {
             nr:'53',
-            New:'淫<span style="font-size:42%">&nbsp;<sup id="cite_ref-E_7-0" class="reference">[7]</sup></span>',
+            New:'淫',
             Old:'',
             Radical:'水',
             Strokes:'11',
@@ -1017,7 +1017,7 @@ export class KanjiDatabase{
         {
             nr:'85',
             New:'謁',
-            Old:'謁<span style="font-size:42%">&nbsp;<sup id="cite_ref-B_4-1" class="reference">[4]</sup></span>',
+            Old:'謁',
             Radical:'言',
             Strokes:'15',
             Grade:'S',
@@ -1419,7 +1419,7 @@ export class KanjiDatabase{
             Grade:'S',
             Year_added:'2010',
             English_meaning:'hill',
-            Readings_kana:'（おか）<sup id="cite_ref-D_6-1" class="reference"',
+            Readings_kana:'（おか）',
             Readings_romaji:'(oka)'
         },
         {
@@ -1869,7 +1869,7 @@ export class KanjiDatabase{
         {
             nr:'156',
             New:'禍',
-            Old:'禍<span style="font-size:42%">&nbsp;<sup id="cite_ref-B_4-2" class="reference">[4]</sup></span>',
+            Old:'禍',
             Radical:'示',
             Strokes:'13',
             Grade:'S',
@@ -1964,7 +1964,7 @@ export class KanjiDatabase{
         },
         {
             nr:'164',
-            New:'牙<span style="font-size:42%">&nbsp;<sup id="cite_ref-C_5-1" class="reference">[5]</sup></span>',
+            New:'牙',
             Old:'',
             Radical:'牙',
             Strokes:'4',
@@ -2169,7 +2169,7 @@ export class KanjiDatabase{
         {
             nr:'181',
             New:'悔',
-            Old:'悔<span style="font-size:42%">&nbsp;<sup id="cite_ref-B_4-3" class="reference">[4]</sup></span>',
+            Old:'悔',
             Radical:'心',
             Strokes:'9',
             Grade:'S',
@@ -2181,7 +2181,7 @@ export class KanjiDatabase{
         {
             nr:'182',
             New:'海',
-            Old:'海<span style="font-size:42%">&nbsp;<sup id="cite_ref-B_4-4" class="reference">[4]</sup></span>',
+            Old:'海',
             Radical:'水',
             Strokes:'9',
             Grade:'2',
@@ -2433,7 +2433,7 @@ export class KanjiDatabase{
         {
             nr:'203',
             New:'慨',
-            Old:'慨<span style="font-size:42%">&nbsp;<sup id="cite_ref-B_4-5" class="reference">[4]</sup></span>',
+            Old:'慨',
             Radical:'心',
             Strokes:'13',
             Grade:'S',
@@ -2817,7 +2817,7 @@ export class KanjiDatabase{
         {
             nr:'235',
             New:'喝',
-            Old:'喝<span style="font-size:42%">&nbsp;<sup id="cite_ref-B_4-6" class="reference">[4]</sup></span>',
+            Old:'喝',
             Radical:'口',
             Strokes:'11',
             Grade:'S',
@@ -2852,7 +2852,7 @@ export class KanjiDatabase{
         },
         {
             nr:'238',
-            New:'葛<span style="font-size:42%">&nbsp;<sup id="cite_ref-E_7-1" class="reference">[7]</sup></span>',
+            New:'葛',
             Old:'',
             Radical:'艸',
             Strokes:'12',
@@ -2877,7 +2877,7 @@ export class KanjiDatabase{
         {
             nr:'240',
             New:'褐',
-            Old:'褐<span style="font-size:42%">&nbsp;<sup id="cite_ref-B_4-7" class="reference">[4]</sup></span>',
+            Old:'褐',
             Radical:'衣',
             Strokes:'13',
             Grade:'S',
@@ -3309,7 +3309,7 @@ export class KanjiDatabase{
         {
             nr:'276',
             New:'漢',
-            Old:'漢<span style="font-size:42%">&nbsp;<sup id="cite_ref-B_4-8" class="reference">[4]</sup></span>',
+            Old:'漢',
             Radical:'水',
             Strokes:'13',
             Grade:'3',
@@ -3464,7 +3464,7 @@ export class KanjiDatabase{
         },
         {
             nr:'289',
-            New:'韓<span style="font-size:42%">&nbsp;<sup id="cite_ref-C_5-2" class="reference">[5]</sup></span>',
+            New:'韓',
             Old:'',
             Radical:'韋',
             Strokes:'18',
@@ -3729,7 +3729,7 @@ export class KanjiDatabase{
         {
             nr:'311',
             New:'祈',
-            Old:'祈<span style="font-size:42%">&nbsp;<sup id="cite_ref-B_4-9" class="reference">[4]</sup></span>',
+            Old:'祈',
             Radical:'示',
             Strokes:'8',
             Grade:'S',
@@ -3777,7 +3777,7 @@ export class KanjiDatabase{
         {
             nr:'315',
             New:'既',
-            Old:'既<span style="font-size:42%">&nbsp;<sup id="cite_ref-B_4-10" class="reference">[4]</sup></span>',
+            Old:'既',
             Radical:'无',
             Strokes:'10',
             Grade:'S',
@@ -4005,7 +4005,7 @@ export class KanjiDatabase{
         {
             nr:'334',
             New:'器',
-            Old:'器<span style="font-size:42%">&nbsp;<sup id="cite_ref-B_4-11" class="reference">[4]</sup></span>',
+            Old:'器',
             Radical:'口',
             Strokes:'15',
             Grade:'4',
@@ -5013,7 +5013,7 @@ export class KanjiDatabase{
         {
             nr:'418',
             New:'響',
-            Old:'響<span style="font-size:42%">&nbsp;<sup id="cite_ref-B_4-12" class="reference">[4]</sup></span>',
+            Old:'響',
             Radical:'音',
             Strokes:'20',
             Grade:'S',
@@ -5205,7 +5205,7 @@ export class KanjiDatabase{
         {
             nr:'434',
             New:'勤',
-            Old:'勤<span style="font-size:42%">&nbsp;<sup id="cite_ref-B_4-13" class="reference">[4]</sup></span>',
+            Old:'勤',
             Radical:'力',
             Strokes:'12',
             Grade:'6',
@@ -5240,7 +5240,7 @@ export class KanjiDatabase{
         },
         {
             nr:'437',
-            New:'僅<span style="font-size:42%">&nbsp;<sup id="cite_ref-E_7-2" class="reference">[7]</sup></span>',
+            New:'僅',
             Old:'',
             Radical:'人',
             Strokes:'13',
@@ -5289,7 +5289,7 @@ export class KanjiDatabase{
         {
             nr:'441',
             New:'謹',
-            Old:'謹<span style="font-size:42%">&nbsp;<sup id="cite_ref-B_4-14" class="reference">[4]</sup></span>',
+            Old:'謹',
             Radical:'言',
             Strokes:'17',
             Grade:'S',
@@ -7953,7 +7953,7 @@ export class KanjiDatabase{
         {
             nr:'663',
             New:'穀',
-            Old:'穀<span style="font-size:42%">&nbsp;<sup id="cite_ref-B_4-15" class="reference">[4]</sup></span>',
+            Old:'穀',
             Radical:'禾',
             Strokes:'14',
             Grade:'6',
@@ -8595,7 +8595,7 @@ export class KanjiDatabase{
             Grade:'S',
             Year_added:'2010',
             English_meaning:'cape (geography)',
-            Readings_kana:'（さい）<sup id="cite_ref-D_6-2" class="reference"',
+            Readings_kana:'（さい）',
             Readings_romaji:'(sai)'
         },
         {
@@ -8853,7 +8853,7 @@ export class KanjiDatabase{
         {
             nr:'738',
             New:'殺',
-            Old:'殺<span style="font-size:42%">&nbsp;<sup id="cite_ref-B_4-16" class="reference">[4]</sup></span>',
+            Old:'殺',
             Radical:'殳',
             Strokes:'10',
             Grade:'4',
@@ -9381,7 +9381,7 @@ export class KanjiDatabase{
         {
             nr:'782',
             New:'祉',
-            Old:'祉<span style="font-size:42%">&nbsp;<sup id="cite_ref-B_4-17" class="reference">[4]</sup></span>',
+            Old:'祉',
             Radical:'示',
             Strokes:'8',
             Grade:'S',
@@ -9501,7 +9501,7 @@ export class KanjiDatabase{
         {
             nr:'792',
             New:'視',
-            Old:'視<span style="font-size:42%">&nbsp;<sup id="cite_ref-B_4-18" class="reference">[4]</sup></span>',
+            Old:'視',
             Radical:'見',
             Strokes:'11',
             Grade:'6',
@@ -9872,7 +9872,7 @@ export class KanjiDatabase{
         },
         {
             nr:'823',
-            New:'餌<span style="font-size:42%">&nbsp;<sup id="cite_ref-G_8-0" class="reference">[8]</sup></span>',
+            New:'餌',
             Old:'',
             Radical:'食',
             Strokes:'15',
@@ -9956,7 +9956,7 @@ export class KanjiDatabase{
         },
         {
             nr:'830',
-            New:'𠮟<span style="font-size:42%">&nbsp;<sup id="cite_ref-C_5-3" class="reference">[5]</sup></span>',
+            New:'𠮟',
             Old:'',
             Radical:'口',
             Strokes:'5',
@@ -10101,7 +10101,7 @@ export class KanjiDatabase{
         {
             nr:'842',
             New:'社',
-            Old:'社<span style="font-size:42%">&nbsp;<sup id="cite_ref-B_4-19" class="reference">[4]</sup></span>',
+            Old:'社',
             Radical:'示',
             Strokes:'7',
             Grade:'2',
@@ -10137,7 +10137,7 @@ export class KanjiDatabase{
         {
             nr:'845',
             New:'者',
-            Old:'者<span style="font-size:42%">&nbsp;<sup id="cite_ref-B_4-20" class="reference">[4]</sup></span>',
+            Old:'者',
             Radical:'老',
             Strokes:'8',
             Grade:'3',
@@ -10197,7 +10197,7 @@ export class KanjiDatabase{
         {
             nr:'850',
             New:'煮',
-            Old:'煮<span style="font-size:42%">&nbsp;<sup id="cite_ref-B_4-21" class="reference">[4]</sup></span>',
+            Old:'煮',
             Radical:'火',
             Strokes:'12',
             Grade:'S',
@@ -10701,7 +10701,7 @@ export class KanjiDatabase{
         {
             nr:'892',
             New:'臭',
-            Old:'臭<span style="font-size:42%">&nbsp;<sup id="cite_ref-B_4-22" class="reference">[4]</sup></span>',
+            Old:'臭',
             Radical:'自',
             Strokes:'9',
             Grade:'S',
@@ -11025,7 +11025,7 @@ export class KanjiDatabase{
         {
             nr:'919',
             New:'祝',
-            Old:'祝<span style="font-size:42%">&nbsp;<sup id="cite_ref-B_4-23" class="reference">[4]</sup></span>',
+            Old:'祝',
             Radical:'示',
             Strokes:'9',
             Grade:'4',
@@ -11373,7 +11373,7 @@ export class KanjiDatabase{
         {
             nr:'948',
             New:'暑',
-            Old:'暑<span style="font-size:42%">&nbsp;<sup id="cite_ref-B_4-24" class="reference">[4]</sup></span>',
+            Old:'暑',
             Radical:'日',
             Strokes:'12',
             Grade:'3',
@@ -11385,7 +11385,7 @@ export class KanjiDatabase{
         {
             nr:'949',
             New:'署',
-            Old:'署<span style="font-size:42%">&nbsp;<sup id="cite_ref-B_4-25" class="reference">[4]</sup></span>',
+            Old:'署',
             Radical:'网',
             Strokes:'13',
             Grade:'6',
@@ -11409,7 +11409,7 @@ export class KanjiDatabase{
         {
             nr:'951',
             New:'諸',
-            Old:'諸<span style="font-size:42%">&nbsp;<sup id="cite_ref-B_4-26" class="reference">[4]</sup></span>',
+            Old:'諸',
             Radical:'言',
             Strokes:'15',
             Grade:'6',
@@ -11733,7 +11733,7 @@ export class KanjiDatabase{
         {
             nr:'978',
             New:'祥',
-            Old:'祥<span style="font-size:42%">&nbsp;<sup id="cite_ref-B_4-27" class="reference">[4]</sup></span>',
+            Old:'祥',
             Radical:'示',
             Strokes:'10',
             Grade:'S',
@@ -12609,7 +12609,7 @@ export class KanjiDatabase{
         {
             nr:'1051',
             New:'神',
-            Old:'神<span style="font-size:42%">&nbsp;<sup id="cite_ref-B_4-28" class="reference">[4]</sup></span>',
+            Old:'神',
             Radical:'示',
             Strokes:'9',
             Grade:'3',
@@ -13941,7 +13941,7 @@ export class KanjiDatabase{
         {
             nr:'1162',
             New:'節',
-            Old:'節<span style="font-size:42%">&nbsp;<sup id="cite_ref-B_4-29" class="reference">[4]</sup></span>',
+            Old:'節',
             Radical:'竹',
             Strokes:'13',
             Grade:'4',
@@ -14180,7 +14180,7 @@ export class KanjiDatabase{
         },
         {
             nr:'1182',
-            New:'煎<span style="font-size:42%">&nbsp;<sup id="cite_ref-E_7-3" class="reference">[7]</sup></span>',
+            New:'煎',
             Old:'',
             Radical:'火',
             Strokes:'13',
@@ -14216,7 +14216,7 @@ export class KanjiDatabase{
         },
         {
             nr:'1185',
-            New:'詮<span style="font-size:42%">&nbsp;<sup id="cite_ref-E_7-4" class="reference">[7]</sup></span>',
+            New:'詮',
             Old:'',
             Radical:'言',
             Strokes:'13',
@@ -14469,7 +14469,7 @@ export class KanjiDatabase{
         {
             nr:'1206',
             New:'祖',
-            Old:'祖<span style="font-size:42%">&nbsp;<sup id="cite_ref-B_4-30" class="reference">[4]</sup></span>',
+            Old:'祖',
             Radical:'示',
             Strokes:'9',
             Grade:'5',
@@ -14576,7 +14576,7 @@ export class KanjiDatabase{
         },
         {
             nr:'1215',
-            New:'遡<span style="font-size:42%">&nbsp;<sup id="cite_ref-G_8-1" class="reference">[8]</sup></span>',
+            New:'遡',
             Old:'',
             Radical:'辵',
             Strokes:'14',
@@ -14901,7 +14901,7 @@ export class KanjiDatabase{
         {
             nr:'1242',
             New:'僧',
-            Old:'僧<span style="font-size:42%">&nbsp;<sup id="cite_ref-B_4-31" class="reference">[4]</sup></span>',
+            Old:'僧',
             Radical:'人',
             Strokes:'13',
             Grade:'S',
@@ -14925,7 +14925,7 @@ export class KanjiDatabase{
         {
             nr:'1244',
             New:'層',
-            Old:'層<span style="font-size:42%">&nbsp;<sup id="cite_ref-B_4-32" class="reference">[4]</sup></span>',
+            Old:'層',
             Radical:'尸',
             Strokes:'14',
             Grade:'6',
@@ -15081,7 +15081,7 @@ export class KanjiDatabase{
         {
             nr:'1257',
             New:'憎',
-            Old:'憎<span style="font-size:42%">&nbsp;<sup id="cite_ref-B_4-33" class="reference">[4]</sup></span>',
+            Old:'憎',
             Radical:'心',
             Strokes:'14',
             Grade:'S',
@@ -15105,7 +15105,7 @@ export class KanjiDatabase{
         {
             nr:'1259',
             New:'贈',
-            Old:'贈<span style="font-size:42%">&nbsp;<sup id="cite_ref-B_4-34" class="reference">[4]</sup></span>',
+            Old:'贈',
             Radical:'貝',
             Strokes:'18',
             Grade:'S',
@@ -15392,7 +15392,7 @@ export class KanjiDatabase{
         },
         {
             nr:'1283',
-            New:'遜<span style="font-size:42%">&nbsp;<sup id="cite_ref-G_8-2" class="reference">[8]</sup></span>',
+            New:'遜',
             Old:'',
             Radical:'辵',
             Strokes:'14',
@@ -16101,7 +16101,7 @@ export class KanjiDatabase{
         {
             nr:'1342',
             New:'嘆',
-            Old:'嘆<span style="font-size:42%">&nbsp;<sup id="cite_ref-B_4-35" class="reference">[4]</sup></span>',
+            Old:'嘆',
             Radical:'口',
             Strokes:'13',
             Grade:'S',
@@ -16677,7 +16677,7 @@ export class KanjiDatabase{
         {
             nr:'1390',
             New:'著',
-            Old:'著<span style="font-size:42%">&nbsp;<sup id="cite_ref-B_4-36" class="reference">[4]</sup></span>',
+            Old:'著',
             Radical:'艸',
             Strokes:'11',
             Grade:'6',
@@ -16940,7 +16940,7 @@ export class KanjiDatabase{
         },
         {
             nr:'1412',
-            New:'嘲<span style="font-size:42%">&nbsp;<sup id="cite_ref-E_7-5" class="reference">[7]</sup></span>',
+            New:'嘲',
             Old:'',
             Radical:'口',
             Strokes:'15',
@@ -17001,7 +17001,7 @@ export class KanjiDatabase{
         {
             nr:'1417',
             New:'懲',
-            Old:'懲<span style="font-size:42%">&nbsp;<sup id="cite_ref-B_4-37" class="reference">[4]</sup></span>',
+            Old:'懲',
             Radical:'心',
             Strokes:'18',
             Grade:'S',
@@ -17036,7 +17036,7 @@ export class KanjiDatabase{
         },
         {
             nr:'1420',
-            New:'捗<span style="font-size:42%">&nbsp;<sup id="cite_ref-E_7-6" class="reference">[7]</sup></span>',
+            New:'捗',
             Old:'',
             Radical:'手',
             Strokes:'10',
@@ -17181,7 +17181,7 @@ export class KanjiDatabase{
         {
             nr:'1432',
             New:'塚',
-            Old:'塚<span style="font-size:42%">&nbsp;<sup id="cite_ref-B_4-38" class="reference">[4]</sup></span>',
+            Old:'塚',
             Radical:'土',
             Strokes:'12',
             Grade:'S',
@@ -17588,7 +17588,7 @@ export class KanjiDatabase{
         },
         {
             nr:'1466',
-            New:'溺<span style="font-size:42%">&nbsp;<sup id="cite_ref-E_7-7" class="reference">[7]</sup></span>',
+            New:'溺',
             Old:'',
             Radical:'水',
             Strokes:'13',
@@ -17744,7 +17744,7 @@ export class KanjiDatabase{
         },
         {
             nr:'1479',
-            New:'塡<span style="font-size:42%">&nbsp;<sup id="cite_ref-E_7-8" class="reference">[7]</sup></span>',
+            New:'塡',
             Old:'',
             Radical:'土',
             Strokes:'13',
@@ -17865,7 +17865,7 @@ export class KanjiDatabase{
         {
             nr:'1489',
             New:'都',
-            Old:'都<span style="font-size:42%">&nbsp;<sup id="cite_ref-B_4-39" class="reference">[4]</sup></span>',
+            Old:'都',
             Radical:'邑',
             Strokes:'11',
             Grade:'3',
@@ -17900,7 +17900,7 @@ export class KanjiDatabase{
         },
         {
             nr:'1492',
-            New:'賭<span style="font-size:42%">&nbsp;<sup id="cite_ref-E_7-9" class="reference">[7]</sup></span>',
+            New:'賭',
             Old:'',
             Radical:'貝',
             Strokes:'16',
@@ -18680,14 +18680,14 @@ export class KanjiDatabase{
         },
         {
             nr:'1557',
-            New:'栃<span style="font-size:42%">&nbsp;<sup id="cite_ref-C_5-4" class="reference">[5]</sup></span>',
+            New:'栃',
             Old:'',
             Radical:'木',
             Strokes:'9',
             Grade:'S',
             Year_added:'2010',
             English_meaning:'horse chestnut',
-            Readings_kana:'（とち）<sup id="cite_ref-D_6-3" class="reference"',
+            Readings_kana:'（とち）',
             Readings_romaji:'(tochi)'
         },
         {
@@ -18705,7 +18705,7 @@ export class KanjiDatabase{
         {
             nr:'1559',
             New:'突',
-            Old:'突<span style="font-size:42%">&nbsp;<sup id="cite_ref-B_4-40" class="reference">[4]</sup></span>',
+            Old:'突',
             Radical:'穴',
             Strokes:'8',
             Grade:'S',
@@ -18860,7 +18860,7 @@ export class KanjiDatabase{
         },
         {
             nr:'1572',
-            New:'謎<span style="font-size:42%">&nbsp;<sup id="cite_ref-G_8-3" class="reference">[8]</sup></span>',
+            New:'謎',
             Old:'',
             Radical:'言',
             Strokes:'17',
@@ -18909,7 +18909,7 @@ export class KanjiDatabase{
         {
             nr:'1576',
             New:'難',
-            Old:'難<span style="font-size:42%">&nbsp;<sup id="cite_ref-B_4-41" class="reference">[4]</sup></span>',
+            Old:'難',
             Radical:'隹',
             Strokes:'18',
             Grade:'6',
@@ -19485,7 +19485,7 @@ export class KanjiDatabase{
         {
             nr:'1624',
             New:'梅',
-            Old:'梅<span style="font-size:42%">&nbsp;<sup id="cite_ref-B_4-42" class="reference">[4]</sup></span>',
+            Old:'梅',
             Radical:'木',
             Strokes:'10',
             Grade:'4',
@@ -19616,7 +19616,7 @@ export class KanjiDatabase{
         },
         {
             nr:'1635',
-            New:'剝<span style="font-size:42%">&nbsp;<sup id="cite_ref-E_7-10" class="reference">[7]</sup></span>',
+            New:'剝',
             Old:'',
             Radical:'刀',
             Strokes:'10',
@@ -19724,7 +19724,7 @@ export class KanjiDatabase{
         },
         {
             nr:'1644',
-            New:'箸<span style="font-size:42%">&nbsp;<sup id="cite_ref-E_7-11" class="reference">[7]</sup></span>',
+            New:'箸',
             Old:'',
             Radical:'竹',
             Strokes:'15',
@@ -20121,7 +20121,7 @@ export class KanjiDatabase{
         {
             nr:'1677',
             New:'繁',
-            Old:'繁<span style="font-size:42%">&nbsp;<sup id="cite_ref-B_4-43" class="reference">[4]</sup></span>',
+            Old:'繁',
             Radical:'糸',
             Strokes:'16',
             Grade:'S',
@@ -20301,7 +20301,7 @@ export class KanjiDatabase{
         {
             nr:'1692',
             New:'卑',
-            Old:'卑<span style="font-size:42%">&nbsp;<sup id="cite_ref-B_4-44" class="reference">[4]</sup></span>',
+            Old:'卑',
             Radical:'十',
             Strokes:'9',
             Grade:'S',
@@ -20397,7 +20397,7 @@ export class KanjiDatabase{
         {
             nr:'1700',
             New:'碑',
-            Old:'碑<span style="font-size:42%">&nbsp;<sup id="cite_ref-B_4-45" class="reference">[4]</sup></span>',
+            Old:'碑',
             Radical:'石',
             Strokes:'14',
             Grade:'S',
@@ -20781,7 +20781,7 @@ export class KanjiDatabase{
         {
             nr:'1732',
             New:'賓',
-            Old:'賓<span style="font-size:42%">&nbsp;<sup id="cite_ref-B_4-46" class="reference">[4]</sup></span>',
+            Old:'賓',
             Radical:'貝',
             Strokes:'15',
             Grade:'S',
@@ -20793,7 +20793,7 @@ export class KanjiDatabase{
         {
             nr:'1733',
             New:'頻',
-            Old:'頻<span style="font-size:42%">&nbsp;<sup id="cite_ref-B_4-47" class="reference">[4]</sup></span>',
+            Old:'頻',
             Radical:'頁',
             Strokes:'17',
             Grade:'S',
@@ -20805,7 +20805,7 @@ export class KanjiDatabase{
         {
             nr:'1734',
             New:'敏',
-            Old:'敏<span style="font-size:42%">&nbsp;<sup id="cite_ref-B_4-48" class="reference">[4]</sup></span>',
+            Old:'敏',
             Radical:'攴',
             Strokes:'10',
             Grade:'S',
@@ -20931,7 +20931,7 @@ export class KanjiDatabase{
             Grade:'S',
             Year_added:'2010',
             English_meaning:'mound',
-            Readings_kana:'（フ）<sup id="cite_ref-D_6-4" class="reference"',
+            Readings_kana:'（フ）',
             Readings_romaji:'(fu)'
         },
         {
@@ -21105,7 +21105,7 @@ export class KanjiDatabase{
         {
             nr:'1759',
             New:'侮',
-            Old:'侮<span style="font-size:42%">&nbsp;<sup id="cite_ref-B_4-49" class="reference">[4]</sup></span>',
+            Old:'侮',
             Radical:'人',
             Strokes:'8',
             Grade:'S',
@@ -21237,7 +21237,7 @@ export class KanjiDatabase{
         {
             nr:'1770',
             New:'福',
-            Old:'福<span style="font-size:42%">&nbsp;<sup id="cite_ref-B_4-50" class="reference">[4]</sup></span>',
+            Old:'福',
             Radical:'示',
             Strokes:'13',
             Grade:'3',
@@ -21549,7 +21549,7 @@ export class KanjiDatabase{
         {
             nr:'1796',
             New:'塀',
-            Old:'塀<span style="font-size:42%">&nbsp;<sup id="cite_ref-B_4-51" class="reference">[4]</sup></span>',
+            Old:'塀',
             Radical:'土',
             Strokes:'12',
             Grade:'S',
@@ -21584,7 +21584,7 @@ export class KanjiDatabase{
         },
         {
             nr:'1799',
-            New:'蔽<span style="font-size:42%">&nbsp;<sup id="cite_ref-E_7-12" class="reference">[7]</sup></span>',
+            New:'蔽',
             Old:'',
             Radical:'艸',
             Strokes:'15',
@@ -21596,7 +21596,7 @@ export class KanjiDatabase{
         },
         {
             nr:'1800',
-            New:'餅<span style="font-size:42%">&nbsp;<sup id="cite_ref-G_8-4" class="reference">[8]</sup></span>',
+            New:'餅',
             Old:'餠',
             Radical:'食',
             Strokes:'15',
@@ -21789,7 +21789,7 @@ export class KanjiDatabase{
         {
             nr:'1816',
             New:'勉',
-            Old:'勉<span style="font-size:42%">&nbsp;<sup id="cite_ref-B_4-52" class="reference">[4]</sup></span>',
+            Old:'勉',
             Radical:'力',
             Strokes:'10',
             Grade:'3',
@@ -22484,7 +22484,7 @@ export class KanjiDatabase{
         },
         {
             nr:'1874',
-            New:'頰<span style="font-size:42%">&nbsp;<sup id="cite_ref-E_7-13" class="reference">[7]</sup></span>',
+            New:'頰',
             Old:'',
             Radical:'頁',
             Strokes:'16',
@@ -22569,7 +22569,7 @@ export class KanjiDatabase{
         {
             nr:'1881',
             New:'墨',
-            Old:'墨<span style="font-size:42%">&nbsp;<sup id="cite_ref-B_4-53" class="reference">[4]</sup></span>',
+            Old:'墨',
             Radical:'土',
             Strokes:'14',
             Grade:'S',
@@ -23217,7 +23217,7 @@ export class KanjiDatabase{
         {
             nr:'1935',
             New:'免',
-            Old:'免<span style="font-size:42%">&nbsp;<sup id="cite_ref-B_4-54" class="reference">[4]</sup></span>',
+            Old:'免',
             Radical:'儿',
             Strokes:'8',
             Grade:'S',
@@ -24405,7 +24405,7 @@ export class KanjiDatabase{
         {
             nr:'2034',
             New:'欄',
-            Old:'欄<span style="font-size:42%">&nbsp;<sup id="cite_ref-B_4-55" class="reference">[4]</sup></span>',
+            Old:'欄',
             Radical:'木',
             Strokes:'20',
             Grade:'S',
@@ -24645,7 +24645,7 @@ export class KanjiDatabase{
         {
             nr:'2054',
             New:'隆',
-            Old:'隆<span style="font-size:42%">&nbsp;<sup id="cite_ref-B_4-56" class="reference">[4]</sup></span>',
+            Old:'隆',
             Radical:'阜',
             Strokes:'11',
             Grade:'S',
@@ -24693,7 +24693,7 @@ export class KanjiDatabase{
         {
             nr:'2058',
             New:'虜',
-            Old:'虜<span style="font-size:42%">&nbsp;<sup id="cite_ref-B_4-57" class="reference">[4]</sup></span>',
+            Old:'虜',
             Radical:'虍',
             Strokes:'13',
             Grade:'S',
@@ -25029,7 +25029,7 @@ export class KanjiDatabase{
         {
             nr:'2086',
             New:'類',
-            Old:'類<span style="font-size:42%">&nbsp;<sup id="cite_ref-B_4-58" class="reference">[4]</sup></span>',
+            Old:'類',
             Radical:'頁',
             Strokes:'18',
             Grade:'4',
@@ -25293,7 +25293,7 @@ export class KanjiDatabase{
         {
             nr:'2108',
             New:'練',
-            Old:'練<span style="font-size:42%">&nbsp;<sup id="cite_ref-B_4-59" class="reference">[4]</sup></span>',
+            Old:'練',
             Radical:'糸',
             Strokes:'14',
             Grade:'3',
@@ -25425,7 +25425,7 @@ export class KanjiDatabase{
         {
             nr:'2119',
             New:'朗',
-            Old:'朗<span style="font-size:42%">&nbsp;<sup id="cite_ref-B_4-60" class="reference">[4]</sup></span>',
+            Old:'朗',
             Radical:'月',
             Strokes:'10',
             Grade:'6',
@@ -25449,7 +25449,7 @@ export class KanjiDatabase{
         {
             nr:'2121',
             New:'廊',
-            Old:'廊<span style="font-size:42%">&nbsp;<sup id="cite_ref-B_4-61" class="reference">[4]</sup></span>',
+            Old:'廊',
             Radical:'广',
             Strokes:'12',
             Grade:'S',
@@ -25639,6 +25639,7 @@ export class KanjiDatabase{
             Readings_romaji:'wan, ude'
         }
     ];
+
 }
 
 

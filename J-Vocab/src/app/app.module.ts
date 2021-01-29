@@ -25,6 +25,7 @@ import { MainMenuComponent } from './main-menu/main-menu.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 import { KanjiDialogBoxComponent } from './kanji-dialog-box/kanji-dialog-box.component';
+import {MatPaginatorModule} from '@angular/material/paginator'; 
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { KanjiDialogBoxComponent } from './kanji-dialog-box/kanji-dialog-box.com
     MatMenuModule,
     MatToolbarModule,
     MatButtonModule,
-    MatDialogModule
+    MatDialogModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,6 +1,20 @@
 <div class="{{theme}}">
     <div class="centerize">
         <h1>Znaki:</h1>
-        <button *ngFor="let item of kanjiDb" id={{kanjiHandler.toString(item)}} (click)="kanjiClick($event)">{{item.New}}</button>
+        <div >
+        <button  *ngFor="let item of kanjiDb | 
+        slice: lowValue : highValue" id={{kanjiHandler.toString(item)}} (click)="kanjiClick($event)">{{item.New}}</button>
+   
+      <!--  <button *ngFor="let item of kanjiDb" id={{kanjiHandler.toString(item)}} (click)="kanjiClick($event)">{{item.New}}</button>
+    -->
     </div>
-</div>
+
+    </div>
+</div> 
+
+ 
+<mat-paginator [length]="kanjiDb.length"  
+[pageSizeOptions]="pageSizeOptions"
+[pageSize]="pageSize" 
+(page)="pageEvent = getPaginatorData($event)">
+</mat-paginator> 

@@ -1,11 +1,10 @@
 import { KanjiDialogBoxComponent } from './../kanji-dialog-box/kanji-dialog-box.component';
-import { DialBoxComponent } from './dial-box/dial-box.component';
 import { KanjiData } from './kanji-data.model';
 import { KanjiDatabase } from './kanji-database';
 import { Component, OnInit } from '@angular/core';
 import { ThemesService } from '../themes.service';
 import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { Inject } from '@angular/core';
+import { PageEvent } from '@angular/material/paginator';
 
 export interface DialogData {
   kanji: KanjiData;
@@ -20,10 +19,20 @@ export class KanjiComponent implements OnInit {
 
   kanjiHandler= new KanjiDatabase();
   kanjiDb =this.kanjiHandler.jouyouKanji;
+/*
+
+// MatPaginator Output
+pageEvent: PageEvent;
+datasource = [];
+activePageDataChunk = []
+*/
+
+
 
   theme = 'amethystTheme';
   constructor(private readonly themeService: ThemesService,
     public dialog: MatDialog) {
+  //    this.activePageDataChunk = this.datasource.slice(0,this.pageSize);
   }
   ngOnInit(): void {
     this.theme = this.themeService.currentTheme;
@@ -31,6 +40,31 @@ export class KanjiComponent implements OnInit {
       this.theme = receivedTheme;
     });
   }
+  pageSizeOptions: number[] = [150];
+  pageIndex:number = 0;
+  pageSize:number = 150;
+  lowValue:number = 0;
+  highValue:number = 150;       
+
+  setPageSizeOptions(setPageSizeOptionsInput: string) {
+    if (setPageSizeOptionsInput) {
+      this.pageSizeOptions = setPageSizeOptionsInput.split(',').map(str => +str);
+    }  
+  }
+
+getPaginatorData(event){
+   console.log(event);
+  // this.pageSize= event.pageSize;
+   if(event.pageIndex === this.pageIndex + 1){
+      this.lowValue = this.lowValue + this.pageSize;
+      this.highValue =  this.highValue + this.pageSize;
+     }
+  else if(event.pageIndex === this.pageIndex - 1){
+     this.lowValue = this.lowValue - this.pageSize;
+     this.highValue =  this.highValue - this.pageSize;
+    }   
+     this.pageIndex = event.pageIndex;
+}
 
   kanjiClick(evt) {
 
