@@ -1,4 +1,10 @@
 export class KanjiDatabase{
+    toString(object){
+        return JSON.stringify(object);
+    }
+    toObject(string){
+        return JSON.parse(string);
+    }
     jouyouKanji=[
         {
             nr:'1',

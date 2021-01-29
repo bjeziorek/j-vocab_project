@@ -24,6 +24,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MainMenuComponent } from './main-menu/main-menu.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
+import { KanjiDialogBoxComponent } from './kanji-dialog-box/kanji-dialog-box.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     MainMenuComponent,
     FuriganaComponent,
     GamesComponent,
-    KanjiComponent
+    KanjiComponent,
+    KanjiDialogBoxComponent
   ],
   imports: [
     BrowserModule,

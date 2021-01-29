@@ -1,3 +1,6 @@
+import { KanjiDialogBoxComponent } from './../kanji-dialog-box/kanji-dialog-box.component';
+import { DialBoxComponent } from './dial-box/dial-box.component';
+import { KanjiData } from './kanji-data.model';
 import { KanjiDatabase } from './kanji-database';
 import { Component, OnInit } from '@angular/core';
 import { ThemesService } from '../themes.service';
@@ -5,7 +8,7 @@ import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Inject } from '@angular/core';
 
 export interface DialogData {
-  kanji: string;
+  kanji: KanjiData;
 }
 
 @Component({
@@ -15,7 +18,8 @@ export interface DialogData {
 })
 export class KanjiComponent implements OnInit {
 
-  kanjiDb = new KanjiDatabase().jouyouKanji;
+  kanjiHandler= new KanjiDatabase();
+  kanjiDb =this.kanjiHandler.jouyouKanji;
 
   theme = 'amethystTheme';
   constructor(private readonly themeService: ThemesService,
@@ -30,20 +34,12 @@ export class KanjiComponent implements OnInit {
 
   kanjiClick(evt) {
 
-    this.dialog.open(dialogBox, {
+    this.dialog.open(KanjiDialogBoxComponent, {
       data: {
-        kanji: (evt.target as HTMLButtonElement).id
+        kanji: JSON.parse((evt.target as HTMLButtonElement).id)
       }
     });
   }
 
-}
-
-@Component({
-  selector: 'dialog-box',
-  templateUrl: 'dialog-box.html',
-})
-export class dialogBox {
-  constructor(@Inject(MAT_DIALOG_DATA) public data: DialogData) { }
 }
 
