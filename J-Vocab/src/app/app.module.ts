@@ -19,10 +19,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import {MatMenuModule} from '@angular/material/menu';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import { MainMenuComponent } from './main-menu/main-menu.component'; 
-import {MatButtonModule} from '@angular/material/button'; 
+import { MatMenuModule } from '@angular/material/menu';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MainMenuComponent } from './main-menu/main-menu.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -50,8 +51,8 @@ import {MatButtonModule} from '@angular/material/button';
     BrowserAnimationsModule,
     MatMenuModule,
     MatToolbarModule,
-    MatButtonModule
-
+    MatButtonModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

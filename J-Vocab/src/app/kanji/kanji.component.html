@@ -1,6 +1,6 @@
 <div class="{{theme}}">
     <div class="centerize">
         <h1>Znaki:</h1>
-        <button *ngFor="let item of kanjiDb">{{item.New}}</button>
+        <button *ngFor="let item of kanjiDb" id={{item.New}} (click)="kanjiClick($event)">{{item.New}}</button>
     </div>
 </div>
