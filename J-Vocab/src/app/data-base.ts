@@ -1674,6 +1674,24 @@ export class DataBase {
             sylabs: ['u','ke','ru'],
             meaningPL: 'otrzymać',
             tags: ['NHK', 'n4']
+        },
+        {
+            character: 'アカウント',
+            sylabs: ['A','KA','U','N','TO'],
+            meaningPL: 'konto',
+            tags: ['NHK', 'n4']
+        },
+        {
+            character: '一時凍結',
+            sylabs: ['ichi','ji','tou','ketsu'],
+            meaningPL: 'tymczasowe zamrożenie',
+            tags: ['NHK', 'n?']
+        },
+        {
+            character: '氏',
+            sylabs: ['shi'],
+            meaningPL: 'pan, pani',
+            tags: ['NHK', 'n?']
         }
 
         
