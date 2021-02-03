@@ -1131,49 +1131,49 @@ export class DataBase {
         },
         {
             character: 'どこ',
-            sylabs: ['do','ko'],
+            sylabs: ['do', 'ko'],
             meaningPL: 'gdzie',
             tags: ['notatki', 'n5']
         },
         {
             character: 'どこか',
-            sylabs: ['do','ko', 'ka'],
+            sylabs: ['do', 'ko', 'ka'],
             meaningPL: 'gdzieś',
             tags: ['notatki', 'n3']
         },
         {
             character: 'どこも',
-            sylabs: ['do','ko', 'mo'],
+            sylabs: ['do', 'ko', 'mo'],
             meaningPL: 'wszędzie / nigdzie',
             tags: ['notatki', 'n3']
         },
         {
             character: 'どこでも',
-            sylabs: ['do','ko', 'de', 'mo'],
+            sylabs: ['do', 'ko', 'de', 'mo'],
             meaningPL: 'gdziekolwiek',
             tags: ['notatki', 'n3']
         },
         {
             character: 'いつ',
-            sylabs: ['i','tsu'],
+            sylabs: ['i', 'tsu'],
             meaningPL: 'kiedy',
             tags: ['notatki', 'n5']
         },
         {
             character: 'いつか',
-            sylabs: ['i','tsu', 'ka'],
+            sylabs: ['i', 'tsu', 'ka'],
             meaningPL: 'kiedyś',
             tags: ['notatki', 'n3']
         },
         {
             character: 'いつも',
-            sylabs: ['i','tsu', 'mo'],
+            sylabs: ['i', 'tsu', 'mo'],
             meaningPL: 'zawsze / nigdy',
             tags: ['notatki', 'n3']
         },
         {
             character: 'いつでも',
-            sylabs: ['i','tsu', 'de', 'mo'],
+            sylabs: ['i', 'tsu', 'de', 'mo'],
             meaningPL: 'kiedykolwiek',
             tags: ['notatki', 'n3']
         },
@@ -1221,7 +1221,7 @@ export class DataBase {
         },
         {
             character: '見当違い',
-            sylabs: ['ken', 'tou','chiga','i'],
+            sylabs: ['ken', 'tou', 'chiga', 'i'],
             meaningPL: 'niewłaściwy, błednie wyestymowany',
             tags: ['j-pop', 'n?']
         },
@@ -1443,67 +1443,67 @@ export class DataBase {
         },
         {
             character: '挑戦',
-            sylabs: ['chou','sen'],
+            sylabs: ['chou', 'sen'],
             meaningPL: 'wyzwanie',
             tags: ['j-pop', 'n1']
         },
         {
             character: '携帯',
-            sylabs: ['kei','tai'],
+            sylabs: ['kei', 'tai'],
             meaningPL: 'wyzwanie',
             tags: ['j-pop', 'n1']
         },
         {
             character: '形態',
-            sylabs: ['kei','tai'],
+            sylabs: ['kei', 'tai'],
             meaningPL: 'forma, kształt',
             tags: ['j-pop', 'n1']
         },
         {
             character: '質問',
-            sylabs: ['shitsu','mon'],
+            sylabs: ['shitsu', 'mon'],
             meaningPL: 'pytanie',
             tags: ['j-pop', 'n5']
         },
         {
             character: '教科書',
-            sylabs: ['kyou','ka','sho'],
+            sylabs: ['kyou', 'ka', 'sho'],
             meaningPL: 'podręcznik',
             tags: ['j-pop', 'n3']
         },
         {
             character: '上司',
-            sylabs: ['jou','shi'],
+            sylabs: ['jou', 'shi'],
             meaningPL: 'szef',
             tags: ['j-pop', 'n1']
         },
         {
             character: '文法',
-            sylabs: ['bun','pou'],
+            sylabs: ['bun', 'pou'],
             meaningPL: 'gramatyka',
             tags: ['j-pop', 'n4']
         },
         {
             character: '覚える',
-            sylabs: ['obo','e','ru'],
+            sylabs: ['obo', 'e', 'ru'],
             meaningPL: 'zapamiętać',
             tags: ['j-pop', 'n5']
         },
         {
             character: '発問する',
-            sylabs: ['hatsu','mon','su','ru'],
+            sylabs: ['hatsu', 'mon', 'su', 'ru'],
             meaningPL: 'wymówić',
             tags: ['j-pop', 'n?']
         },
         {
             character: '固体',
-            sylabs: ['ko','tai'],
+            sylabs: ['ko', 'tai'],
             meaningPL: 'stały, solidny, twardy',
             tags: ['j-pop', 'n1']
         },
         {
             character: '指輪',
-            sylabs: ['yubi','wa'],
+            sylabs: ['yubi', 'wa'],
             meaningPL: 'pierścionek',
             tags: ['NHK', 'n4']
         },
@@ -1521,55 +1521,55 @@ export class DataBase {
         },
         {
             character: '最も',
-            sylabs: ['motto','mo'],
+            sylabs: ['motto', 'mo'],
             meaningPL: 'większość',
             tags: ['NHK', 'n2']
         },
         {
             character: '若しくは',
-            sylabs: ['mo','shi','ku','wha'],
+            sylabs: ['mo', 'shi', 'ku', 'wha'],
             meaningPL: 'lub',
             tags: ['NHK', 'n1']
         },
         {
             character: 'デザインする',
-            sylabs: ['DE','ZA','I','N','su','ru'],
+            sylabs: ['DE', 'ZA', 'I', 'N', 'su', 'ru'],
             meaningPL: 'zaprojektować',
             tags: ['NHK', 'n1']
         },
         {
             character: '天然',
-            sylabs: ['ten','nen'],
+            sylabs: ['ten', 'nen'],
             meaningPL: 'naturalny, spontaniczny',
             tags: ['NHK', 'n3']
         },
         {
             character: '重さ',
-            sylabs: ['omo','sa'],
+            sylabs: ['omo', 'sa'],
             meaningPL: 'waga, ciężar',
             tags: ['NHK', 'n?']
         },
         {
             character: '宝石商',
-            sylabs: ['hou','seki','shou'],
+            sylabs: ['hou', 'seki', 'shou'],
             meaningPL: 'jubiler',
             tags: ['NHK', 'n?']
         },
         {
             character: 'に依る',
-            sylabs: ['ni','yo','ru'],
+            sylabs: ['ni', 'yo', 'ru'],
             meaningPL: 'według, zgodnie z',
             tags: ['NHK', 'n?']
         },
         {
             character: '破る',
-            sylabs: ['yabu','ru'],
+            sylabs: ['yabu', 'ru'],
             meaningPL: 'przerwać',
             tags: ['NHK', 'n3']
         },
         {
             character: '増える',
-            sylabs: ['fu','e','ru'],
+            sylabs: ['fu', 'e', 'ru'],
             meaningPL: 'wzrastać',
             tags: ['NHK', 'n4']
         },
@@ -1581,55 +1581,55 @@ export class DataBase {
         },
         {
             character: '入院',
-            sylabs: ['nyuu','in'],
+            sylabs: ['nyuu', 'in'],
             meaningPL: 'hospitalizacja',
             tags: ['NHK', 'n4']
         },
         {
             character: '警察',
-            sylabs: ['kei','satsu'],
+            sylabs: ['kei', 'satsu'],
             meaningPL: 'policja',
             tags: ['NHK', 'n4']
         },
         {
             character: 'に依ると',
-            sylabs: ['ni','yo','ru','to'],
+            sylabs: ['ni', 'yo', 'ru', 'to'],
             meaningPL: 'według',
             tags: ['NHK', 'n?']
         },
         {
             character: '具合',
-            sylabs: ['gu','ai'],
+            sylabs: ['gu', 'ai'],
             meaningPL: 'stan, kondycja',
             tags: ['NHK', 'n4']
         },
         {
             character: '急に',
-            sylabs: ['kyuu','ni'],
+            sylabs: ['kyuu', 'ni'],
             meaningPL: 'nagły',
             tags: ['NHK', 'n3']
         },
         {
             character: '悪くなる',
-            sylabs: ['waru','ku','na','ru'],
+            sylabs: ['waru', 'ku', 'na', 'ru'],
             meaningPL: 'pogarszać się',
             tags: ['NHK', 'n?']
         },
         {
             character: '特に',
-            sylabs: ['toku','ni'],
+            sylabs: ['toku', 'ni'],
             meaningPL: 'w szczególności',
             tags: ['NHK', 'n4']
         },
         {
             character: 'この内',
-            sylabs: ['ko','no','uchi'],
+            sylabs: ['ko', 'no', 'uchi'],
             meaningPL: 'spośród nich',
             tags: ['NHK', 'n?']
         },
         {
             character: 'など',
-            sylabs: ['na','do'],
+            sylabs: ['na', 'do'],
             meaningPL: 'taki, i tym podobny',
             tags: ['NHK', 'n5']
         },
@@ -1641,50 +1641,56 @@ export class DataBase {
         },
         {
             character: 'すぐ',
-            sylabs: ['su','gu'],
+            sylabs: ['su', 'gu'],
             meaningPL: 'wkrótce, natychmiast',
             tags: ['NHK', 'n1']
         },
         {
             character: '専門家',
-            sylabs: ['sen','mon','ka'],
+            sylabs: ['sen', 'mon', 'ka'],
             meaningPL: 'specjalista',
             tags: ['NHK', 'n?']
         },
         {
             character: '軽い',
-            sylabs: ['karu','i'],
+            sylabs: ['karu', 'i'],
             meaningPL: 'lekki',
             tags: ['NHK', 'n5']
         },
         {
             character: '場合',
-            sylabs: ['ba','ai'],
+            sylabs: ['ba', 'ai'],
             meaningPL: 'gdyby',
             tags: ['NHK', 'n4']
         },
         {
             character: '治療',
-            sylabs: ['chi','ryou'],
+            sylabs: ['chi', 'ryou'],
             meaningPL: 'leczenie',
             tags: ['NHK', 'n1']
         },
         {
             character: '受ける',
-            sylabs: ['u','ke','ru'],
+            sylabs: ['u', 'ke', 'ru'],
             meaningPL: 'otrzymać',
             tags: ['NHK', 'n4']
         },
         {
             character: 'アカウント',
-            sylabs: ['A','KA','U','N','TO'],
+            sylabs: ['A', 'KA', 'U', 'N', 'TO'],
             meaningPL: 'konto',
             tags: ['NHK', 'n4']
         },
         {
             character: '一時凍結',
-            sylabs: ['ichi','ji','tou','ketsu'],
+            sylabs: ['ichi', 'ji', 'tou', 'ketsu'],
             meaningPL: 'tymczasowe zamrożenie',
+            tags: ['NHK', 'n?']
+        },
+        {
+            character: 'ツイッター',
+            sylabs: ['TSU', 'I', 'X', 'TA', '-'],
+            meaningPL: 'Twitter',
             tags: ['NHK', 'n?']
         },
         {
@@ -1694,20 +1700,20 @@ export class DataBase {
             tags: ['NHK', 'n?']
         }
 
-        
-        
-        
+
+
+
         //,
 
 
 
         ///zdania
-      /*  {
-            character: 'その猫の一方は黒で、もう一方は茶だ。',
-            sylabs: ['so', 'no', 'neko', 'no', 'ix', 'pou', 'ha', 'kuro', 'de',',', 'mo', 'u', 'ix', 'pou', 'ha', 'cha', 'da', '.'],
-            meaningPL: 'Ten kot jest czarny, ale ten drugi jest brązowy.',
-            tags: ['jisho']
-        },*/
+        /*  {
+              character: 'その猫の一方は黒で、もう一方は茶だ。',
+              sylabs: ['so', 'no', 'neko', 'no', 'ix', 'pou', 'ha', 'kuro', 'de',',', 'mo', 'u', 'ix', 'pou', 'ha', 'cha', 'da', '.'],
+              meaningPL: 'Ten kot jest czarny, ale ten drugi jest brązowy.',
+              tags: ['jisho']
+          },*/
     ];//*/
     getResources() {
         return this.resources;
