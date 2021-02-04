@@ -1694,6 +1694,18 @@ export class DataBase {
             tags: ['NHK', 'n?']
         },
         {
+            character: '大統領選挙',
+            sylabs: ['dai', 'tou', 'ryou', 'sen', 'kou'],
+            meaningPL: 'wybory prezydenckie',
+            tags: ['NHK', 'n?']
+        },
+        {
+            character: '大統領',
+            sylabs: ['dai', 'tou', 'ryou'],
+            meaningPL: 'prezydent',
+            tags: ['NHK', 'n3']
+        },
+        {
             character: '氏',
             sylabs: ['shi'],
             meaningPL: 'pan, pani',
