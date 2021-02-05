@@ -1706,6 +1706,12 @@ export class DataBase {
             tags: ['NHK', 'n3']
         },
         {
+            character: '不正',
+            sylabs: ['fu', 'sei'],
+            meaningPL: 'nielegalny, niesprawiedliwy',
+            tags: ['NHK', 'n3']
+        },
+        {
             character: '氏',
             sylabs: ['shi'],
             meaningPL: 'pan, pani',
