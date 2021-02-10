@@ -1716,6 +1716,30 @@ export class DataBase {
             sylabs: ['shi'],
             meaningPL: 'pan, pani',
             tags: ['NHK', 'n?']
+        },
+        {
+            character: '共に',
+            sylabs: ['tomo', 'ni'],
+            meaningPL: 'razem, wspólnie',
+            tags: ['NHK', 'n3']
+        },
+        {
+            character: '乱入',
+            sylabs: ['ran', 'nyuu'],
+            meaningPL: 'wtargnięcie',
+            tags: ['NHK', 'n3']
+        },
+        {
+            character: '支持者',
+            sylabs: ['shi', 'ji', 'sha'],
+            meaningPL: 'zwolennik',
+            tags: ['NHK', 'n3']
+        },
+        {
+            character: '訴える',
+            sylabs: ['utta', 'e', 'ru'],
+            meaningPL: 'wnieść sprawę',
+            tags: ['NHK', 'n3']
         }
 
 
