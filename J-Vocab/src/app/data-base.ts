@@ -1736,6 +1736,24 @@ export class DataBase {
             tags: ['NHK', 'n3']
         },
         {
+            character: '決める',
+            sylabs: ['ki', 'me', 'ru'],
+            meaningPL: 'decydować',
+            tags: ['NHK', 'n4']
+        },
+        {
+            character: '決めさせる',
+            sylabs: ['ki', 'me', 'sa', 'se', 'ru'],
+            meaningPL: 'zmusić do decyzji',
+            tags: ['NHK', 'n?']
+        },
+        {
+            character: 'させる',
+            sylabs: ['sa', 'se', 'ru'],
+            meaningPL: 'zmusić do zrobienia czegoś',
+            tags: ['NHK', 'n?']
+        },
+        {
             character: '訴える',
             sylabs: ['utta', 'e', 'ru'],
             meaningPL: 'wnieść sprawę',
