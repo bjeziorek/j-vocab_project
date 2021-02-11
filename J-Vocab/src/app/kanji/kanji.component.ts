@@ -17,22 +17,22 @@ export interface DialogData {
 })
 export class KanjiComponent implements OnInit {
 
-  kanjiHandler= new KanjiDatabase();
-  kanjiDb =this.kanjiHandler.jouyouKanji;
-/*
-
-// MatPaginator Output
-pageEvent: PageEvent;
-datasource = [];
-activePageDataChunk = []
-*/
+  kanjiHandler = new KanjiDatabase();
+  kanjiDb = this.kanjiHandler.jouyouKanji;
+  /*
+  
+  // MatPaginator Output
+  pageEvent: PageEvent;
+  datasource = [];
+  activePageDataChunk = []
+  */
 
 
 
   theme = 'amethystTheme';
   constructor(private readonly themeService: ThemesService,
     public dialog: MatDialog) {
-  //    this.activePageDataChunk = this.datasource.slice(0,this.pageSize);
+    //    this.activePageDataChunk = this.datasource.slice(0,this.pageSize);
   }
   ngOnInit(): void {
     this.theme = this.themeService.currentTheme;
@@ -41,30 +41,30 @@ activePageDataChunk = []
     });
   }
   pageSizeOptions: number[] = [150];
-  pageIndex:number = 0;
-  pageSize:number = 150;
-  lowValue:number = 0;
-  highValue:number = 150;       
+  pageIndex: number = 0;
+  pageSize: number = 150;
+  lowValue: number = 0;
+  highValue: number = 150;
 
   setPageSizeOptions(setPageSizeOptionsInput: string) {
     if (setPageSizeOptionsInput) {
       this.pageSizeOptions = setPageSizeOptionsInput.split(',').map(str => +str);
-    }  
+    }
   }
 
-getPaginatorData(event){
-   console.log(event);
-  // this.pageSize= event.pageSize;
-   if(event.pageIndex === this.pageIndex + 1){
+  getPaginatorData(event) {
+    console.log(event);
+    // this.pageSize= event.pageSize;
+    if (event.pageIndex === this.pageIndex + 1) {
       this.lowValue = this.lowValue + this.pageSize;
-      this.highValue =  this.highValue + this.pageSize;
-     }
-  else if(event.pageIndex === this.pageIndex - 1){
-     this.lowValue = this.lowValue - this.pageSize;
-     this.highValue =  this.highValue - this.pageSize;
-    }   
-     this.pageIndex = event.pageIndex;
-}
+      this.highValue = this.highValue + this.pageSize;
+    }
+    else if (event.pageIndex === this.pageIndex - 1) {
+      this.lowValue = this.lowValue - this.pageSize;
+      this.highValue = this.highValue - this.pageSize;
+    }
+    this.pageIndex = event.pageIndex;
+  }
 
   kanjiClick(evt) {
 
