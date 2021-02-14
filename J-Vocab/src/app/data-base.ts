@@ -1754,6 +1754,18 @@ export class DataBase {
             tags: ['NHK', 'n?']
         },
         {
+            character: 'に対して',
+            sylabs: ['ni', 'tai','shi', 'te'],
+            meaningPL: 'w kierunku, w przeciwieństwie',
+            tags: ['NHK', 'n?']
+        },
+        {
+            character: '容認する',
+            sylabs: ['you', 'nin','su','ru'],
+            meaningPL: 'tolerować',
+            tags: ['NHK', 'n?']
+        },
+        {
             character: '訴える',
             sylabs: ['utta', 'e', 'ru'],
             meaningPL: 'wnieść sprawę',
