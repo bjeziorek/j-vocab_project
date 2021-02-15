@@ -20,18 +20,21 @@ export class KanjiComponent implements OnInit {
   kanjiHandler = new KanjiDatabase();
   kanjiDb = this.kanjiHandler.jouyouKanji;
   /*
-  
   // MatPaginator Output
   pageEvent: PageEvent;
   datasource = [];
   activePageDataChunk = []
   */
 
-
+  pageSizeOptions: number[] = [150];
+  pageIndex = 0;
+  pageSize = 150;
+  lowValue = 0;
+  highValue = 150;
 
   theme = 'amethystTheme';
   constructor(private readonly themeService: ThemesService,
-    public dialog: MatDialog) {
+              public dialog: MatDialog) {
     //    this.activePageDataChunk = this.datasource.slice(0,this.pageSize);
   }
   ngOnInit(): void {
@@ -40,19 +43,15 @@ export class KanjiComponent implements OnInit {
       this.theme = receivedTheme;
     });
   }
-  pageSizeOptions: number[] = [150];
-  pageIndex: number = 0;
-  pageSize: number = 150;
-  lowValue: number = 0;
-  highValue: number = 150;
 
-  setPageSizeOptions(setPageSizeOptionsInput: string) {
+
+  setPageSizeOptions(setPageSizeOptionsInput: string): void {
     if (setPageSizeOptionsInput) {
       this.pageSizeOptions = setPageSizeOptionsInput.split(',').map(str => +str);
     }
   }
 
-  getPaginatorData(event) {
+  getPaginatorData(event): void {
     console.log(event);
     // this.pageSize= event.pageSize;
     if (event.pageIndex === this.pageIndex + 1) {
@@ -66,8 +65,7 @@ export class KanjiComponent implements OnInit {
     this.pageIndex = event.pageIndex;
   }
 
-  kanjiClick(evt) {
-
+  kanjiClick(evt): void {
     this.dialog.open(KanjiDialogBoxComponent, {
       data: {
         kanji: JSON.parse((evt.target as HTMLButtonElement).id)
