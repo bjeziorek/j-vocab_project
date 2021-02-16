@@ -1,5 +1,8 @@
 <div class="{{theme}}">
     <div class="centerize">
+      <button *ngFor="let radical of radicals" (click)="radicalClick($event)" class="unclicked">{{radical}}</button>
+      <button *ngFor="let stroke of strokes" (click)="strokeClick($event)" class="unclicked">{{stroke}}</button>
+
         <h1>Znaki:</h1>
         <div >
         <button  *ngFor="let item of kanjiDb | 

@@ -1515,7 +1515,7 @@ export class DataBase {
         },
         {
             character: 'ダイヤモンド',
-            sylabs: ['DAIYAMONDO'],
+            sylabs: ['DA', 'I', 'YA', 'MO', 'N', 'DO'],
             meaningPL: 'diament',
             tags: ['NHK', 'n?']
         },
@@ -1755,13 +1755,13 @@ export class DataBase {
         },
         {
             character: 'に対して',
-            sylabs: ['ni', 'tai','shi', 'te'],
+            sylabs: ['ni', 'tai', 'shi', 'te'],
             meaningPL: 'w kierunku, w przeciwieństwie',
             tags: ['NHK', 'n?']
         },
         {
             character: '容認する',
-            sylabs: ['you', 'nin','su','ru'],
+            sylabs: ['you', 'nin', 'su', 'ru'],
             meaningPL: 'tolerować',
             tags: ['NHK', 'n?']
         },

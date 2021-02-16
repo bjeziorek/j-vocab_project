@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
 import { ThemesService } from '../themes.service';
 import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { PageEvent } from '@angular/material/paginator';
+import { isNgTemplate } from '@angular/compiler';
 
 export interface DialogData {
   kanji: KanjiData;
@@ -18,7 +19,10 @@ export interface DialogData {
 export class KanjiComponent implements OnInit {
 
   kanjiHandler = new KanjiDatabase();
-  kanjiDb = this.kanjiHandler.jouyouKanji;
+  fullKanjiDb = this.kanjiHandler.jouyouKanji;
+  kanjiDb = this.fullKanjiDb;
+  radicals=['1','2','3'];
+  strokes=['1','2','3'];
   /*
   // MatPaginator Output
   pageEvent: PageEvent;
@@ -35,6 +39,8 @@ export class KanjiComponent implements OnInit {
   theme = 'amethystTheme';
   constructor(private readonly themeService: ThemesService,
               public dialog: MatDialog) {
+                this.radicals=this.listElements('radical');
+                this.strokes=this.listElements('stroke');
     //    this.activePageDataChunk = this.datasource.slice(0,this.pageSize);
   }
   ngOnInit(): void {
@@ -44,6 +50,42 @@ export class KanjiComponent implements OnInit {
     });
   }
 
+  radicalClick(evt){
+    console.log(evt)
+  }
+  strokeClick(evt){
+    console.log(evt)
+  }
+
+  listElements(what): string[] {
+            function existsOnTagListAlready(tag, tagList) {
+                for (let t of tagList) {
+                    if (t === tag) {
+                        return true;
+                    }
+                }
+                return false;
+            }
+            let tagList: string[];
+            tagList = [];
+            const db = this.fullKanjiDb;
+            for (let el of this.fullKanjiDb) {
+                for (let tag of (what==='radical'?el.Radical:el.Strokes)) {
+                    if (!existsOnTagListAlready(tag, tagList)) {
+                        tagList.push(tag);
+                    }
+                }
+            }
+            console.log(tagList);
+            return tagList;
+        }
+
+ /* filterResults(rules,method){
+    if(item.Radicals){
+
+    }
+  }
+  this.kanjiDb=this.kanjiDb.filter();*/
 
   setPageSizeOptions(setPageSizeOptionsInput: string): void {
     if (setPageSizeOptionsInput) {
@@ -52,8 +94,6 @@ export class KanjiComponent implements OnInit {
   }
 
   getPaginatorData(event): void {
-    console.log(event);
-    // this.pageSize= event.pageSize;
     if (event.pageIndex === this.pageIndex + 1) {
       this.lowValue = this.lowValue + this.pageSize;
       this.highValue = this.highValue + this.pageSize;
