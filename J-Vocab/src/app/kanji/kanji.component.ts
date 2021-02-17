@@ -21,8 +21,8 @@ export class KanjiComponent implements OnInit {
   kanjiHandler = new KanjiDatabase();
   fullKanjiDb = this.kanjiHandler.jouyouKanji;
   kanjiDb = this.fullKanjiDb;
-  radicals=['1','2','3'];
-  strokes=['1','2','3'];
+  radicals = ['1', '2', '3'];
+  strokes = ['1', '2', '3'];
   /*
   // MatPaginator Output
   pageEvent: PageEvent;
@@ -39,8 +39,8 @@ export class KanjiComponent implements OnInit {
   theme = 'amethystTheme';
   constructor(private readonly themeService: ThemesService,
               public dialog: MatDialog) {
-                this.radicals=this.listElements('radical');
-                this.strokes=this.listElements('stroke');
+    this.radicals = this.listElements('radical');
+    this.strokes = this.listElements('stroke');
     //    this.activePageDataChunk = this.datasource.slice(0,this.pageSize);
   }
   ngOnInit(): void {
@@ -50,42 +50,42 @@ export class KanjiComponent implements OnInit {
     });
   }
 
-  radicalClick(evt){
-    console.log(evt)
+  radicalClick(evt): void {
+    this.kanjiDb = this.fullKanjiDb.filter((item) => item.Radical === evt.target.id );
   }
-  strokeClick(evt){
-    console.log(evt)
+  strokeClick(evt): void {
+    this.kanjiDb = this.fullKanjiDb.filter((item) => item.Strokes === evt.target.id );
   }
 
-  listElements(what): string[] {
-            function existsOnTagListAlready(tag, tagList) {
-                for (let t of tagList) {
-                    if (t === tag) {
-                        return true;
-                    }
-                }
-                return false;
-            }
-            let tagList: string[];
-            tagList = [];
-            const db = this.fullKanjiDb;
-            for (let el of this.fullKanjiDb) {
-                for (let tag of (what==='radical'?el.Radical:el.Strokes)) {
-                    if (!existsOnTagListAlready(tag, tagList)) {
-                        tagList.push(tag);
-                    }
-                }
-            }
-            console.log(tagList);
-            return tagList;
-        }
-
- /* filterResults(rules,method){
-    if(item.Radicals){
-
+  listElements(what): string[] {
+    function existsOnTagListAlready(tag, tagList) {
+      for (let t of tagList) {
+        if (t === tag) {
+          return true;
+        }
+      }
+      return false;
     }
+    let tagList: string[];
+    tagList = [];
+    const db = this.fullKanjiDb;
+    for (let el of this.fullKanjiDb) {
+      for (let tag of (what === 'radical' ? el.Radical : el.Strokes)) {
+        if (!existsOnTagListAlready(tag, tagList)) {
+          tagList.push(tag);
+        }
+      }
+    }
+    console.log(tagList);
+    return tagList;
   }
-  this.kanjiDb=this.kanjiDb.filter();*/
+
+  /* filterResults(rules,method){
+     if(item.Radicals){
+ 
+     }
+   }
+   this.kanjiDb=this.kanjiDb.filter();*/
 
   setPageSizeOptions(setPageSizeOptionsInput: string): void {
     if (setPageSizeOptionsInput) {

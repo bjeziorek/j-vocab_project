@@ -21765,8 +21765,8 @@ export class KanjiDatabase{
         {
             nr:'1814',
             New:'弁',
-            Old:'辨<br>瓣<br>辯',
-            Radical:'辛<br>瓜<br>辛',
+            Old:'辨瓣辯',
+            Radical:'辛瓜辛',
             Strokes:'5',
             Grade:'5',
             Year_added:'',

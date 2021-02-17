@@ -1,7 +1,7 @@
 <div class="{{theme}}">
     <div class="centerize">
-      <button *ngFor="let radical of radicals" (click)="radicalClick($event)" class="unclicked">{{radical}}</button>
-      <button *ngFor="let stroke of strokes" (click)="strokeClick($event)" class="unclicked">{{stroke}}</button>
+      <button *ngFor="let radical of radicals" id="{{radical}}" (click)="radicalClick($event)" class="unclicked">{{radical}}</button>
+      <button *ngFor="let stroke of strokes" id="{{stroke}}" (click)="strokeClick($event)" class="unclicked">{{stroke}}</button>
 
         <h1>Znaki:</h1>
         <div >
