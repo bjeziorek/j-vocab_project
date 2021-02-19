@@ -11,5 +11,10 @@
     <li>Znaczenie angielskie: {{data.kanji.English_meaning}}</li>
     <li>Czytanie w kanie: {{data.kanji.Readings_kana}}</li>
     <li>Czytanie w romaji: {{data.kanji.Readings_romaji}}</li>
+    <li>Przykłady:
+      <ul>
+        <li *ngFor="let word of listToDisplay">{{word.kanji}} - {{word.reading}} - {{word.meaning}}</li>
+      </ul>
+    </li>
   </ul>
 </div>
