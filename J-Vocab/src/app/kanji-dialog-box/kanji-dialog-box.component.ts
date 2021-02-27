@@ -15,9 +15,9 @@ export class KanjiDialogBoxComponent implements OnInit {
     for (const word of this.vocabularyList) {
       if (word.character.includes(data.kanji.New)) {
         this.listToDisplay.push(
-          { 
-            kanji: word.character, 
-            reading: word.sylabs, 
+          {
+            kanji: word.character,
+            reading: word.sylabs,
             meaning: word.meaningPL
           });
       }

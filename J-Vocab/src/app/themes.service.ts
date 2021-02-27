@@ -5,7 +5,7 @@ import { BehaviorSubject, Subject } from 'rxjs';
   providedIn: 'root'
 })
 export class ThemesService {
-
+  dataIsReady = new Subject();
   theme = new BehaviorSubject('amethystTheme');
   currentTheme = 'amethystTheme';
 

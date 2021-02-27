@@ -11,7 +11,7 @@
 //amethyst
 %amethystThemeDark {
   
-  h1{
+  h1,summary{
     color: colors.$lightPurple;
     font-size:40px;//4vw;
   margin: 2vw;
@@ -138,7 +138,7 @@
 
 //turquise
 %turquiseThemeDark {
-  h1{
+  h1,summary{
     color: colors.$lightTurquise;
     font-size:40px;//4vw;
   margin: 2vw;
@@ -237,7 +237,7 @@
 %amberThemeDark {
   //background-color: colors.$darkAmber;
   //color: colors.$lightAmber;
-  h1{
+  h1,summary{
     color: colors.$lightAmber;
     font-size:40px;//4vw;
   margin: 2vw;
