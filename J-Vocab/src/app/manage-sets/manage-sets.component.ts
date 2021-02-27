@@ -1,3 +1,4 @@
+import { Converter } from './../converter';
 import { Tags } from './tags';
 import { Data } from './../raw-data.model';
 import { SaveHelper } from './../save-helper';
@@ -27,6 +28,7 @@ export class ManageSetsComponent implements OnInit {
   resourceBoxContent: Data[];
   setBoxContent: Data[];
 
+  converter = new Converter();
 
   saveHelper = new SaveHelper();
   loadedData;
